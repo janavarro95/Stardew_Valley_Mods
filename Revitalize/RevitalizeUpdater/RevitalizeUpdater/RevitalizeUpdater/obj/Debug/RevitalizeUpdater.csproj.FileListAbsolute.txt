@@ -1,6 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeProgram\RevitalizeUpdater\RevitalizeUpdater\bin\Debug\RevitalizeUpdater.exe.config
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeUpdater\RevitalizeUpdater\RevitalizeUpdater\bin\Debug\RevitalizeUpdater.exe.config
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeUpdater\RevitalizeUpdater\RevitalizeUpdater\bin\Debug\RevitalizeUpdater.exe
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeUpdater\RevitalizeUpdater\RevitalizeUpdater\bin\Debug\RevitalizeUpdater.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeUpdater\RevitalizeUpdater\RevitalizeUpdater\obj\Debug\RevitalizeUpdater.exe
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Revitalize\RevitalizeUpdater\RevitalizeUpdater\RevitalizeUpdater\obj\Debug\RevitalizeUpdater.pdb

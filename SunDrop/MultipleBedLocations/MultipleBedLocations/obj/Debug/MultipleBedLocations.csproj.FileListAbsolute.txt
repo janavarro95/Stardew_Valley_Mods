@@ -1,7 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\bin\Debug\MultipleBedLocations.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\bin\Debug\MultipleBedLocations.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\obj\Debug\MultipleBedLocations.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\obj\Debug\MultipleBedLocations.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\bin\Debug\Newtonsoft.Json.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\bin\Debug\Newtonsoft.Json.xml
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\MultipleBedLocations\MultipleBedLocations\obj\Debug\MultipleBedLocations.csprojResolveAssemblyReference.cache

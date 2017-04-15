@@ -1,7 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\obj\Debug\BusStopMenu.csprojResolveAssemblyReference.cache
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\bin\Debug\BusStopMenu.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\bin\Debug\BusStopMenu.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\bin\Debug\EntoaroxFramework.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\bin\Debug\EntoaroxFramework.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\obj\Debug\BusStopMenu.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\SunDrop\BusStopMenu\BusStopMenu\BusStopMenu\obj\Debug\BusStopMenu.pdb

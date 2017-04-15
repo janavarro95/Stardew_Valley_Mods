@@ -1,5 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\MenuControllerCompatability\MenuControllerCompatability\bin\Debug\MenuControllerCompatability.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\MenuControllerCompatability\MenuControllerCompatability\bin\Debug\MenuControllerCompatability.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\MenuControllerCompatability\MenuControllerCompatability\obj\Debug\MenuControllerCompatability.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\MenuControllerCompatability\MenuControllerCompatability\obj\Debug\MenuControllerCompatability.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\MenuControllerCompatability\MenuControllerCompatability\obj\Debug\MenuControllerCompatability.csprojResolveAssemblyReference.cache
