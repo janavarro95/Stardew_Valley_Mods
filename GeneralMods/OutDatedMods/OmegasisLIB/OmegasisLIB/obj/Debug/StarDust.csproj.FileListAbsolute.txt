@@ -1,7 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\obj\Debug\StarDust.csprojResolveAssemblyReference.cache
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\bin\Debug\StarDustCore.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\bin\Debug\StarDustCore.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\obj\Debug\StarDustCore.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\obj\Debug\StarDustCore.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\bin\Debug\Newtonsoft.Json.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\OmegasisLIB\OmegasisLIB\bin\Debug\Newtonsoft.Json.xml

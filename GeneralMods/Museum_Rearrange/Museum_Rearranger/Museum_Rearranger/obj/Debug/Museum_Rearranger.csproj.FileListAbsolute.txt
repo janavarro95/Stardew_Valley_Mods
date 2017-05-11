@@ -1,9 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\bin\Debug\Museum_Rearranger.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\bin\Debug\Museum_Rearranger.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\obj\Debug\Museum_Rearranger.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\obj\Debug\Museum_Rearranger.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\bin\Debug\Museum_Rearranger.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\bin\Debug\Museum_Rearranger.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\obj\Debug\Museum_Rearranger.csprojResolveAssemblyReference.cache
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\obj\Debug\Museum_Rearranger.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\Museum_Rearrange\Museum_Rearranger\Museum_Rearranger\obj\Debug\Museum_Rearranger.pdb
