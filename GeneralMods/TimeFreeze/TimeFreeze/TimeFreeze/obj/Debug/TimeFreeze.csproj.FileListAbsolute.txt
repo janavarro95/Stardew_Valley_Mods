@@ -1,9 +1,0 @@
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\TimeFreeze\TimeFreeze\TimeFreeze\bin\Debug\TimeFreeze.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\TimeFreeze\TimeFreeze\TimeFreeze\bin\Debug\TimeFreeze.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\TimeFreeze\TimeFreeze\TimeFreeze\obj\Debug\TimeFreeze.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\Stardew_Valley_Mods\Stardew_Valley_Mods\TimeFreeze\TimeFreeze\TimeFreeze\obj\Debug\TimeFreeze.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\TimeFreeze\TimeFreeze\TimeFreeze\bin\Debug\TimeFreeze.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\TimeFreeze\TimeFreeze\TimeFreeze\bin\Debug\TimeFreeze.pdb
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\TimeFreeze\TimeFreeze\TimeFreeze\obj\Debug\TimeFreeze.csprojResolveAssemblyReference.cache
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\TimeFreeze\TimeFreeze\TimeFreeze\obj\Debug\TimeFreeze.dll
-C:\Users\owner\Documents\Visual Studio 2015\Projects\github\StardewValleyMods\GeneralMods\TimeFreeze\TimeFreeze\TimeFreeze\obj\Debug\TimeFreeze.pdb
