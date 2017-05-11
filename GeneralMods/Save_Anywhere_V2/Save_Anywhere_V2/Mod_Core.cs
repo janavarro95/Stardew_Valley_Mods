@@ -780,7 +780,7 @@ namespace Save_Anywhere_V2
                     string name = array2[2];
                     int num2 = Convert.ToInt32(array2[3]);
                     bool flag = false;
-                    using (List<Farmer>.Enumerator enumerator = Game1.getAllFarmers().GetEnumerator())
+                    using (List<StardewValley.Farmer>.Enumerator enumerator = Game1.getAllFarmers().GetEnumerator())
                     {
                         while (enumerator.MoveNext())
                         {
