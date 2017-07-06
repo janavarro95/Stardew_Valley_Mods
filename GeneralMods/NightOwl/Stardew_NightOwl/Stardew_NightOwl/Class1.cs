@@ -65,7 +65,7 @@ namespace Stardew_NightOwl
         public override void Entry(IModHelper helper)
         {
             StardewModdingAPI.Events.TimeEvents.TimeOfDayChanged += TimeEvents_TimeOfDayChanged;
-            StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += TimeEvents_DayOfMonthChanged;
+            StardewModdingAPI.Events.TimeEvents.AfterDayStarted += TimeEvents_AfterDayStarted;
             StardewModdingAPI.Events.SaveEvents.AfterLoad += PlayerEvents_LoadedGame;
             StardewModdingAPI.Events.GameEvents.FourthUpdateTick += GameEvents_FourthUpdateTick;
             ModPath =Helper.DirectoryPath;
@@ -150,7 +150,7 @@ namespace Stardew_NightOwl
             super_map_warping_check = true;
         }
 
-        public void TimeEvents_DayOfMonthChanged(object sender, StardewModdingAPI.Events.EventArgsIntChanged e)
+        public void TimeEvents_AfterDayStarted(object sender, EventArgs e)
         {
             /*
             IMPLEMENT TRY CATCH SYSTEM HERE

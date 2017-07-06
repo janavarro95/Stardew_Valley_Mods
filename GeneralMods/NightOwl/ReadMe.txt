@@ -1,16 +1,16 @@
 Night Owl
 
-Version:1.2.0
+Version:1.2.1
 
 Published: 7/4/16 1:37 PM
 
-Updated: 10/21/16 12:35 AM
+Updated: 7/6/17 12:35 AM
 
 Compatability:
 
-Stardew Valley 1.1.0 Windows
+Stardew Valley 1.2.0 Windows
 
-SMAPI 0.40.0 1.1-3
+SMAPI 1.14.1
 
 Description:
 
@@ -37,6 +37,10 @@ Yes this compatibility file is incompatible with other mods that edit the Fish.x
 
 
 Update Info: 
+1.2.1
+-Updated to SDV 1.2, SMAPI 1.14.1
+-This is a migration only with no feature change. All credits to author Alpha_Omegasis.
+
 1.2.0
 -Updated to SDV 1.1
 

@@ -1,14 +1,14 @@
 {
   "Name": "Stardew_NightOwl",
-  "Authour": "Alpha_Omegasis",
+  "Author": "Alpha_Omegasis",
   "Version": {
     "MajorVersion": 2,
-    "MinorVersion": 1,
+    "MinorVersion": 3,
     "PatchVersion": 0,
     "Build": ""
   },
-  "Description": "Allows the farmer to stay up all night. SMAPI 1.12. Updated 5/14/17",
-  "UniqueID": "SaveAnywhere",
+  "Description": "Allows the farmer to stay up all night. SMAPI 1.14. Updated 7/6/17",
+  "UniqueID": "NightOwl",
   "PerSaveConfigs": false,
   "EntryDll": "Stardew_NightOwl.dll"
 }
