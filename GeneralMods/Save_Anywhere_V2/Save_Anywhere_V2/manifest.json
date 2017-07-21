@@ -3,11 +3,11 @@
   "Author": "Alpha_Omegasis",
   "Version": {
     "MajorVersion": "1",
-    "MinorVersion": "1",
-    "PatchVersion": "1",
+    "MinorVersion": "2",
+    "PatchVersion": "0",
     "Build": ""
   },
-  "Description": "Allows the farmer to save almost anywhere. SMAPI 1.12. Updated 5/14/17",
+  "Description": "Allows the farmer to save almost anywhere. SMAPI 1.12. Updated 7/21/17",
   "UniqueID": "Save_Anywhere_V2",
   "EntryDll": "Save_Anywhere_V2.dll"
 }

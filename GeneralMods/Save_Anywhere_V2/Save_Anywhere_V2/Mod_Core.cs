@@ -27,6 +27,7 @@ namespace Save_Anywhere_V2
         public static int checking_time;
         public static bool once;
         public static bool new_day;
+        public static bool anywhereSaved = false;
         Dictionary<string, string> npc_key_value_pair;
 
         public static IMonitor thisMonitor;
@@ -36,11 +37,11 @@ namespace Save_Anywhere_V2
             try {
                 StardewModdingAPI.Events.ControlEvents.KeyPressed += KeyPressed_Save_Load_Menu;
                 StardewModdingAPI.Events.SaveEvents.AfterLoad += PlayerEvents_LoadedGame;
+                StardewModdingAPI.SaveEvents.AfterSave += SaveEvents_AfterSave;
                 StardewModdingAPI.Events.GameEvents.UpdateTick += Warp_Check;
-                StardewModdingAPI.Events.GameEvents.UpdateTick += PassiveSaveChecker;
                 StardewModdingAPI.Events.TimeEvents.TimeOfDayChanged += NPC_scheduel_update;
-                StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += TimeEvents_DayOfMonthChanged;
-                StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += TimeEvents_OnNewDay;
+                StardewModdingAPI.Events.TimeEvents.AfterDayStarted += TimeEvents_DayOfMonthChanged;
+                StardewModdingAPI.Events.TimeEvents.AfterDayStarted += TimeEvents_OnNewDay;
                 mod_path = Helper.DirectoryPath;
                 npc_key_value_pair = new Dictionary<string, string>();
                 thisMonitor = Monitor;
@@ -51,17 +52,25 @@ namespace Save_Anywhere_V2
             }
         }
 
-        private void PassiveSaveChecker(object sender, EventArgs e)
+        private void SaveEvents_AfterSave(object sender, EventArgs e)
         {
-            if (GameUtilities.passiveSave == true && Game1.activeClickableMenu==null)
+            if (anywhereSaved)
             {
-                Game1.activeClickableMenu = new StardewValley.Menus.SaveGameMenu();
-                GameUtilities.passiveSave = false;
+                Monitor.Log("Anywhere saved.");
+                anywhereSaved = false;
+            }
+            else
+            {
+                Monitor.Log("Game normal saved.");
+                var name = Game1.player.name;
+                var player_path = Path.Combine(mod_path, "Save_Data", name);
+                Directory.Delete(player_path, true);
+                Monitor.Log("Anywhere saved data cleared.");
             }
         }
 
         //done
-        private void TimeEvents_OnNewDay(object sender, EventArgsIntChanged e)
+        private void TimeEvents_OnNewDay(object sender, EventArgs e)
         {
             try {
                 //Log.Info("Day of Month Changed");
@@ -77,7 +86,7 @@ namespace Save_Anywhere_V2
         }
 
         //done
-        private void TimeEvents_DayOfMonthChanged(object sender, EventArgsIntChanged e)
+        private void TimeEvents_DayOfMonthChanged(object sender, EventArgs e)
         {
             try {
                 //new_day = true;
@@ -741,6 +750,12 @@ namespace Save_Anywhere_V2
                 if (Game1.activeClickableMenu != null) return;
                 try {
                     Save_Anywhere_V2.Save_Utilities.GameUtilities.save_game();
+                    if (GameUtilities.passiveSave)
+                    {
+                        Game1.activeClickableMenu = new StardewValley.Menus.SaveGameMenu();
+                        GameUtilities.passiveSave = false;
+                    }
+                    anywhereSaved = true;
                 }
                 catch(Exception exe)
                 {
