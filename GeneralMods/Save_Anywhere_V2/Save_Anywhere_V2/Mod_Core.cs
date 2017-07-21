@@ -39,8 +39,8 @@ namespace Save_Anywhere_V2
                 StardewModdingAPI.Events.GameEvents.UpdateTick += Warp_Check;
                 StardewModdingAPI.Events.GameEvents.UpdateTick += PassiveSaveChecker;
                 StardewModdingAPI.Events.TimeEvents.TimeOfDayChanged += NPC_scheduel_update;
-                StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += TimeEvents_DayOfMonthChanged;
-                StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += TimeEvents_OnNewDay;
+                StardewModdingAPI.Events.TimeEvents.AfterDayStarted += TimeEvents_DayOfMonthChanged;
+                StardewModdingAPI.Events.TimeEvents.AfterDayStarted += TimeEvents_OnNewDay;
                 mod_path = Helper.DirectoryPath;
                 npc_key_value_pair = new Dictionary<string, string>();
                 thisMonitor = Monitor;
@@ -61,7 +61,7 @@ namespace Save_Anywhere_V2
         }
 
         //done
-        private void TimeEvents_OnNewDay(object sender, EventArgsIntChanged e)
+        private void TimeEvents_OnNewDay(object sender, EventArgs e)
         {
             try {
                 //Log.Info("Day of Month Changed");
@@ -77,7 +77,7 @@ namespace Save_Anywhere_V2
         }
 
         //done
-        private void TimeEvents_DayOfMonthChanged(object sender, EventArgsIntChanged e)
+        private void TimeEvents_DayOfMonthChanged(object sender, EventArgs e)
         {
             try {
                 //new_day = true;
