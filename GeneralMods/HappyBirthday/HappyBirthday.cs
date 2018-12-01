@@ -166,7 +166,7 @@ namespace Omegasis.HappyBirthday
 
             // load settings
             this.MigrateLegacyData();
-            this.PlayerData = this.Helper.ReadJsonFile<PlayerData>(this.DataFilePath) ?? new PlayerData();
+            this.PlayerData = Helper.Data.ReadJsonFile<PlayerData>(this.DataFilePath) ?? new PlayerData();
             
             //this.SeenEvent = false;
             //this.Dialogue = new Dictionary<string, Dialogue>();
@@ -178,7 +178,7 @@ namespace Omegasis.HappyBirthday
         private void SaveEvents_BeforeSave(object sender, EventArgs e)
         {
             if (this.HasChosenBirthday)
-                this.Helper.WriteJsonFile(this.DataFilePath, this.PlayerData);
+                Helper.Data.WriteJsonFile(this.DataFilePath, this.PlayerData);
         }
 
         /// <summary>The method invoked when the game updates (roughly 60 times per second).</summary>
@@ -584,7 +584,7 @@ namespace Omegasis.HappyBirthday
                 try
                 {
                     string[] text = File.ReadAllLines(this.LegacyDataFilePath);
-                    this.Helper.WriteJsonFile(this.DataFilePath, new PlayerData
+                    Helper.Data.WriteJsonFile(this.DataFilePath, new PlayerData
                     {
                         BirthdaySeason = text[3],
                         BirthdayDay = Convert.ToInt32(text[5])
