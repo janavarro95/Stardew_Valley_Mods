@@ -1,0 +1,6 @@
+{
+  "Mail:birthdayMom": "Caro jogador @,^  Feliz aniversário, docinho. Estou muito orgulhosa de ver como você cresceu, e se tornou aquela pessoa gentil e trabalhadora que eu sempre sonhei que você se tornaria. Espero que você continue a fazer muitas lembranças boas com quem você ama. ^ Com amor, Mãe. ^ P.S. Aqui está uma pequena coisa que fiz para você. %item object 221 1 %%",
+  "Mail:birthdayDad": "Caro jogador @,^  Feliz aniversário, garoto(a). Tem sido um pouco quieto por aqui no seu aniversário, já que você não está por perto, mas sua mãe e eu sabemos que você está deixando tanto seu avô quanto nós orgulhosos. Nós dois sabemos que viver sozinho pode ser difícil, mas acreditamos em você cem por cento, apenas continue seguindo seus sonhos. ^ Amor, pai ^ P.S. Aqui está algum dinheiro para ajudá-lo na fazenda. Boa sorte! %item money 5000 5001 %%",
+  "Happy Birthday: Star Message": "Hoje é seu aniversário! Parabéns!",
+  "Happy Birthday: Farmhand Birthday Message": "Hoje é o aniversário de @. Deem os parabéns para ele(a)."
+}
