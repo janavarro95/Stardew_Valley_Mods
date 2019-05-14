@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DeepWoodsMod.API;
 using Microsoft.Xna.Framework;
 using Netcode;
 using Omegasis.NightOwl.Framework;
@@ -58,6 +59,9 @@ namespace Omegasis.NightOwl
 
         /// <summary>The player's health before they collapsed.</summary>
         private int PreCollapseHealth;
+
+        /// <summary>If player collapsed in a Deep Woods location, this is that location's level.</summary>
+        private int PreCollapseDeepWoodsLevel;
 
         /// <summary>Checks if the player was bathing or not before passing out.</summary>
         private bool isBathing;
@@ -117,7 +121,9 @@ namespace Omegasis.NightOwl
                     if (Context.IsWorldReady && this.JustStartedNewDay && this.Config.KeepPositionAfterCollapse)
                     {
                         if (this.PreCollapseMap != null)
-                            Game1.warpFarmer(this.PreCollapseMap, this.PreCollapseTile.X, this.PreCollapseTile.Y, false);
+                        {
+                            this.WarpToPreCollapseMap();
+                        }
 
                         this.PreCollapseMap = null;
                         this.JustStartedNewDay = false;
@@ -183,7 +189,9 @@ namespace Omegasis.NightOwl
                     if (this.Config.KeepPositionAfterCollapse)
                     {
                         if (!Game1.weddingToday)
-                            Game1.warpFarmer(this.PreCollapseMap, this.PreCollapseTile.X, this.PreCollapseTile.Y, false);
+                        {
+                            this.WarpToPreCollapseMap();
+                        }
                     }
 
                     if (this.horse != null && this.shouldWarpHorse)
@@ -305,6 +313,7 @@ namespace Omegasis.NightOwl
                     this.PreCollapseStamina = Game1.player.stamina;
                     this.PreCollapseHealth = Game1.player.health;
                     this.PreCollapseMoney = Game1.player.money;
+                    this.PreCollapseDeepWoodsLevel = (Game1.player.currentLocation as IDeepWoodsLocation)?.Level ?? 1;
                     this.isInSwimSuit = Game1.player.bathingClothes.Value;
                     this.isBathing = Game1.player.swimming.Value;
 
@@ -356,6 +365,32 @@ namespace Omegasis.NightOwl
         {
             if (Game1.player.stamina <= 0 || Game1.player.health <= 0 || Game1.timeOfDay >= 2600) return true;
             else return false;
+        }
+
+        /// <summary>Warp the player back to the map they collapsed in.</summary>
+        private void WarpToPreCollapseMap()
+        {
+            if (this.PreCollapseMap == null)
+                return;
+
+            if (Game1.getLocationFromName(this.PreCollapseMap) != null)
+            {
+                Game1.warpFarmer(this.PreCollapseMap, this.PreCollapseTile.X, this.PreCollapseTile.Y, false);
+            }
+            else if (this.PreCollapseMap.StartsWith("DeepWoods") && this.Helper.ModRegistry.IsLoaded("maxvollmer.deepwoodsmod"))
+            {
+                // If player was deep in the forest and has a Woods Obelisk, warp them into the appropriate level
+                IDeepWoodsAPI deepWoodsAPI = this.Helper.ModRegistry.GetApi<IDeepWoodsAPI>("maxvollmer.deepwoodsmod");
+                if (deepWoodsAPI != null && this.PreCollapseDeepWoodsLevel > 1 && Game1.getFarm().buildings.Any(b => b.buildingType.Value == "Woods Obelisk"))
+                {
+                    deepWoodsAPI.WarpPlayerToDeepWoodsLevel(this.PreCollapseDeepWoodsLevel);
+                }
+                else // warp player into root level ("DeepWoods")
+                {
+                    // DeepWoods mod will automagically put the player to the entrance position if we warp them to (0,0)
+                    Game1.warpFarmer("DeepWoods", 0, 0, false);
+                }
+            }
         }
     }
 }
