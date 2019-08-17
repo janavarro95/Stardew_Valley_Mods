@@ -239,6 +239,8 @@ namespace Omegasis.HappyBirthday
                     index = pair.Value.BirthdayDay;
                     Game1.player.FarmerRenderer.drawMiniPortrat(Game1.spriteBatch, new Vector2(Game1.activeClickableMenu.xPositionOnScreen + 152 + (index - 1) % 7 * 32 * 4, Game1.activeClickableMenu.yPositionOnScreen + 230 + (index - 1) / 7 * 32 * 4), 0.5f, 4f, 2, Game1.getFarmer(pair.Key));
                 }
+
+                Game1.activeClickableMenu.drawMouse(e.SpriteBatch);
             }
         }
 
@@ -265,13 +267,17 @@ namespace Omegasis.HappyBirthday
                         text.SetData<Color>(col);
                         //players birthday position rect=new ....
 
+                        string bdayDisplay = Game1.content.LoadString("Strings\\UI:Billboard_Birthday");
+
                         if (!string.IsNullOrEmpty(this.PlayerData.BirthdaySeason))
                         {
                             if (this.PlayerData.BirthdaySeason.ToLower() == Game1.currentSeason.ToLower())
                             {
                                 int index = this.PlayerData.BirthdayDay;
                                 Rectangle birthdayRect = new Rectangle(Game1.activeClickableMenu.xPositionOnScreen + 152 + (index - 1) % 7 * 32 * 4, Game1.activeClickableMenu.yPositionOnScreen + 200 + (index - 1) / 7 * 32 * 4, 124, 124);
-                                billboard.calendarDays.Add(new ClickableTextureComponent("", birthdayRect, "", $"{Game1.player.Name}'s Birthday", text, new Rectangle(0, 0, 124, 124), 1f, false));
+                                // billboard.calendarDays.Add(new ClickableTextureComponent("", birthdayRect, "", $"{Game1.player.Name}'s Birthday", text, new Rectangle(0, 0, 124, 124), 1f, false));
+                                billboard.calendarDays.Add(new ClickableTextureComponent("", birthdayRect, "", string.Format(bdayDisplay, Game1.player.Name), text, new Rectangle(0, 0, 124, 124), 1f, false));
+
                             }
                         }
 
@@ -280,7 +286,8 @@ namespace Omegasis.HappyBirthday
                             if (pair.Value.BirthdaySeason != Game1.currentSeason.ToLower()) continue;
                             int index = pair.Value.BirthdayDay;
                             Rectangle otherBirthdayRect = new Rectangle(Game1.activeClickableMenu.xPositionOnScreen + 152 + (index - 1) % 7 * 32 * 4, Game1.activeClickableMenu.yPositionOnScreen + 200 + (index - 1) / 7 * 32 * 4, 124, 124);
-                            billboard.calendarDays.Add(new ClickableTextureComponent("", otherBirthdayRect, "", $"{Game1.getFarmer(pair.Key).Name}'s Birthday", text, new Rectangle(0, 0, 124, 124), 1f, false));
+                            // billboard.calendarDays.Add(new ClickableTextureComponent("", otherBirthdayRect, "", $"{Game1.getFarmer(pair.Key).Name}'s Birthday", text, new Rectangle(0, 0, 124, 124), 1f, false));
+                            billboard.calendarDays.Add(new ClickableTextureComponent("", otherBirthdayRect, "", string.Format(bdayDisplay, Game1.getFarmer(pair.Key).Name), text, new Rectangle(0, 0, 124, 124), 1f, false));
                         }
 
                         break;
