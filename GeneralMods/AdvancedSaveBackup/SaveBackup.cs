@@ -15,16 +15,16 @@ namespace Omegasis.SaveBackup
         ** Fields
         *********/
         /// <summary>The folder path containing the game's app data.</summary>
-        private static readonly string AppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StardewValley");
+        private static string AppDataPath => Constants.TargetPlatform != GamePlatform.Android ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StardewValley") : Constants.DataPath;
 
         /// <summary>The folder path containing the game's saves.</summary>
-        private static readonly string SavesPath = Path.Combine(SaveBackup.AppDataPath, "Saves");
+        private static string SavesPath => Constants.TargetPlatform != GamePlatform.Android ? Path.Combine(SaveBackup.AppDataPath, "Saves") : Constants.CurrentSavePath;
 
         /// <summary>The folder path containing backups of the save before the player starts playing.</summary>
         private static readonly string PrePlayBackupsPath = Path.Combine(SaveBackup.AppDataPath, "Backed_Up_Saves", "Pre_Play_Saves");
 
         /// <summary>The folder path containing nightly backups of the save.</summary>
-        private static readonly string NightlyBackupsPath = Path.Combine(SaveBackup.AppDataPath, "Backed_Up_Saves", "Nightly_InGame_Saves");
+        private static string NightlyBackupsPath => Constants.TargetPlatform != GamePlatform.Android ? Path.Combine(SaveBackup.AppDataPath, "Backed_Up_Saves", "Nightly_InGame_Saves") : Path.Combine(SaveBackup.AppDataPath, "Backed_Up_Saves", Constants.SaveFolderName, "Nightly_InGame_Saves");
 
         /// <summary>The mod configuration.</summary>
         private ModConfig Config;
@@ -39,7 +39,8 @@ namespace Omegasis.SaveBackup
         {
             this.Config = helper.ReadConfig<ModConfig>();
 
-            this.BackupSaves(SaveBackup.PrePlayBackupsPath);
+            if(Constants.TargetPlatform != GamePlatform.Android)
+                this.BackupSaves(SaveBackup.PrePlayBackupsPath);
 
             helper.Events.GameLoop.Saving += this.OnSaving;
         }
