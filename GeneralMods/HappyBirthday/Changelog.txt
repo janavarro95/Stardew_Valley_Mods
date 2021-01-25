@@ -1,0 +1,35 @@
+Happy Birthday Change Log
+
+~~~~~~~~~~~~~~~~
+Manifest 1.9.0 Changelog
+~~~~~~~~~~~~~~~~
+General Changes
+    -Added support for Chinese birthday translations thanks to Nexus user erinyang.
+    -Added support for loading translation strings for Birthday Mail and HUD Messages.
+
+
+~~~~~~~~~~~~~~~~
+Manifest 1.8.0 Changelog
+~~~~~~~~~~~~~~~~
+
+﻿General Changes
+	﻿-NPCs now wish you a happy birthday if you have 2+ hearts with them. (Configurable in config file)
+	﻿-A language can be set for birthday messages in the Config.json file.
+	-Added support for birthday messages to be in .json files for easier editing.
+	-Added support for birthday messages to be in multiple supported languages
+	    -English
+	    -Spanish
+	    -German
+	    -Chinese
+	    -Japanese
+	    -Brazilian Portuguese
+	-Added in spouse specific birthday dialogue messages which can be created by the players.
+	-Added in multiple languages for spouse birthday messages.
+	-Added in birthday gifts to be in .json files.
+	-Added in a new pool of spouse specific gifts that can be set by the player located in SpouseBirthdayGifts.json
+	-Added in support for loading legacy birthday gift.xnb info from StardewValley/Content/Data/PossibleBirthdayGifts.xnb
+	-Added in support for loading legacy birthday messages from StardewValley/Content/Data/BirthdayMessages.xnb
+	-Added in player portraits to be shown on the callendar.
+Multiplayer changes:
+	-Added in multiplayer farmhand portraits to be shown on the callendar.
+	-Added in a hud message that displays when another player has a birthday.
