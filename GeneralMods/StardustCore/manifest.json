@@ -1,0 +1,10 @@
+{
+  "Name": "StardustCore",
+  "Author": "Alpha_Omegasis updated by noswanson1982",
+  "Version": "2.2.1-unofficial.1-noswanson1982",
+  "Description": "A core mod that allows for other mods of mine to be run.",
+  "UniqueID": "Omegasis.StardustCore",
+  "EntryDll": "StardustCore.dll",
+  "MinimumApiVersion": "2.10.1",
+  "UpdateKeys": []
+}
