@@ -82,10 +82,6 @@ namespace Omegasis.SaveBackup
             }
             else
             {
-                if (!Directory.Exists(SaveBackup.AndroidNightlyBackupsPath))
-                {
-                    Directory.CreateDirectory(SaveBackup.AndroidNightlyBackupsPath);
-                }
                 this.BackupSaves(SaveBackup.AndroidNightlyBackupsPath);
             }
         }
@@ -94,6 +90,9 @@ namespace Omegasis.SaveBackup
         /// <param name="folderPath">The folder path in which to generate saves.</param>
         private void BackupSaves(string folderPath)
         {
+            //Ensure the backup directory is created and exists.
+            //CreateDirectory will do nothing if it already exists.
+            Directory.CreateDirectory(folderPath);
             if (this.Config.UseZipCompression == false)
             {
 

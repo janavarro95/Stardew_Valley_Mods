@@ -6,6 +6,8 @@
     <RootNamespace>Omegasis.SaveBackup</RootNamespace>
 
     <Platforms>AnyCPU;x64</Platforms>
+
+    <BundleExtraAssemblies>ThirdParty</BundleExtraAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
