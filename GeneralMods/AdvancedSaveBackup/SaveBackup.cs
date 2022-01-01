@@ -17,10 +17,10 @@ namespace Omegasis.SaveBackup
         ** Fields
         *********/
         /// <summary>The folder path containing the game's app data.</summary>
-        private static readonly string AppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StardewValley");
+        private static readonly string AppDataPath = Constants.DataPath;
 
         /// <summary>The folder path containing the game's saves.</summary>
-        private static readonly string SavesPath = Path.Combine(SaveBackup.AppDataPath, "Saves");
+        private static readonly string SavesPath = Constants.SavesPath;
 
         /// <summary>The folder path containing backups of the save before the player starts playing.</summary>
         private static readonly string PrePlayBackupsPath = Path.Combine(SaveBackup.AppDataPath, "Backed_Up_Saves", "Pre_Play_Saves");
@@ -92,12 +92,12 @@ namespace Omegasis.SaveBackup
         {
             //Ensure the backup directory is created and exists.
             //CreateDirectory will do nothing if it already exists.
-            Directory.CreateDirectory(folderPath);
+            DirectoryInfo backupDir = Directory.CreateDirectory(folderPath);
             if (this.Config.UseZipCompression == false)
             {
 
                 DirectoryCopy(Constants.TargetPlatform != GamePlatform.Android ? SaveBackup.SavesPath : SaveBackup.AndroidCurrentSavePath, Path.Combine(folderPath, $"backup-{DateTime.Now:yyyyMMdd'-'HHmmss}"), true);
-                new DirectoryInfo(folderPath)
+                backupDir
                 .EnumerateDirectories()
                 .OrderByDescending(f => f.CreationTime)
                 .Skip(this.Config.SaveCount)
@@ -106,12 +106,14 @@ namespace Omegasis.SaveBackup
             }
             else
             {
-                FastZip fastZip = new FastZip();
-                fastZip.UseZip64 = UseZip64.Off;
+                FastZip fastZip = new FastZip
+                {
+                    UseZip64 = UseZip64.Off
+                };
                 bool recurse = true;  // Include all files by recursing through the directory structure
                 string filter = null; // Dont filter any files at all
                 fastZip.CreateZip(Path.Combine(folderPath, $"backup-{DateTime.Now:yyyyMMdd'-'HHmmss}.zip"), Constants.TargetPlatform != GamePlatform.Android ? SaveBackup.SavesPath : SaveBackup.AndroidCurrentSavePath, recurse, filter);
-                new DirectoryInfo(folderPath)
+                backupDir
                 .EnumerateFiles()
                 .OrderByDescending(f => f.CreationTime)
                 .Skip(this.Config.SaveCount)
