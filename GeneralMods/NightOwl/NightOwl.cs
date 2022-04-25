@@ -346,11 +346,7 @@ namespace Omegasis.NightOwl
 
                     //Game1.timeOfDay += 2400; //Recalculate for the sake of technically being up a whole day. Why did I put this here?
 
-                    //Reset animal happiness since it drains over night.
-                    for (int i = 0; i < this.oldAnimalHappiness.Count; i++)
-                    {
-                        Game1.getFarm().getAllFarmAnimals()[i].happiness.Value = this.oldAnimalHappiness[i].Value;
-                    }
+
 
                     foreach(var v in OnPlayerStayingUpLate)
                     {
