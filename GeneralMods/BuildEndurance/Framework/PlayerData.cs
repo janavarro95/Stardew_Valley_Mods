@@ -12,9 +12,6 @@ namespace Omegasis.BuildEndurance.Framework
         /// <summary>The XP points needed to reach the next endurance level.</summary>
         public double ExpToNextLevel { get; set; } = 20;
 
-        /// <summary>The initial stamina bonus to apply regardless of the player's endurance level, from the config file.</summary>
-        public int BaseStaminaBonus { get; set; }
-
         /// <summary>The stamina points to add to the player's base stamina due to their current endurance level.</summary>
         public int CurrentLevelStaminaBonus { get; set; }
 

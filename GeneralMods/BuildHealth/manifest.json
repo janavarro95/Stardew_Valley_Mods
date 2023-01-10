@@ -1,7 +1,7 @@
 {
   "Name": "Build Health",
   "Author": "Alpha_Omegasis",
-  "Version": "1.9.0",
+  "Version": "1.9.1",
   "Description": "Increase your health as you play.",
   "UniqueID": "Omegasis.BuildHealth",
   "EntryDll": "BuildHealth.dll",

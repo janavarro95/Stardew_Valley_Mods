@@ -6,17 +6,8 @@ namespace Omegasis.BuildHealth.Framework
         /// <summary>The XP points needed to reach the next level.</summary>
         public double ExpToNextLevel { get; set; } = 20;
 
-        /// <summary>The player's current XP points.</summary>
-        public double CurrentExp { get; set; }
-
-        /// <summary>The player's current level.</summary>
-        public int CurrentLevel { get; set; }
-
         /// <summary>The initial health bonus to apply regardless of the player's level, from the config file.</summary>
         public int BaseHealthBonus { get; set; }
-
-        /// <summary>The health points to add to the player's base health due to their current level.</summary>
-        public int CurrentLevelHealthBonus { get; set; }
 
         /// <summary>The multiplier for the experience points to need to reach an endurance level relative to the previous one.</summary>
         public double ExpCurve { get; set; } = 1.15;
