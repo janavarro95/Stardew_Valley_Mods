@@ -1,8 +1,8 @@
 {
   "Name": "Build Endurance",
   "Author": "Alpha_Omegasis",
-  "Version": "1.9.0",
-  "Description": "Increase your health as you play.",
+  "Version": "1.9.1",
+  "Description": "Increase your stamina as you play.",
   "UniqueID": "Omegasis.BuildEndurance",
   "EntryDll": "BuildEndurance.dll",
   "MinimumApiVersion": "3.0.0",

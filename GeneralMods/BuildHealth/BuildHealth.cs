@@ -44,6 +44,7 @@ namespace Omegasis.BuildHealth
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
             helper.Events.GameLoop.SaveLoaded += this.OnSaveLoaded;
+            helper.Events.GameLoop.Saving += this.OnSaving;
 
             this.Config = helper.ReadConfig<ModConfig>();
         }
@@ -110,7 +111,11 @@ namespace Omegasis.BuildHealth
             this.WasCollapsed = false;
 
             // load player data
-            this.PlayerData = this.Helper.Data.ReadJsonFile<PlayerData>(this.RelativeDataPath) ?? new PlayerData();
+            this.PlayerData = this.Helper.Data.ReadJsonFile<PlayerData>(this.RelativeDataPath)
+                ?? new PlayerData {
+                    ExpToNextLevel = this.Config.ExpToNextLevel
+                };
+
             if (this.PlayerData.OriginalMaxHealth == 0)
                 this.PlayerData.OriginalMaxHealth = Game1.player.maxHealth;
 
@@ -119,17 +124,19 @@ namespace Omegasis.BuildHealth
             {
                 Game1.player.maxHealth = this.PlayerData.OriginalMaxHealth;
                 this.PlayerData.ExpToNextLevel = this.Config.ExpToNextLevel;
-                this.PlayerData.CurrentExp = this.Config.CurrentExp;
+                this.PlayerData.CurrentExp = 0;
                 this.PlayerData.CurrentLevelHealthBonus = 0;
                 this.PlayerData.OriginalMaxHealth = Game1.player.maxHealth;
-                this.PlayerData.BaseHealthBonus = 0;
                 this.PlayerData.CurrentLevel = 0;
                 this.PlayerData.ClearModEffects = false;
             }
 
             // else apply health bonus
-            else
-                Game1.player.maxHealth = this.PlayerData.BaseHealthBonus + this.PlayerData.CurrentLevelHealthBonus + this.PlayerData.OriginalMaxHealth;
+            else {
+                Game1.player.maxHealth = this.Config.BaseHealthBonus + this.PlayerData.CurrentLevelHealthBonus + this.PlayerData.OriginalMaxHealth;
+                if (Game1.player.health > Game1.player.maxHealth)
+                    Game1.player.health = Game1.player.maxHealth;
+            }
         }
 
         /// <summary>Raised after the game begins a new day (including when the player loads a save).</summary>
@@ -159,7 +166,13 @@ namespace Omegasis.BuildHealth
                     this.PlayerData.CurrentLevelHealthBonus += this.Config.HealthIncreasePerLevel;
                 }
             }
+        }
 
+        /// <summary>Raised before the game begins writes data to the save file (except the initial save creation).</summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnSaving(object sender, SavingEventArgs e)
+        {
             // save data
             this.Helper.Data.WriteJsonFile(this.RelativeDataPath, this.PlayerData);
         }

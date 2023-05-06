@@ -116,7 +116,10 @@ namespace Omegasis.BuildEndurance
             this.WasEating = false;
 
             // load player data
-            this.PlayerData = this.Helper.Data.ReadJsonFile<PlayerData>(this.RelativeDataPath) ?? new PlayerData();
+            this.PlayerData = this.Helper.Data.ReadJsonFile<PlayerData>(this.RelativeDataPath)
+                ?? new PlayerData {
+                    ExpToNextLevel = this.Config.ExpToNextLevel
+                };
             if (this.PlayerData.OriginalMaxStamina == 0)
                 this.PlayerData.OriginalMaxStamina = Game1.player.MaxStamina;
 
@@ -125,10 +128,9 @@ namespace Omegasis.BuildEndurance
             {
                 Game1.player.MaxStamina = this.PlayerData.OriginalMaxStamina;
                 this.PlayerData.ExpToNextLevel = this.Config.ExpToNextLevel;
-                this.PlayerData.CurrentExp = this.Config.CurrentExp;
+                this.PlayerData.CurrentExp = 0;
                 this.PlayerData.CurrentLevelStaminaBonus = 0;
                 this.PlayerData.OriginalMaxStamina = Game1.player.MaxStamina;
-                this.PlayerData.BaseStaminaBonus = 0;
                 this.PlayerData.CurrentLevel = 0;
                 this.PlayerData.ClearModEffects = false;
             }
@@ -137,8 +139,10 @@ namespace Omegasis.BuildEndurance
             else
             {
                 Game1.player.MaxStamina = this.PlayerData.NightlyStamina <= 0
-                    ? this.PlayerData.BaseStaminaBonus + this.PlayerData.CurrentLevelStaminaBonus + this.PlayerData.OriginalMaxStamina
+                    ? this.Config.BaseStaminaBonus + this.PlayerData.CurrentLevelStaminaBonus + this.PlayerData.OriginalMaxStamina
                     : this.PlayerData.NightlyStamina;
+                if (Game1.player.Stamina > Game1.player.MaxStamina)
+                    Game1.player.Stamina = Game1.player.MaxStamina;
             }
         }
 
