@@ -1,14 +1,15 @@
 {
-  "Alex": "",
-  "Elliott": "",
-  "Harvey": "",
-  "Sam": "",
-  "Sebastian": "",
-  "Shane": "",
-  "Abigail": "",
-  "Emily": "",
-  "Haley": "",
-  "Leah": "",
-  "Maru": "",
-  "Penny": ""
+  "Alex": "Ehi, {AffectionateSpouseWord}. Sono così felice di averti sposato. Mi fai sentire ogni giorno come se avessi vinto un'evento sportivo. Buon compleanno! $l",
+  "Elliott": "Buon{TimeOfDay}, {AffectionateSpouseWord}. Stavo pensando a come sei stata una musa per il mio lavoro. Mi ispiri ogni giorno che passo con te. Buon compleanno! $l",
+  "Harvey": "Buon{TimeOfDay}, {AffectionateSpouseWord}. Stavo pensando a quanto mi sento rinvigorito da quando ti ho sposato. Quando ti guardo, mi sembra di brillare di gioia. Buon compleanno! $l",
+  "Sam": "Buon{TimeOfDay}, {AffectionateSpouseWord}. Sai, prima di conoscerti non mi sarei mai immaginato di sistemarmi, ma ora che l'ho fatto sento che non voglio più guardarmi indietro. Buon compleanno! $l",
+  "Sebastian": "I was never a big celebrator of birthdays, but with you, today is special. Happy birthday, {AffectionateSpouseWord}. $l",
+  "Shane": "Non avrei mai pensato di godermi qualcosa di diverso dal bere ai compleanni, ma tu mi hai mostrato come vivere una vita fantastica. Buon compleanno, {AffectionateSpouseWord}. $l",
+  "Abigail": "Ehi, {AffectionateSpouseWord}. Sai che con te ogni giorno sembra una grande avventura! Buon compleanno! $l",
+  "Emily": "Sai, ogni volta che ho cercato di leggere la mia fortuna, non ho mai pensato che sarei stata così felice come lo sono con te! Buon compleanno, {AffectionateSpouseWord}! $l",
+  "Haley": "Sai, {AffectionateSpouseWord}, abbiamo fatto molta strada dal nostro primo incontro, ma sono felice di aver intrapreso questo viaggio insieme. Con te ogni giorno è perfetto. Buon compleanno! $l",
+  "Leah": "Ehi, Buon{TimeOfDay}, {AffectionateSpouseWord}. Stare con te è stata una grande ispirazione per me. Potrei scolpire il legno, ma stare con te ha contribuito a scolpire la mia vita. Buon compleanno! $l",
+  "Maru": "Buon compleanno, {AffectionateSpouseWord}. Ho sempre pensato di dover guardare nello spazio per trovare una stella cadente, ma quando ti guardo mi rendo conto di averne già una. $l",
+  "Penny": "Buon compleanno, {AffectionateSpouseWord}. Nei libri leggo sempre di lieto fine, ma stare con te mi fa capire che continua anche in futuro. A tanti altri anni a venire. $l",
+  "Krobus": "Buon{TimeOfDay}. Sono felice di aver avuto l'opportunità di vivere insieme, perché mi ha insegnato molto su di voi e sulla vostra cultura umana, compreso il modo in cui si festeggiano i compleanni. Spero che potremo trascorrere molti altri anni insieme. Buon compleanno @! $h"
 }
