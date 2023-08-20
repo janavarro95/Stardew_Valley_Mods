@@ -1,8 +1,13 @@
 {
-  "Mail:birthdayMom": "",
-  "Mail:birthdayDad": "",
-  "Happy Birthday: Star Message": "",
-  "Happy Birthday: Farmhand Birthday Message": "",
-  "Season": "Season",
-  "Date": "Date"
+  "BirthdayError_FestivalDay": "Il tuo compleanno non può essere lo stesso giorno di un festival. Spiacente!",
+  "Date": "Data",
+  "Default Birthday Wish": "Buon compleanno, @!",
+  "FavoriteGift": "Regalo preferito",
+  "Happy Birthday: Farmhand Birthday Message": "È il compleanno di @! Tanti auguri a loro!",
+  "Happy Birthday: Star Message": "Oggi è il tuo compleanno! Buon compleanno!",
+  "Season": "Stagione",
+  "Selected": "Selezionato",
+  "TimeOfDay_Morning": " Giorno",
+  "TimeOfDay_Afternoon": " Pomeriggio",
+  "TimeOfDay_Night":"a Sera"
 }
