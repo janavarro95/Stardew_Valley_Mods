@@ -58,8 +58,8 @@ namespace Omegasis.BillboardAnywhere
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
             helper.Events.Display.RenderedActiveMenu += this.RenderBillboardMenuButton;
 
-            this.calendarTexture = helper.Content.Load<Texture2D>(Path.Combine("Assets", "Billboard.png"));
-            this.questTexture = helper.Content.Load<Texture2D>(Path.Combine("Assets", "Quest.png"));
+            this.calendarTexture = helper.ModContent.Load<Texture2D>(Path.Combine("Assets", "Billboard.png"));
+            this.questTexture = helper.ModContent.Load<Texture2D>(Path.Combine("Assets", "Quest.png"));
             this.billboardButton = new ClickableTextureComponent(new Rectangle((int)this.Config.CalendarOffsetFromMenu.X, (int)this.Config.CalendarOffsetFromMenu.Y, this.calendarTexture.Width, this.calendarTexture.Height), this.calendarTexture, new Rectangle(0, 0, this.calendarTexture.Width, this.calendarTexture.Height), 1f, false);
             this.questButton = new ClickableTextureComponent(new Rectangle((int)this.Config.QuestOffsetFromMenu.X, (int)this.Config.QuestOffsetFromMenu.Y, this.questTexture.Width, this.questTexture.Height), this.questTexture, new Rectangle(0, 0, this.questTexture.Width, this.questTexture.Height), 1f, false);
         }
