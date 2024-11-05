@@ -1,7 +1,7 @@
 {
   "Name": "Refill Silos",
   "Author": "Alpha_Omegasis",
-  "Version": "1.0.1",
+  "Version": "1.0.2",
   "Description": "Allows you to purchase enough hay to refill your silos, or as much as you can afford, from the Animal Shop.",
   "UniqueID": "Omegasis.RefillSilos",
   "EntryDll": "RefillSilos.dll",

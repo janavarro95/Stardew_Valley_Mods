@@ -681,7 +681,7 @@ namespace Omegasis.StardustCore.Events
                 }
             }
 
-            ModCore.ModMonitor.Log(b.ToString(), StardewModdingAPI.LogLevel.Info);
+            StardustCoreModCore.ModMonitor.Log(b.ToString(), StardewModdingAPI.LogLevel.Info);
 
             this.addEventData(b);
         }
@@ -1463,7 +1463,7 @@ namespace Omegasis.StardustCore.Events
             b.Append(Message);
            // b.Append("\\\"");
 
-            StardustCore.ModCore.ModMonitor.Log(b.ToString());
+            StardustCore.StardustCoreModCore.ModMonitor.Log(b.ToString());
 
             this.addEventData(b);
         }

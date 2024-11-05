@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework.Graphics;
+using Omegasis.StardustCore.Utilities.Objects;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -115,14 +116,17 @@ namespace CrystalRefiner
             {
                 "category_gem"
             };
+            machineOutputTriggerRuleGems.Condition = string.Format("ITEM_CATEGORY INPUT {0}", StardewValley.Object.GemCategory.ToString());
+
             MachineOutputTriggerRule machineOutputTriggerRuleMinerals = new MachineOutputTriggerRule();
-            machineOutputTriggerRuleGems.Id = "MineralsPlacedIntoMachine";
-            machineOutputTriggerRuleGems.Trigger = MachineOutputTrigger.ItemPlacedInMachine;
-            machineOutputTriggerRuleGems.RequiredCount = 1;
-            machineOutputTriggerRuleGems.RequiredTags = new List<string>()
+            machineOutputTriggerRuleMinerals.Id = "MineralsPlacedIntoMachine";
+            machineOutputTriggerRuleMinerals.Trigger = MachineOutputTrigger.ItemPlacedInMachine;
+            machineOutputTriggerRuleMinerals.RequiredCount = 1;
+            machineOutputTriggerRuleMinerals.RequiredTags = new List<string>()
             {
                 "category_minerals"
             };
+            machineOutputTriggerRuleMinerals.Condition = string.Format("ITEM_CATEGORY INPUT {0}", StardewValley.Object.mineralsCategory.ToString());
             machineOutputRule.Triggers.Add(machineOutputTriggerRuleGems);
             machineOutputRule.Triggers.Add(machineOutputTriggerRuleMinerals);
 
@@ -134,8 +138,9 @@ namespace CrystalRefiner
             machineItemOutput.ItemId = "DROP_IN";
             //Adding the condition to the actual output rule itself determines if the trigger for item quality works.
             machineItemOutput.Condition = "ANY \"ITEM_QUALITY Input 0 2\"";
-            machineItemOutput.Quality = 4;
-            machineOutputRule.MinutesUntilReady = 3600; //Make it take 3 days to process. Each in-game day is 1200 in-game minutes.
+            int maxQualityLevel = QualityUtilities.GetMaxQualityLevel();
+            machineItemOutput.Quality = maxQualityLevel;
+            machineOutputRule.DaysUntilReady = QualityUtilities.GetQualityProgressionList(false).Count-1; //For every stage, make it "take" 1 day to process to get to the top tier quality.
             machineOutputRule.OutputItem.Add(machineItemOutput);
 
 
@@ -203,7 +208,7 @@ namespace CrystalRefiner
                 shopDataDictionary["Dwarf"].Items.Add(new ShopItemData()
                 {
                     AvailableStock = -1,
-                    AvailableStockLimit = LimitedStockMode.Global,
+                    AvailableStockLimit = LimitedStockMode.Player,
                     Id = Constants.CrystalRefinerObjectId,
                     TradeItemAmount = 1,
                     ItemId = Constants.CrystalRefinerObjectId,

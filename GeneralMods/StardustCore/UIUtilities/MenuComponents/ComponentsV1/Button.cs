@@ -237,7 +237,7 @@ namespace Omegasis.StardustCore.UIUtilities.MenuComponents.ComponentsV1
         {
             var b = new Button(this.name, this.bounds, this.animationManager.getExtendedTexture(), this.label, this.sourceRect, this.scale, this.animationManager.getDefaultAnimation(), this.textureColor, this.textColor, this.buttonFunctionality, true);
             if (b.buttonFunctionality.hover == null)
-                ModCore.ModMonitor.Log("I'm null!");
+                StardustCoreModCore.ModMonitor.Log("I'm null!");
             return b;
         }
 

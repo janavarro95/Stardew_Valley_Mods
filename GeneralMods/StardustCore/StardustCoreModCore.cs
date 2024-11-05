@@ -8,11 +8,13 @@ using StardewValley;
 
 namespace Omegasis.StardustCore
 {
-    public class ModCore : Mod
+    public class StardustCoreModCore : Mod
     {
+
         public static IModHelper ModHelper;
         public static IMonitor ModMonitor;
         public static IManifest Manifest;
+        public static StardustCoreModCore Instance;
         public static TextureManager TextureManager;
         public static Dictionary<string, TextureManager> TextureManagers;
 
@@ -27,6 +29,8 @@ namespace Omegasis.StardustCore
             ModHelper = this.Helper;
             ModMonitor = this.Monitor;
             Manifest = this.ModManifest;
+
+            Instance = this;
 
             IlluminateFramework.Colors.initializeColors();
             ContentDirectory = "ModAssets";
@@ -45,6 +49,7 @@ namespace Omegasis.StardustCore
             this.Helper.ConsoleCommands.Add("Omegasis.StardustCore.ModdingUtilities.AddFriendship", "Adds a certain amount of friendship to the given npc. <name , amount>", AddNPCFriendship);
 
             this.config = ModHelper.ReadConfig<ModConfig>();
+
         }
 
         private void GameLoop_GameLaunched(object sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)

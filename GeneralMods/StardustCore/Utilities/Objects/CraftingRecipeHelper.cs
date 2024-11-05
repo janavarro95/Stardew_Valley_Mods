@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StardewValley;
 
-namespace CrystalRefiner
+namespace Omegasis.StardustCore.Utilities.Objects
 {
     /// <summary>
     /// A helper class to help create recipe formats for Stardew Valley.

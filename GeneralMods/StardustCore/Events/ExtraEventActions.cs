@@ -58,7 +58,7 @@ namespace Omegasis.StardustCore.Events
             junimo.EventActor = true;
             junimo.flip = flipped;
 
-            IReflectedField<NetColor> colorF=StardustCore.ModCore.ModHelper.Reflection.GetField<NetColor>(junimo, "color", true);
+            IReflectedField<NetColor> colorF=StardustCore.StardustCoreModCore.ModHelper.Reflection.GetField<NetColor>(junimo, "color", true);
             NetColor c = colorF.GetValue();
             c.R = color.R;
             c.G = color.G;

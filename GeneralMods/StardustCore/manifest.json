@@ -1,7 +1,7 @@
 {
   "Name": "StardustCore",
   "Author": "Alpha_Omegasis",
-  "Version": "3.0.1",
+  "Version": "3.1.0",
   "Description": "A core mod that allows for other mods of mine to be run.",
   "UniqueID": "Omegasis.StardustCore",
   "EntryDll": "StardustCore.dll",

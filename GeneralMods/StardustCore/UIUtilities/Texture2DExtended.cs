@@ -168,18 +168,18 @@ namespace Omegasis.StardustCore.UIUtilities
         {
             if (string.IsNullOrEmpty(this.path.Value))
             {
-                ModCore.log("Texture path is null: " + this.path.Value);
+                StardustCoreModCore.log("Texture path is null: " + this.path.Value);
                 return;
 
             }
             if (string.IsNullOrEmpty(this.modID.Value))
             {
-                ModCore.log("Texture modId is null?");
+                StardustCoreModCore.log("Texture modId is null?");
                 return;
             }
             if (string.IsNullOrEmpty(this.textureManagerId.Value))
             {
-                ModCore.log("Texture manager id is null?");
+                StardustCoreModCore.log("Texture manager id is null?");
                 return;
             }
 

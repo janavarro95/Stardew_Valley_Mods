@@ -156,7 +156,7 @@ namespace Omegasis.StardustCore.Animations
             }
             else
             {
-                ModCore.ModMonitor.Log("Error setting animation: " + AnimationName + " animation does not exist in list of available animations. Did you make sure to add it in?");
+                StardustCoreModCore.ModMonitor.Log("Error setting animation: " + AnimationName + " animation does not exist in list of available animations. Did you make sure to add it in?");
                 return false;
             }
         }
@@ -181,7 +181,7 @@ namespace Omegasis.StardustCore.Animations
             }
             else
             {
-                ModCore.ModMonitor.Log("Error setting animation: " + AnimationName + " animation does not exist in list of available animations. Did you make sure to add it in?");
+                StardustCoreModCore.ModMonitor.Log("Error setting animation: " + AnimationName + " animation does not exist in list of available animations. Did you make sure to add it in?");
                 return false;
             }
         }

@@ -48,13 +48,13 @@ namespace Omegasis.StardustCore.UIUtilities.MenuComponents.ComponentsV1
         {
             if (this.containsPoint(x, y))
             {
-                ModCore.ModMonitor.Log("CLICK THE CYCLE BUTTON!");
+                StardustCoreModCore.ModMonitor.Log("CLICK THE CYCLE BUTTON!");
                 //cycle button to next button and loop around if necessary.
                 this.buttonIndex++;
-                ModCore.ModMonitor.Log("Index is! " + this.buttonIndex.ToString());
+                StardustCoreModCore.ModMonitor.Log("Index is! " + this.buttonIndex.ToString());
                 if (this.buttonIndex >= this.buttons.Count)
                 {
-                    ModCore.ModMonitor.Log("NANIIII????");
+                    StardustCoreModCore.ModMonitor.Log("NANIIII????");
                     this.buttonIndex = 0;
                 }
 

@@ -15,7 +15,7 @@ namespace Omegasis.StardustCore.Compatibility.SpaceCore
 
         public static SpaceCoreAPI GetMappedSpaceCoreAPI()
         {
-            var spaceCore = ModCore.ModHelper.ModRegistry.GetApi<SpaceCoreAPI>("spacechase0.SpaceCore");
+            var spaceCore = StardustCoreModCore.ModHelper.ModRegistry.GetApi<SpaceCoreAPI>("spacechase0.SpaceCore");
             return spaceCore;
         }
 

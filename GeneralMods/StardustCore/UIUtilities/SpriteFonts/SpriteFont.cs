@@ -12,7 +12,7 @@ namespace Omegasis.StardustCore.UIUtilities.SpriteFonts
 
         public static void initialize()
         {
-            FontDirectory = Path.Combine(ModCore.ContentDirectory, "Fonts");
+            FontDirectory = Path.Combine(StardustCoreModCore.ContentDirectory, "Fonts");
             vanillaFont = new VanillaFont();
         }
     }

@@ -1,9 +1,13 @@
+using StardewValley;
+
 namespace Omegasis.StardustCore
 {
     public class ModConfig
     {
-        public bool enableMultiplayerHack { get; set; } = false;
-        public string modularMenuKey { get; set; } = "P";
+        /// <summary>
+        /// A custom max quality level that Stardust Core can recognize in case the default <see cref="QualityUtilities.GetMaxQualityLevel"/> is lower than expected.
+        /// </summary>
+        public int CustomMaxQualityLevel = StardewValley.Object.bestQuality;
         public ModConfig() { }
     }
 }
