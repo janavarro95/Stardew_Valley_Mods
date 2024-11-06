@@ -6,6 +6,7 @@ using StardewValley.GameData.Machines;
 using StardewValley.GameData.Shops;
 using StardewValley.GameData;
 using StardewValley;
+using Omegasis.StardustCore.Utilities.Objects;
 
 namespace FishHatchery
 {
@@ -14,6 +15,12 @@ namespace FishHatchery
         public override void Entry(IModHelper helper)
         {
             this.Helper.Events.Content.AssetRequested += this.checkIfAssetCanBeEdited;
+            this.Helper.Events.GameLoop.SaveLoaded += this.GameLoop_SaveLoaded;
+        }
+
+        private void GameLoop_SaveLoaded(object? sender, SaveLoadedEventArgs e)
+        {
+            Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create(ModConstants.FishHatcheryQualifiedObjectId, 3));
         }
 
         /// <summary>
@@ -115,8 +122,25 @@ namespace FishHatchery
             machineItemOutput.Id = "Default";
             //Gets the actual item id that was used to make the preserved item.
             machineItemOutput.ItemId = "DROP_IN_PRESERVE";
+            machineItemOutput.QualityModifiers = new List<QuantityModifier> {
+                new QuantityModifier(){
+                Modification= QuantityModifier.ModificationType.Set,
+                Condition= "RANDOM 0.25",
+                RandomAmount=new List<float>(){1}
+                },
+                new QuantityModifier(){
+                Modification= QuantityModifier.ModificationType.Set,
+                Condition= "RANDOM 0.15",
+                RandomAmount=new List<float>(){2}
+                },
+                new QuantityModifier(){
+                Modification= QuantityModifier.ModificationType.Set,
+                Condition= "RANDOM 0.1",
+                RandomAmount=new List<float>(){4}
+                }
+            };
             //Adding the condition to the actual output rule itself determines if the trigger for item quality works.
-            machineOutputRule.MinutesUntilReady = 3600; //Make it take 3 days to process. Each in-game day is 1200 in-game minutes.
+            machineOutputRule.DaysUntilReady = 3; //Make it take 3 days to process.
             machineOutputRule.OutputItem.Add(machineItemOutput);
 
 
@@ -138,30 +162,10 @@ namespace FishHatchery
             {
                 Ingredients = new List<ItemWithAmount>()
                 {
-                    new ItemWithAmount()
-                    {
-                        //Refined Quartz
-                        Id = "(O)338",
-                        Amount = 10,
-                    },
-                    new ItemWithAmount()
-                    {
-                        //Seaweed
-                        Id = "(O)152",
-                        Amount = 2,
-                    },
-                    new ItemWithAmount()
-                    {
-                        //Green Algae
-                        Id = "(O)153",
-                        Amount = 2,
-                    },
-                    new ItemWithAmount()
-                    {
-                        //Stone
-                        Id = "(O)390",
-                        Amount = 25,
-                    }
+                    new ItemWithAmount(ObjectIds.StardewObjectIds.RefinedQuartz,10),
+                    new ItemWithAmount(ObjectIds.StardewObjectIds.Seaweed,2),
+                    new ItemWithAmount(ObjectIds.StardewObjectIds.GreenAlgae,2),
+                    new ItemWithAmount(ObjectIds.StardewObjectIds.Stone,25),
                 },
                 OutputItem = new ItemWithAmount()
                 {
@@ -184,7 +188,7 @@ namespace FishHatchery
                 shopDataDictionary["FishShop"].Items.Add(new ShopItemData()
                 {
                     AvailableStock = -1,
-                    AvailableStockLimit = LimitedStockMode.Global,
+                    AvailableStockLimit = LimitedStockMode.Player,
                     Id = ModConstants.FishHatcheryObjectId,
                     TradeItemAmount = 1,
                     ItemId = ModConstants.FishHatcheryObjectId,

@@ -11,4 +11,10 @@
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StardustCore\StardustCore.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+
 </Project>

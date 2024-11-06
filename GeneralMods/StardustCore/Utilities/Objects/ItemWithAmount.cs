@@ -20,6 +20,23 @@ namespace Omegasis.StardustCore.Utilities.Objects
         /// </summary>
         public int Amount;
 
+        public ItemWithAmount()
+        {
+
+        }
+
+        public ItemWithAmount(string id, int amount)
+        {
+            this.Id = id;
+            this.Amount = amount;
+        }
+
+        public ItemWithAmount(StardustCore.Utilities.Objects.ObjectIds.StardewObjectIds id, int amount)
+        {
+            this.Id = StardustCore.Utilities.Objects.ObjectIds.GetQualifiedObjectIdFromStardewObjectId(id);
+            this.Amount = amount;
+        }
+
         public virtual string toRecipeFormat(bool IncludeAmountIfOne = true)
         {
             if(!IncludeAmountIfOne && this.Amount == 1)

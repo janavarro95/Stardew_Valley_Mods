@@ -6,5 +6,11 @@
   "UniqueID": "Omegasis.FishHatchery",
   "EntryDll": "FishHatchery.dll",
   "MinimumApiVersion": "4.0.0",
-  //"UpdateKeys": [ "Nexus:20779" ]
+  "UpdateKeys": [ "Nexus:29153" ],
+  "Dependencies": [
+    {
+      "UniqueID": "Omegasis.StardustCore",
+      "MinimumVersion": "3.1.0"
+    }
+  ]
 }

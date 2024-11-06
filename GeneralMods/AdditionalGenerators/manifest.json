@@ -5,6 +5,12 @@
   "Description": "Adds new generators used to generate battery packs.",
   "UniqueID": "Omegasis.AdditionalGenerators",
   "EntryDll": "AdditionalGenerators.dll",
-  "MinimumApiVersion": "4.0.0"
-  //"UpdateKeys": [ "Nexus:20779" ]
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:29148" ],
+  "Dependencies": [
+    {
+      "UniqueID": "Omegasis.StardustCore",
+      "MinimumVersion": "3.1.0"
+    }
+  ]
 }
