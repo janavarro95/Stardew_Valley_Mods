@@ -1,0 +1,16 @@
+{
+  "Name": "Arboretum",
+  "Author": "Alpha_Omegasis",
+  "Version": "1.0.0",
+  "Description": "Adds an arboretum to get products from tree seeds.",
+  "UniqueID": "Omegasis.Arboretum",
+  "EntryDll": "Arboretum.dll",
+  "MinimumApiVersion": "4.0.0",
+  //"UpdateKeys": [ "Nexus:29148" ],
+  "Dependencies": [
+    {
+      "UniqueID": "Omegasis.StardustCore",
+      "MinimumVersion": "3.1.0"
+    }
+  ]
+}

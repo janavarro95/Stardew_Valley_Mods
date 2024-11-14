@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework;
 
 namespace AdditionalGenerators
 {
-    //TODO: Make sure this works in shops/crafting.
     public class AdditionalGenerators : Mod
     {
         public override void Entry(IModHelper helper)
