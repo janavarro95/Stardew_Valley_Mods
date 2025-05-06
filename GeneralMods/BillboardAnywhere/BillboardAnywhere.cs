@@ -1,12 +1,18 @@
 using System;
 using System.IO;
-using System.Linq;
+
 using GenericModConfigMenu;
+
+using Leclair.Stardew.BetterGameMenu;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+
 using Omegasis.BillboardAnywhere.Framework;
+
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
+
 using StardewValley;
 using StardewValley.Menus;
 
@@ -20,6 +26,11 @@ namespace Omegasis.BillboardAnywhere
         *********/
         /// <summary>The mod configuration.</summary>
         private ModConfig Config;
+
+        /// <summary>
+        /// The API for Better Game Menu.
+        /// </summary>
+        private IBetterGameMenuApi BetterGameMenuApi;
 
         /// <summary>
         /// The texture for the calendar button.
@@ -84,6 +95,9 @@ namespace Omegasis.BillboardAnywhere
 
         private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
+            // get Better Game Menu's API (if it's installed) and store it for later use
+            this.BetterGameMenuApi = this.Helper.ModRegistry.GetApi<IBetterGameMenuApi>("leclair.bettergamemenu");
+
             // get Generic Mod Config Menu's API (if it's installed)
             var configMenu = this.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (configMenu is null)
@@ -236,7 +250,7 @@ namespace Omegasis.BillboardAnywhere
             {
                 Game1.activeClickableMenu = new SpecialOrdersBoard("Qi");
             }
-            
+
 
             // check if billboard icon was clicked
             else if (e.Button == SButton.MouseLeft && this.isInventoryPage())
@@ -251,11 +265,11 @@ namespace Omegasis.BillboardAnywhere
 
                 else if (this.Config.EnableSpecialOrdersButton && this.specialOrderButton.containsPoint(mouse.X, mouse.Y) && Game1.player.eventsSeen.Contains("15389722"))
                     Game1.activeClickableMenu = new SpecialOrdersBoard();
-                
+
                 else if (this.Config.EnableQiBoardButton && this.qiBoardButton.containsPoint(mouse.X, mouse.Y) && Game1.player.eventsSeen.Contains("10040609"))
                     Game1.activeClickableMenu = new SpecialOrdersBoard("Qi");
             }
-            
+
         }
 
         /// <summary>
@@ -277,8 +291,7 @@ namespace Omegasis.BillboardAnywhere
                 if (this.Config.EnableSpecialOrdersButton && Game1.player.eventsSeen.Contains("15389722")) this.specialOrderButton.draw(Game1.spriteBatch);
                 if (this.Config.EnableQiBoardButton && Game1.player.eventsSeen.Contains("10040609")) this.qiBoardButton.draw(Game1.spriteBatch);
 
-                GameMenu activeMenu = (Game1.activeClickableMenu as GameMenu);
-                activeMenu.drawMouse(Game1.spriteBatch);
+                Game1.activeClickableMenu.drawMouse(e.SpriteBatch);
 
                 if (this.calendarButton.containsPoint(Game1.getMousePosition().X, Game1.getMousePosition().Y))
                 {
@@ -329,9 +342,9 @@ namespace Omegasis.BillboardAnywhere
         /// </summary>
         private bool isInventoryPage()
         {
-            return
-                Game1.activeClickableMenu is GameMenu gameMenu
-                && gameMenu.GetCurrentPage() is InventoryPage;
+            if (Game1.activeClickableMenu is GameMenu gameMenu)
+                return gameMenu.GetCurrentPage() is InventoryPage;
+            return this.BetterGameMenuApi?.ActivePage is InventoryPage;
         }
 
 
