@@ -19,6 +19,7 @@ using Omegasis.HappyBirthday.Framework.Events;
 using Omegasis.HappyBirthday.Framework.Gifts;
 using Omegasis.StardustCore.Events;
 using Omegasis.HappyBirthday.Framework.Compatibility;
+using StardewValley.Locations;
 
 namespace Omegasis.HappyBirthday
 {

@@ -17,17 +17,6 @@ namespace Arboretum
         {
             this.Helper.Events.Content.AssetRequested += this.checkIfAssetCanBeEdited;
 
-            this.Helper.Events.GameLoop.SaveLoaded += this.GameLoop_SaveLoaded;
-        }
-
-        private void GameLoop_SaveLoaded(object? sender, SaveLoadedEventArgs e)
-        {
-            Game1.player.addItemByMenuIfNecessaryElseHoldUp(ItemRegistry.Create(ObjectIds.GetQualifiedObjectIdFromStardewObjectId(ObjectIds.StardewObjectIds.Acorn), 5));
-            Game1.player.addItemByMenuIfNecessaryElseHoldUp(ItemRegistry.Create(ObjectIds.GetQualifiedObjectIdFromStardewObjectId(ObjectIds.StardewObjectIds.PineCone), 5));
-            Game1.player.addItemByMenuIfNecessaryElseHoldUp(ItemRegistry.Create(ObjectIds.GetQualifiedObjectIdFromStardewObjectId(ObjectIds.StardewObjectIds.MahoganySeed), 5));
-            Game1.player.addItemByMenuIfNecessaryElseHoldUp(ItemRegistry.Create(ObjectIds.GetQualifiedObjectIdFromStardewObjectId(ObjectIds.StardewObjectIds.MapleSeed), 5));
-
-            Game1.player.addItemByMenuIfNecessaryElseHoldUp(ItemRegistry.Create(ModConstants.ArboretumQualifiedObjectId, 20));
         }
 
 

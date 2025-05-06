@@ -1,7 +1,0 @@
-{
-  "stardewEventID": "Omegasis.HappyBirthday.Events.AskPlayerForFavoriteGift_Farmhouse_3",
-  "eventStringId": "HappyBirthday_Events_AskPlayerForFavoriteGift_Farmhouse_3",
-  "version": 3,
-  "EventData": "playful/26 24/farmer 26 24 0 $Spouse 23 24 0/faceDirection farmer 3 True/globalFadeToClear 0.007/move farmer -2 0 3 False/faceDirection $Spouse 1 True/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseAskPlayerForFavoriteGift_$Spouse_0/Omegasis.HappyBirthday.Events.ShowFavoriteGiftSelectionMenu/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseAskPlayerForFavoriteGift_$Spouse_1/globalFade 0.01/viewport -100 -100 true/end",
-  "EventPreconditionData": "StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/Omegasis.HappyBirthday.Framework.EventPreconditions.GameLocationIsHome/Omegasis.HappyBirthday.Framework.EventPreconditions.HasChosenFavoriteGiftPrecondition False/Omegasis.HappyBirthday.Framework.EventPreconditions.FarmHouseLevelPrecondition 3/Omegasis.HappyBirthday.Framework.EventPreconditions.IsMarried/"
-}

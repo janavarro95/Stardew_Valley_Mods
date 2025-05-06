@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Omegasis.HappyBirthday.Framework.Menus;
 using Omegasis.StardustCore.Events;
 using StardewValley;
+using StardewValley.Locations;
 using StardewValley.Menus;
 
 namespace Omegasis.HappyBirthday.Framework.Events
@@ -208,6 +209,38 @@ namespace Omegasis.HappyBirthday.Framework.Events
 
             Event.CurrentCommand++;
 
+        }
+
+        public static void setUpSpouseAndFarmerToCorrectFarmhouseStandingLocation(Event Event, string[] data, EventContext eventContext = null)
+        {
+            if (eventContext.Location is FarmHouse)
+            {
+                Point spouseStandingSpot = (eventContext.Location as FarmHouse).getKitchenStandingSpot();
+                foreach (NPC npc in Event.actors)
+                {
+                    if (npc.Name == Game1.player.getSpouse().Name)
+                    {
+                        npc.setTilePosition(spouseStandingSpot);
+                        Game1.viewport.X = spouseStandingSpot.X * 64 + 32 - Game1.viewport.Width / 2;
+                        Game1.viewport.Y = spouseStandingSpot.Y * 64 + 32 - Game1.viewport.Height / 2;
+                    }
+                }
+                Event.farmer.setTileLocation(new Vector2(spouseStandingSpot.X + 3, spouseStandingSpot.Y));
+                Event.CurrentCommand++;
+            }
+        }
+
+        public static void setSpouseFacingDirection(Event Event, string[] data, EventContext eventContext = null)
+        {
+            int facingDirection = Convert.ToInt32(data[1]);
+            foreach (NPC npc in Event.actors)
+            {
+                if (npc.Name == Game1.player.getSpouse().Name)
+                {
+                    npc.faceDirection(facingDirection);
+                }
+            }
+            Event.currentCommand++;
         }
 
     }

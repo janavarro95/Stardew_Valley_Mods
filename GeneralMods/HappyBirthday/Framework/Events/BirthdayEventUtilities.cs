@@ -72,6 +72,11 @@ namespace Omegasis.HappyBirthday.Framework.Events
             Event.RegisterCommand("Omegasis.HappyBirthday.Events.GivePlayerFavoriteGift", new StardewValley.Delegates.EventCommandDelegate(BirthdayEventCommands.givePlayerFavoriteGift));
             Event.RegisterCommand("Omegasis.HappyBirthday.Events.MakeObjectsTemporarilyInvisible", new StardewValley.Delegates.EventCommandDelegate(BirthdayEventCommands.makeObjectsTemporarilyInvisible));
 
+            Event.RegisterCommand("Omegasis.HappyBirthday.Events.SetUpSpouseAndFarmerToCorrectFarmhouseStandingLocation", new StardewValley.Delegates.EventCommandDelegate(BirthdayEventCommands.setUpSpouseAndFarmerToCorrectFarmhouseStandingLocation));
+
+            Event.RegisterCommand("Omegasis.HappyBirthday.Events.SetSpouseFacingDirection", new StardewValley.Delegates.EventCommandDelegate(BirthdayEventCommands.setSpouseFacingDirection));
+
+
             //TODO: Maybe make preconditions registered properly using  Event.RegisterPrecondition
             //Additional Preconditions
             BirthdayEventManager.eventPreconditionParsingMethods.Add(FarmerBirthdayPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseFarmerBirthdayPrecondition);

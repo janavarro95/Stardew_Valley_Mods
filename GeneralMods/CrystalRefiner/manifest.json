@@ -1,16 +1,16 @@
 {
   "Name": "Crystal Refiner",
   "Author": "Alpha_Omegasis",
-  "Version": "1.0.1",
+  "Version": "1.0.2",
   "Description": "Adds a new machine that can increase the quality of gems and minerals, to increase their sell value.",
   "UniqueID": "Omegasis.CrystalRefiner",
   "EntryDll": "CrystalRefiner.dll",
-  "MinimumApiVersion": "4.0.0",
+  "MinimumApiVersion": "4.1.7",
   "UpdateKeys": [ "Nexus:29145" ],
   "Dependencies": [
     {
       "UniqueID": "Omegasis.StardustCore",
-      "MinimumVersion": "3.0.1"
+      "MinimumVersion": "3.1.1"
     }
   ]
 }

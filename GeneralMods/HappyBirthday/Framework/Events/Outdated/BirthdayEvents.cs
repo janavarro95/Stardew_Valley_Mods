@@ -17,7 +17,7 @@ using Omegasis.StardustCore.Utilities;
 using Omegasis.HappyBirthday.Framework.Events.Compatibility;
 using Omegasis.HappyBirthday.Framework.Utilities;
 
-namespace Omegasis.HappyBirthday.Framework.Events
+namespace Omegasis.HappyBirthday.Framework.Events.Outdated
 {
     public class BirthdayEvents
     {
@@ -1087,7 +1087,6 @@ namespace Omegasis.HappyBirthday.Framework.Events
 
 
             if (FarmHouseLevel == 2)
-            {
                 e.makeAllObjectsTemporarilyInvisible(new List<Vector2>()
                 {
                     new Vector2(7,14),
@@ -1095,9 +1094,7 @@ namespace Omegasis.HappyBirthday.Framework.Events
                     new Vector2(9,14),
                     new Vector2(10,14),
                 });
-            }
             else
-            {
                 e.makeAllObjectsTemporarilyInvisible(new List<Vector2>()
                 {
                     new Vector2(6,5),
@@ -1105,7 +1102,6 @@ namespace Omegasis.HappyBirthday.Framework.Events
                     new Vector2(8,5),
                     new Vector2(9,5),
                 });
-            }
             e.globalFadeIn();
 
             e.moveFarmerLeft(2, EventHelper.FacingDirection.Left, false);

@@ -20,256 +20,247 @@
 
   <ItemGroup>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_AskPlayerForBirthday.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\AskPlayerForBirthday.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_AskPlayerForFavoriteGift_Farmhouse_1.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\AskPlayerForFavoriteGift.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_AskPlayerForFavoriteGift_Farmhouse_2.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Abigail_Mines.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_AskPlayerForFavoriteGift_Farmhouse_3.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Abigail_Seedshop.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Abigail_Mines.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Alex.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Abigail_Seedshop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Elliott.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Alex.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Emily.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Elliott.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Haley.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Emily.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Harvey.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Haley.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Leah.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Harvey.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Leah_SDVE.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Leah.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Leah_Stardew_Valley_Expanded.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Maru.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Maru.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny_House.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Penny_House.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny_House_Stardew_Valley_Expanded.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Penny_House_SDVE.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny_Stardew_Valley_Expanded.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny_Trailer.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Penny_Trailer.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Penny_Trailer_Stardew_Valley_Expanded.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Penny_Trailer_SDVE.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Sam.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Sam.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Sebastian.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Sebastian.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_BirthdayParty_Dating_Shane.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Dating_Shane.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_JojaMartBirthday.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\JojaMartBirthday.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_JunimoCommunityCenterBirthday.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\JunimoCCBirthday.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_Married_BirthdayParty_Farmhouse_1.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\Party_Married_Spouse.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_Married_BirthdayParty_Farmhouse_2.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\SaloonParty_Year1.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_Married_BirthdayParty_Farmhouse_3.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_SaloonBirthdayParty_Year1.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\HappyBirthday_Events_SaloonBirthdayParty_Year2.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Events\SaloonParty_Year2.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Abigail.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Alex.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Caroline.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Clint.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\DefaultGifts.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Demetrius.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Dwarf.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Elliott.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Emily.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Evelyn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\George.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Gus.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Haley.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Harvey.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Jas.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Jodi.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Kent.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Krobus.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Leah.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Leo.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Lewis.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Linus.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Marnie.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Maru.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Pam.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Penny.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Pierre.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\RegisteredGifts.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Robin.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Sam.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Sandy.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Sebastian.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Shane.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Abigail.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Alex.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Elliott.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Emily.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Haley.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Harvey.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Leah.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Maru.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Penny.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Sam.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Sebastian.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Spouses\Shane.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Vincent.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Willy.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Data\Gifts\Wizard.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Strings\BirthdayWishes.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Strings\Events.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Strings\Mail.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Strings\SpouseBirthdayWishes.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\ModAssets\Strings\TranslatedStrings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="ContentPacks\HappyBirthdayContentPack en-US\TranslationInfo.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

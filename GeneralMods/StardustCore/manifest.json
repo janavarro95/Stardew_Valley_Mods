@@ -1,10 +1,10 @@
 {
   "Name": "StardustCore",
   "Author": "Alpha_Omegasis",
-  "Version": "3.1.0",
+  "Version": "3.1.1",
   "Description": "A core mod that allows for other mods of mine to be run.",
   "UniqueID": "Omegasis.StardustCore",
   "EntryDll": "StardustCore.dll",
-  "MinimumApiVersion": "3.0.0",
+  "MinimumApiVersion": "4.1.7",
   "UpdateKeys": [ "Nexus:2341" ]
 }

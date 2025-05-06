@@ -15,12 +15,6 @@ namespace FishHatchery
         public override void Entry(IModHelper helper)
         {
             this.Helper.Events.Content.AssetRequested += this.checkIfAssetCanBeEdited;
-            this.Helper.Events.GameLoop.SaveLoaded += this.GameLoop_SaveLoaded;
-        }
-
-        private void GameLoop_SaveLoaded(object? sender, SaveLoadedEventArgs e)
-        {
-            Game1.player.addItemByMenuIfNecessary(ItemRegistry.Create(ModConstants.FishHatcheryQualifiedObjectId, 3));
         }
 
         /// <summary>
