@@ -63,6 +63,14 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
             string formattedString = string.Format("%item money {0} %%",moneyToGet);
 
+            if (Game1.player.isMarriedOrRoommates() && Game1.player.isRoommate("Krobus")==false)
+            {
+                string birthdayMessage = HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadMarriedBirthdayMessageKey);
+                if (string.IsNullOrEmpty(birthdayMessage)==false) {
+                    return string.Format(HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadMarriedBirthdayMessageKey), formattedString);
+                }
+            }
+
             return string.Format(HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadBirthdayMessageKey), formattedString);
         }
 

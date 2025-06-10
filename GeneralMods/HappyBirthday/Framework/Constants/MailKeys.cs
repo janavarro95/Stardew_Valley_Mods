@@ -14,6 +14,7 @@ namespace Omegasis.HappyBirthday.Framework.Constants
 
         public static readonly string MomBirthdayMessageKey = CreateMailKey("Mom");
         public static readonly string DadBirthdayMessageKey = CreateMailKey("Dad");
+        public static readonly string DadMarriedBirthdayMessageKey = CreateMailKey("Dad_Married");
         public static readonly string JunimosBirthdayMessageKey = CreateMailKey("Junimos");
 
 
@@ -109,7 +110,8 @@ namespace Omegasis.HappyBirthday.Framework.Constants
             allMailKeys.AddRange(new List<string>()
             {
                 MomBirthdayMessageKey,
-                DadBirthdayMessageKey
+                DadBirthdayMessageKey,
+                DadMarriedBirthdayMessageKey
 
             });
             allMailKeys.AddRange(GetAllBelatedBirthdayMailKeys().Values);

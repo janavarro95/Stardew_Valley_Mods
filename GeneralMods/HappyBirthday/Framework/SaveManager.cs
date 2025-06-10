@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Omegasis.HappyBirthday.Framework.Utilities;
 using StardewValley;
 
@@ -41,7 +37,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <param name="UniqueMultiplayerId"></param>
         public static void Save(long UniqueMultiplayerId)
         {
-            Farmer player = Game1.getFarmer(UniqueMultiplayerId);
+            Farmer player = Game1.GetPlayer(UniqueMultiplayerId);
             //Use only the unique multiplayer id since the farmer's name can include special characters which cause the save file system to break.
             string uniqueSaveName = $"{player.UniqueMultiplayerID}";
             string dataDirectory = Path.Combine("data", uniqueSaveName);
@@ -50,8 +46,6 @@ namespace Omegasis.HappyBirthday.Framework
 
             if (HappyBirthdayModCore.Instance.birthdayManager.hasChosenBirthday())
             {
-                Directory.CreateDirectory(dataDirectory);
-
                 //Write birthday file to disk.
                 HappyBirthdayModCore.Instance.Helper.Data.WriteJsonFile(dataFilePath, HappyBirthdayModCore.Instance.birthdayManager.playerBirthdayData);
                 HappyBirthdayModCore.Instance.Helper.Data.WriteJsonFile(villagerQueuePath, HappyBirthdayModCore.Instance.birthdayManager.villagerQueue);
@@ -64,7 +58,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <param name="UniqueMultiplayerId"></param>
         public static void Load(long UniqueMultiplayerId)
         {
-            Farmer player = Game1.getFarmer(UniqueMultiplayerId);
+            Farmer player = Game1.GetPlayer(UniqueMultiplayerId);
             string legacyUniqueSaveName = $"{player.Name}_{player.UniqueMultiplayerID}";
             string uniqueSaveName = $"{player.UniqueMultiplayerID}";
             string dataDirectory = Path.Combine("data", legacyUniqueSaveName);
@@ -96,7 +90,7 @@ namespace Omegasis.HappyBirthday.Framework
                     playerData = new PlayerData();
                 }
             }
-            catch (IOException ex)
+            catch
             {
                 //If we can't load the data, use the new format.
 
