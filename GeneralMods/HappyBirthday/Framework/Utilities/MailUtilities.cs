@@ -19,6 +19,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             IDictionary<string, string> data = asset.AsDictionary<string, string>().Data;
             data[MailKeys.MomBirthdayMessageKey] = GetMomsMailMessage();
             data[MailKeys.DadBirthdayMessageKey] = GetDadsMailMessage();
+            data[MailKeys.DadMarriedBirthdayMessageKey] = GetDadsMailMessage();
 
 
             foreach (string MailKey in MailKeys.GetAllNonBelatedMailKeysExcludingParents())
@@ -42,6 +43,12 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                 if (string.IsNullOrEmpty(mailMessage))
                 {
                     mailMessage = GetMailMessage("Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message");
+
+                    NPC npc = Game1.getCharacterFromName(npcName);
+                    if (npc != null)
+                    {
+                        npcName = npc.displayName;
+                    }
 
                     data[mailKey] = string.Format(mailMessage, formattedMailItemString,npcName);
                     continue;

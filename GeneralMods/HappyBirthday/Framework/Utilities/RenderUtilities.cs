@@ -103,7 +103,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             Game1.player.FarmerRenderer.drawHairAndAccesories(spriteBatch, 2, Game1.player, drawPosition, Vector2.Zero, 1f, 0, 0, Color.White, 0.5f);
 
             //Draw arms.
-            if (FarmerTexture == null)
+            if (FarmerTexture == null || FarmerTexture.IsDisposed)
             {
                 FarmerTexture = HappyBirthdayModCore.Instance.Helper.Reflection.GetField<Texture2D>(who.FarmerRenderer, "baseTexture").GetValue();
             }
