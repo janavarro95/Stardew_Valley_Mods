@@ -220,12 +220,12 @@ namespace Omegasis.HappyBirthday
                 {
                     if (this.happyBirthdayContentPackManager.getHappyBirthdayContentPacksForEnglishLanguageCode().Count == 0)
                     {
-                        this.drawDialogueBoxWithError(string.Format("There were zero content packs for Happy Birthday for the English language code en-US. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one? One can be found at https://www.nexusmods.com/stardewvalley/mods/11148 for English dialogue. If one is installed, is the language code in TranslationInfo.json correct?", LocalizationUtilities.GetCurrentLanguageCodeString()));
+                        this.drawDialogueBoxWithError("There were zero content packs for Happy Birthday for the English language code en-US. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one? One can be found at https://www.nexusmods.com/stardewvalley/mods/11148 for English dialogue. If one is installed, is the language code in TranslationInfo.json correct?");
                         return;
                     }
                 }
 
-                this.drawDialogueBoxWithError(string.Format("There were zero content packs for Happy Birthday for the given language code {0}. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one? If one is installed, is the language code in TranslationInfo.json correct?", LocalizationUtilities.GetCurrentLanguageCodeString()));
+                this.drawDialogueBoxWithError(string.Format("There were zero content packs for Happy Birthday for the given language code {0}. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one?", LocalizedContentManager.CurrentLanguageString));
                 return;
             }
 

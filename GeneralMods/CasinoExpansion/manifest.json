@@ -1,0 +1,11 @@
+{
+  "Name": "Casino Expansion",
+  "Author": "Alpha_Omegasis",
+  "Version": "1.0.0",
+  "Description": "Adds in some new content to the Casino in the dessert.",
+  "UniqueID": "Omegasis.CasinoExpansion",
+  "EntryDll": "CasinoExpansion.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "Dependencies": []
+}

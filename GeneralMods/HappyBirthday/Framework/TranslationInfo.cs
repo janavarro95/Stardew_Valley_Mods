@@ -32,20 +32,13 @@ namespace Omegasis.HappyBirthday.Framework
 
         /// <summary>Gets the proper file extension for the current translation.</summary>
         /// <param name="language">The translation language name.</param>
-        protected string getFileExtentionForTranslation(LocalizedContentManager.LanguageCode LanguageCode, FileType fileType)
+        protected string getFileExtentionForTranslation(string languageCode, FileType fileType)
         {
-            try
-            {
-                if (LanguageCode== LocalizedContentManager.LanguageCode.en)
-                {
-                    return this.getFileExtensionForFileType(fileType);
-                }
-                return "."+LocalizationUtilities.GetCurrentLanguageCodeString() + this.getFileExtensionForFileType(fileType);
+            if (string.IsNullOrEmpty(languageCode)) {
+                return this.getFileExtensionForFileType(fileType);
             }
-            catch (Exception)
-            {
-                return ".xnb";
-            }
+
+            return "."+LocalizedContentManager.CurrentLanguageString + this.getFileExtensionForFileType(fileType);
         }
         protected string getFileExtensionForFileType(FileType Type)
         {
@@ -61,13 +54,19 @@ namespace Omegasis.HappyBirthday.Framework
 
         public string loadStringFromXNBFile(string xnbFileName, string key)
         {
-            return this.loadStringFromXNBFile(xnbFileName, key, LocalizedContentManager.CurrentLanguageCode);
+            return this.loadStringFromXNBFile(xnbFileName, key, LocalizedContentManager.CurrentLanguageString);
         }
 
         /// <summary>Loads an XNB file from StardewValley/Content</summary>
-        public string loadStringFromXNBFile(string xnbFileName, string key, LocalizedContentManager.LanguageCode LanguageCode)
+        public string loadStringFromXNBFile(string xnbFileName, string key, string languageCode)
         {
-            string xnb = xnbFileName + this.getFileExtentionForTranslation(LanguageCode, FileType.XNB);
+            if (string.IsNullOrEmpty(languageCode))
+            {
+                languageCode = LocalizedContentManager.CurrentLanguageString;
+            }
+
+            string xnb = xnbFileName + this.getFileExtentionForTranslation(languageCode, FileType.XNB);
+
             Dictionary<string, string> loadedDict = Game1.content.Load<Dictionary<string, string>>(xnb);
 
             if (!loadedDict.TryGetValue(key, out string loaded))
@@ -116,7 +115,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <returns></returns>
         public virtual string getEventString(string Key)
         {
-            return this.getEventString(Key, LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getEventString(Key, LocalizedContentManager.CurrentLanguageString, true);
         }
 
         /// <summary>
@@ -128,7 +127,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <returns></returns>
         public virtual string getEventString(string Key, string LanguageCode, bool DefaultToEnglish)
         {
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -145,7 +144,7 @@ namespace Omegasis.HappyBirthday.Framework
             {
                 if (DefaultToEnglish)
                 {
-                    return this.getEventString(Key, LocalizationUtilities.GetEnglishLanguageCode(), false);
+                    return this.getEventString(Key, "", false);
                 }
                 return "";
             }
@@ -158,12 +157,12 @@ namespace Omegasis.HappyBirthday.Framework
 
         public virtual string getMailString(string Key)
         {
-            return this.getMailString(Key, LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getMailString(Key, LocalizedContentManager.CurrentLanguageString, true);
         }
 
         public virtual string getMailString(string Key, string LanguageCode, bool DefaultToEnglish)
         {
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -181,7 +180,7 @@ namespace Omegasis.HappyBirthday.Framework
 
                 if (DefaultToEnglish)
                 {
-                    return this.getMailString(Key, LocalizationUtilities.GetEnglishLanguageCode(), false);
+                    return this.getMailString(Key, "", false);
                 }
 
                 return "";
@@ -200,7 +199,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <returns></returns>
         public virtual string getTranslatedContentPackString(string Key)
         {
-            return this.getTranslatedContentPackString(Key, LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getTranslatedContentPackString(Key, LocalizedContentManager.CurrentLanguageString, true);
         }
 
         /// <summary>
@@ -212,7 +211,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <returns></returns>
         public virtual string getTranslatedContentPackString(string Key, string LanguageCode, bool DefaultToEnglish)
         {
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -229,7 +228,7 @@ namespace Omegasis.HappyBirthday.Framework
             {
                 if (DefaultToEnglish)
                 {
-                    return this.getTranslatedContentPackString(Key, LocalizationUtilities.GetEnglishLanguageCode(), false);
+                    return this.getTranslatedContentPackString(Key, "", false);
                 }
                 return "";
             }

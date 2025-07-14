@@ -122,7 +122,7 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getNonSpouseBirthdayWish(string Key)
         {
-            return this.getNonSpouseBirthdayWish(Key, LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getNonSpouseBirthdayWish(Key, LocalizedContentManager.CurrentLanguageString, true);
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getNonSpouseBirthdayWish(string Key, string LanguageCode, bool DefaultToEnglish)
         {
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -153,7 +153,7 @@ namespace Omegasis.HappyBirthday
             {
                 if (DefaultToEnglish)
                 {
-                    return this.getNonSpouseBirthdayWish(Key, LocalizationUtilities.GetEnglishLanguageCode(), false);
+                    return this.getNonSpouseBirthdayWish(Key, "", false);
                 }
 
                 return this.getDefaultBirthdayWish();
@@ -173,7 +173,7 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getSpouseBirthdayWish(string Key)
         {
-            return this.getSpouseBirthdayWish(Key, LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getSpouseBirthdayWish(Key, LocalizedContentManager.CurrentLanguageString, true);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getSpouseBirthdayWish(string Key, string LanguageCode, bool DefaultToEnglish)
         {
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -202,7 +202,7 @@ namespace Omegasis.HappyBirthday
             {
                 if (DefaultToEnglish)
                 {
-                   string spouseBirthdayWish= this.getSpouseBirthdayWish(Key, LocalizationUtilities.GetEnglishLanguageCode(), false);
+                   string spouseBirthdayWish= this.getSpouseBirthdayWish(Key, "", false);
 
                     spouseBirthdayWish = spouseBirthdayWish.Replace("{AffectionateSpouseWord}", this.getAffectionateSpouseWord());
                     spouseBirthdayWish = spouseBirthdayWish.Replace("{TimeOfDay}", this.getTimeOfDayString());
@@ -231,7 +231,7 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getDefaultBirthdayWish()
         {
-            return this.getDefaultBirthdayWish(LocalizationUtilities.GetCurrentLanguageCodeString(), true);
+            return this.getDefaultBirthdayWish(LocalizedContentManager.CurrentLanguageString, true);
 
         }
 
@@ -242,7 +242,7 @@ namespace Omegasis.HappyBirthday
         public virtual string getDefaultBirthdayWish(string LanguageCode, bool DefaultToEnglish)
         {
             string Key = "Default Birthday Wish";
-            if (LanguageCode == LocalizationUtilities.GetEnglishLanguageCode() && DefaultToEnglish == true)
+            if (LanguageCode == "" && DefaultToEnglish == true)
             {
                 //Prevent infinite recursion.
                 DefaultToEnglish = false;
@@ -260,7 +260,7 @@ namespace Omegasis.HappyBirthday
             {
                 if (DefaultToEnglish)
                 {
-                    return this.getDefaultBirthdayWish(LocalizationUtilities.GetEnglishLanguageCode(), false);
+                    return this.getDefaultBirthdayWish("", false);
                 }
 
                 return "Happy Birthday @!";

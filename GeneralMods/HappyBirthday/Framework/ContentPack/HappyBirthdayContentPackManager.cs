@@ -82,10 +82,14 @@ namespace Omegasis.HappyBirthday.Framework.ContentPack
         /// <returns></returns>
         public virtual List<HappyBirthdayContentPack> getHappyBirthdayContentPacksForCurrentLanguageCode()
         {
-            string currentLanguageCode = LocalizationUtilities.GetCurrentLanguageCodeString();
-            if (this.contentPacks.ContainsKey(currentLanguageCode))
+            string currentLanguageString = LocalizedContentManager.CurrentLanguageString;
+            if (string.IsNullOrEmpty(currentLanguageString) && HappyBirthdayModCore.Configs.modConfig.fallbackToEnglishTranslationWhenPossible)
             {
-                List<HappyBirthdayContentPack> contentPacks = this.contentPacks[currentLanguageCode];
+                return this.getHappyBirthdayContentPacksForEnglishLanguageCode();
+            }
+            if (this.contentPacks.ContainsKey(LocalizedContentManager.CurrentLanguageString))
+            {
+                List<HappyBirthdayContentPack> contentPacks = this.contentPacks[LocalizedContentManager.CurrentLanguageString];
                 if (contentPacks.Count > 0)
                 {
                     return contentPacks;
@@ -97,7 +101,7 @@ namespace Omegasis.HappyBirthday.Framework.ContentPack
             }
             else
             {
-                HappyBirthdayModCore.Instance.Monitor.Log("Language code {0} not included in content pack manager???");
+                HappyBirthdayModCore.Instance.Monitor.Log(string.Format("Language code {0} not included in content pack manager", LocalizedContentManager.CurrentLanguageString));
                 if (HappyBirthdayModCore.Configs.modConfig.fallbackToEnglishTranslationWhenPossible)
                 {
 
