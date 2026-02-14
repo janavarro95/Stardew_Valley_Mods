@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arboretum", "Arboretum\Arbo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasinoExpansion", "CasinoExpansion\CasinoExpansion.csproj", "{8422BAE4-634C-4033-BCF6-C79613EA525E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSoundManager", "SimpleSoundManager\SimpleSoundManager.csproj", "{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -326,6 +328,24 @@ Global
 		{8422BAE4-634C-4033-BCF6-C79613EA525E}.x86|x64.Build.0 = Debug|Any CPU
 		{8422BAE4-634C-4033-BCF6-C79613EA525E}.x86|x86.ActiveCfg = Debug|Any CPU
 		{8422BAE4-634C-4033-BCF6-C79613EA525E}.x86|x86.Build.0 = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|x64.ActiveCfg = Debug|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|x64.Build.0 = Debug|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|x64.ActiveCfg = Release|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|x64.Build.0 = Release|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.Release|x86.Build.0 = Release|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|Any CPU.Build.0 = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|x64.ActiveCfg = Debug|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|x64.Build.0 = Debug|x64
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|x86.ActiveCfg = Debug|Any CPU
+		{1A0A3FC6-9E0C-E6C7-CE8B-D21DCCBE088F}.x86|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

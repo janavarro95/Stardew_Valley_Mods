@@ -34,7 +34,7 @@ namespace Omegasis.HappyBirthday.Framework
         /// <param name="language">The translation language name.</param>
         protected string getFileExtentionForTranslation(string languageCode, FileType fileType)
         {
-            if (string.IsNullOrEmpty(languageCode)) {
+            if (string.IsNullOrEmpty(languageCode) || languageCode.ToLower() == "en-us" || languageCode == "en") {
                 return this.getFileExtensionForFileType(fileType);
             }
 
@@ -66,6 +66,11 @@ namespace Omegasis.HappyBirthday.Framework
             }
 
             string xnb = xnbFileName + this.getFileExtentionForTranslation(languageCode, FileType.XNB);
+            //Really make sure that the wrong localization file isn't loaded for the English language.
+            if (xnb.Contains(".en.xnb"))
+            {
+                xnb.Replace(".en.xnb", ".xnb");
+            }
 
             Dictionary<string, string> loadedDict = Game1.content.Load<Dictionary<string, string>>(xnb);
 
