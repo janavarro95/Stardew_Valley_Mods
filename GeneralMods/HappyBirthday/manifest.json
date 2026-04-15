@@ -1,7 +1,7 @@
 {
   "Name": "Happy Birthday",
   "Author": "Alpha_Omegasis",
-  "Version": "3.19.7",
+  "Version": "3.20.0",
   "Description": "Adds the farmer's birthday to the game.",
   "UniqueID": "Omegasis.HappyBirthday",
   "EntryDll": "HappyBirthday.dll",
@@ -16,5 +16,9 @@
       "UniqueID": "shoaib.stardewaccess",
       "IsRequired": false
     },
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": false
+    }
   ]
 }

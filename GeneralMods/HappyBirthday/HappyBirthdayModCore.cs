@@ -20,6 +20,7 @@ using Omegasis.HappyBirthday.Framework.Gifts;
 using Omegasis.StardustCore.Events;
 using Omegasis.HappyBirthday.Framework.Compatibility;
 using StardewValley.Locations;
+using ContentPatcher;
 
 namespace Omegasis.HappyBirthday
 {
@@ -152,6 +153,22 @@ namespace Omegasis.HappyBirthday
             BirthdayEventUtilities.InitializeBirthdayEventCommands();
 
             this.screenreader = this.Helper.ModRegistry.GetApi<IStardewAccessApi>("shoaib.stardewaccess");
+
+
+            var api = this.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            api.RegisterToken(this.ModManifest, "IsPlayersBirthday", () =>
+            {
+                // save is loaded
+                if (Context.IsWorldReady)
+                    return [this.birthdayManager.isBirthday().ToString()];
+
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null)
+                    return [this.birthdayManager.isBirthday().ToString()];
+
+                // no save loaded (e.g. on the title screen)
+                return null;
+            });
 
         }
 
