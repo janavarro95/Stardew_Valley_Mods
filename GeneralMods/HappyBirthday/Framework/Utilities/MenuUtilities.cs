@@ -74,9 +74,32 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                 NPCUtilities.LastSpeaker = Game1.currentSpeaker;
                 if (Game1.activeClickableMenu != null && HappyBirthdayModCore.Instance.birthdayManager.isBirthday())
                 {
-                    if (NPCUtilities.ShouldWishPlayerHappyBirthday(Game1.currentSpeaker.Name) == false) return;
+                    //if (NPCUtilities.ShouldWishPlayerHappyBirthday(Game1.currentSpeaker.Name) == false) return;
                     if (Game1.activeClickableMenu is DialogueBox)
                     {
+                        string birthdayMessage = HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(Game1.currentSpeaker.Name);
+                        HappyBirthdayModCore.Instance.Monitor.Log("Birthday message is: " + birthdayMessage);
+                        DialogueBox db = (Game1.activeClickableMenu as DialogueBox);
+                        DialogueBox comparisonDB = new(new Dialogue(Game1.currentSpeaker, "", birthdayMessage));
+                        if (db.getCurrentString().Equals(comparisonDB.getCurrentString()))
+                        {
+                            HappyBirthdayModCore.Instance.Monitor.Log("Correct birthday message loaded, do nothing!");
+                            return;
+                        }
+                        /*
+                        if (db.getCurrentString().Equals(birthdayMessage.Replace("@", Game1.player.Name)))
+                        {
+                            HappyBirthdayModCore.Instance.Monitor.Log("Correct birthday message loaded, do nothing!");
+                            return;
+                        }
+                        if (db.getCurrentString().Equals(BirthdayMessages.DefaultBirthdayWishMessage.Replace("@",Game1.player.Name)))
+                        {
+                            HappyBirthdayModCore.Instance.Monitor.Log("Default Correct birthday message loaded, do nothing!");
+                            return;
+                        }
+                        */
+
+
                         Game1.currentSpeaker.resetCurrentDialogue();
                         Game1.currentSpeaker.resetSeasonalDialogue();
                         HappyBirthdayModCore.Instance.Helper.Reflection.GetMethod(Game1.currentSpeaker, "loadCurrentDialogue", true).Invoke();
@@ -94,7 +117,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                             }
                         }
 
-                        Game1.activeClickableMenu = new DialogueBox(new Dialogue(Game1.currentSpeaker,"", HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(Game1.currentSpeaker.Name)));
+                        Game1.activeClickableMenu = new DialogueBox(new Dialogue(Game1.currentSpeaker,"", birthdayMessage));
                         HappyBirthdayModCore.Instance.birthdayManager.villagerQueue[Game1.currentSpeaker.Name].hasGivenBirthdayWish = true;
 
                         // Set birthday gift for the player to recieve from the npc they are currently talking with.

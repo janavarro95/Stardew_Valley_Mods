@@ -17,6 +17,8 @@ namespace Omegasis.HappyBirthday
     public class BirthdayMessages
     {
 
+        public static string DefaultBirthdayWishMessage = "Happy Birthday @!";
+
         public BirthdayMessages()
         {
         }
@@ -90,6 +92,24 @@ namespace Omegasis.HappyBirthday
         /// <returns></returns>
         public virtual string getBirthdayMessage(string NPC)
         {
+
+            string message = "";
+            string key = string.Format("Characters/Dialogue/{0}:Omegasis.HappyBirthday.BirthdayGreeting", NPC);
+            try
+            {
+                message = Game1.content.LoadString(string.Format("Characters/Dialogue/{0}:Omegasis.HappyBirthday.BirthdayGreeting", NPC));
+            }
+            catch
+            {
+                message = "";
+            }
+
+            if (!string.IsNullOrEmpty(message) && !message.Equals(key))
+            {
+                return message;
+            }
+
+
             if (Game1.player.friendshipData.ContainsKey(NPC))
             {
                 if (Game1.player.getSpouse() != null) {
@@ -142,6 +162,7 @@ namespace Omegasis.HappyBirthday
             List<HappyBirthdayContentPack> affectedContentPacks = HappyBirthdayModCore.Instance.happyBirthdayContentPackManager.getHappyBirthdayContentPacksForCurrentLanguageCode();
 
             List<string> potentialBirthdayWishes = new List<string>();
+
             foreach (HappyBirthdayContentPack contentPack in affectedContentPacks)
             {
                 string birthdayWish = contentPack.getBirthdayWish(Key, false);
@@ -263,7 +284,7 @@ namespace Omegasis.HappyBirthday
                     return this.getDefaultBirthdayWish("", false);
                 }
 
-                return "Happy Birthday @!";
+                return DefaultBirthdayWishMessage;
             }
             else
             {

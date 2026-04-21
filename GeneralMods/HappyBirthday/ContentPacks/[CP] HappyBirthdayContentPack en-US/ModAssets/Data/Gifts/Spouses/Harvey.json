@@ -1,0 +1,23 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.MuscleRemedy",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Coffee",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SuperMeal",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

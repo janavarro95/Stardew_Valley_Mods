@@ -1,0 +1,7 @@
+{
+  "stardewEventID": "Omegasis.HappyBirthday.Events.BirthdayParty_Dating_Haley",
+  "eventStringId": "HappyBirthday_Events_BirthdayParty_Dating_Haley",
+  "version": 3,
+  "EventData": "playful/20 18/farmer 11 20 1 Haley 20 17 2/skippable/globalFadeToClear 0.007/move farmer 9 0 0 False/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Haley DatingHaleyBirthday_Haley:0/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Haley DatingHaleyBirthday_Haley:1/emote farmer 32/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Haley DatingHaleyBirthday_Haley:2/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Haley DatingHaleyBirthday_Haley:3/emote farmer 40/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Haley DatingHaleyBirthday_Haley:4/emote farmer 20/emote Haley 20/globalFade 0.01/viewport -100 -100 true/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingHaleyBirthday_Finish:0/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingHaleyBirthday_Finish:1/Omegasis.EventFramework.AddObjectToPlayersInventory 221 1 False/Omegasis.HappyBirthday.Events.ShowTranslatedMessage PartyOver/end",
+  "EventPreconditionData": "Omegasis.HappyBirthday.Framework.EventPreconditions.FarmerBirthdayPrecondition/StardustCore.Events.Preconditions.GameLocationPrecondition HaleyHouse/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/StardustCore.Events.Preconditions.NPCSpecific.DatingNPC Haley/"
+}

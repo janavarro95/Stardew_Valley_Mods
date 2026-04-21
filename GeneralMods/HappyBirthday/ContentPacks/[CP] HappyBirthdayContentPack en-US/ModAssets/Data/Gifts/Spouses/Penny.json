@@ -1,0 +1,37 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Hashbrowns",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CrispyBass",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.VegetableMedley",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.MixedSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Sunflower",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CommonMushroom",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.FriedMushroom",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PurpleMushroom",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Morel",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Truffle",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SnowYam",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

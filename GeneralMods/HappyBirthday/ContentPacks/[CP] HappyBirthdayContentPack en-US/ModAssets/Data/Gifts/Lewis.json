@@ -1,0 +1,23 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.GreenTea",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PepperPoppers",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.VegetableMedley",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

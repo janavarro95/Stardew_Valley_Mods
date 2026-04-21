@@ -1,0 +1,30 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Quartz",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 234,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BlueberryTart",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CherryBomb",
+    "minAmount": 4,
+    "maxAmount": 4
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.GhostCrystal",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

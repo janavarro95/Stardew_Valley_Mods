@@ -1,0 +1,9 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Cookie",
+    "minAmount": 3,
+    "maxAmount": 3
+  }
+]

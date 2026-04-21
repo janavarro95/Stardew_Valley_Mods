@@ -1,0 +1,27 @@
+{
+  "Format": "2.9.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Hopefully this year we can go on even more adventures together! $h"
+      },
+      "When": {
+        "Hearts:Abigail": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{AffectionateSpouseWord}}. You know every day feels like a great adventure with you! Happy birthday! $l"
+      },
+      "When": {
+        "Hearts:Abigail": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
+        "Spouse": "Abigail"
+      }
+    }
+
+  ]
+}

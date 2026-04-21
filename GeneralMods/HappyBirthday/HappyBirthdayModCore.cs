@@ -27,6 +27,16 @@ namespace Omegasis.HappyBirthday
     /// <summary>The mod entry point.</summary>
     public class HappyBirthdayModCore : Mod
     {
+        //TODO: Migrate all original content pack dialogue to ContentPatcher dialogue.
+        //TODO: Migrate all Spouse Dialogue. (Just have a when condition for when you are married)
+        //TODO: Migrate all Mail
+        //TODO: Migrate all events.
+        //TODO: Migrate all translated strings (Can I just have a "fake") file and have Content Patcher take care of this?
+
+
+
+
+
         //TODO: Include changelog documentation for new command, ability to select multiple birthday gifts, and support for modded items.
 
         //TODO: Make an official StardewValleyExpanded ContentPack.
@@ -63,6 +73,8 @@ namespace Omegasis.HappyBirthday
         public bool contentPacksInitalized;
 
         public IStardewAccessApi screenreader;
+
+        private int delay = 5;
 
         /*********
         ** Public methods
@@ -170,6 +182,21 @@ namespace Omegasis.HappyBirthday
                 return null;
             });
 
+            api.RegisterToken(this.ModManifest, "MinimumHeartsForBirthdayWishes", () =>
+            {
+                if (HappyBirthdayModCore.Configs.modConfig == null)
+                {
+                    return ["2"];
+                }
+                //Instance.Monitor.Log("The token result is: " + HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish.ToString()); 
+
+                return [HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish.ToString()];
+            });
+            api.RegisterToken(this.ModManifest, "AffectionateSpouseWord", () =>
+            {
+                return [this.birthdayMessages.getAffectionateSpouseWord()];
+            });
+
         }
 
         private void LocalizedContentManager_OnLanguageChange(LocalizedContentManager.LanguageCode code)
@@ -183,9 +210,6 @@ namespace Omegasis.HappyBirthday
         /// <param name="e">The event arguments.</param>
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-
-            this.initalizeHappyBirthdayContent();
-
             SaveManager.OnDayStarted(sender, e);
             this.birthdayManager.onDayStarted(sender, e);
 
@@ -220,17 +244,20 @@ namespace Omegasis.HappyBirthday
         protected virtual void initalizeHappyBirthdayContent()
         {
             if (this.contentPacksInitalized) return;
+
+            /*
             if (this.Helper.ContentPacks.GetOwned().Count() == 0)
             {
                 this.drawDialogueBoxWithError("There are ZERO Happy birthday content packs found for the mod. Without at least one installed there is no guaranteed that this mod will work due to missing dialogue errors. Please install at least one HappyBirthdayContent pack before continuing. One can be found at https://www.nexusmods.com/stardewvalley/mods/11148 for English dialogue. Thank you!");
                 return;
             }
-
+            */
+            
             foreach (IContentPack contentPack in this.Helper.ContentPacks.GetOwned())
             {
                 this.happyBirthdayContentPackManager.registerNewContentPack(contentPack);
             }
-
+            /*
             if (this.happyBirthdayContentPackManager.getHappyBirthdayContentPacksForCurrentLanguageCode().Count == 0)
             {
                 if (HappyBirthdayModCore.Configs.modConfig.fallbackToEnglishTranslationWhenPossible)
@@ -245,6 +272,7 @@ namespace Omegasis.HappyBirthday
                 this.drawDialogueBoxWithError(string.Format("There were zero content packs for Happy Birthday for the given language code {0}. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one?", LocalizedContentManager.CurrentLanguageString));
                 return;
             }
+            */
 
             this.giftManager.addInPotentialGiftsFromNPCsFromContentPacks();
             MailUtilities.RemoveAllBirthdayMail();
@@ -289,6 +317,16 @@ namespace Omegasis.HappyBirthday
 
             if (!this.birthdayManager.hasCheckedForBirthday() && Game1.activeClickableMenu == null)
             {
+                if (this.birthdayManager.playerBirthdayData == null)
+                {
+
+                    this.birthdayManager.playerBirthdayData = new PlayerData();
+                    this.birthdayManager.playerBirthdayData.BirthdayDay = 1;
+                    this.birthdayManager.playerBirthdayData.BirthdaySeason = "spring";
+                    this.birthdayManager.playerBirthdayData.PlayersName = Game1.player.Name;
+                    this.birthdayManager.playerBirthdayData.PlayerUniqueMultiplayerId = Game1.player.UniqueMultiplayerID;
+                }
+
                 this.birthdayManager.setCheckedForBirthday(true);
 
                 this.birthdayManager.setUpPlayersBirthday();

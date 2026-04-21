@@ -1,0 +1,23 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Wood",
+    "minAmount": 50,
+    "maxAmount": 50
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Stone",
+    "minAmount": 50,
+    "maxAmount": 50
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Hardwood",
+    "minAmount": 20,
+    "maxAmount": 20
+  }
+]

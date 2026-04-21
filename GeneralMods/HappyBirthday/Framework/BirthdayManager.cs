@@ -206,13 +206,15 @@ namespace Omegasis.HappyBirthday.Framework
 
                 foreach (NPC npc in NPCUtilities.GetAllHumanNpcs())
                 {
+                    string message = HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(npc.Name);
+                    Dialogue d = new Dialogue(npc, "", message);
+                    npc.CurrentDialogue.Push(d);
+                    if (npc.CurrentDialogue.ElementAt(0) != d) npc.setNewDialogue(message);
+
+
                     if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) >= HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish)
                     {
-                        HappyBirthdayModCore.Instance.Monitor.Log("Adding dialogue for npc: " + npc.Name);
-                        string message = HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(npc.Name);
-                        Dialogue d = new Dialogue(npc, "", message);
-                        npc.CurrentDialogue.Push(d);
-                        if (npc.CurrentDialogue.ElementAt(0) != d) npc.setNewDialogue(message);
+                        //TODO: DON'T DELETE, MIGRATE TO CONTENT PATCHER PACK INSTEAD!!!
                     }
                 }
             }

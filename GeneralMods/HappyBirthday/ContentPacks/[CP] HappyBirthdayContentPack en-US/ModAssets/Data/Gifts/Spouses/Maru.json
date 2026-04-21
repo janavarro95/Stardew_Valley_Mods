@@ -1,0 +1,37 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.IronBar",
+    "minAmount": 3,
+    "maxAmount": 3
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.GoldBar",
+    "minAmount": 3,
+    "maxAmount": 3
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CopperBar",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BatteryPack",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 6,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.IridiumSprinkler",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

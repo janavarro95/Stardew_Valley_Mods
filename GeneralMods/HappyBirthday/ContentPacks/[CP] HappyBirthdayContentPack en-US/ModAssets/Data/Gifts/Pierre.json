@@ -1,0 +1,331 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.QualityFertilizer",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BasicFertilizer",
+    "minAmount": 10,
+    "maxAmount": 10
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.AmaranthSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.GrapeStarter",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.HopsStarter",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.Acorn",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.MapleSeed",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PineCone",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.RareSeed",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.FairySeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.TulipBulb",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.JazzSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SunflowerSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CoffeeBean",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PoppySeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SpangleSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.ParsnipSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BeanStarter",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CauliflowerSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PotatoSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.GarlicSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.KaleSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.RhubarbSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.MelonSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.TomatoSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BlueberrySeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PepperSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.WheatSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.RadishSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.RedCabbageSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.StarfruitSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CornSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.EggplantSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.ArtichokeSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.PumpkinSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BokChoySeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.YamSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CranberrySeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.BeetSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SpringSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SummerSeeds",
+    "minAmount": 2,
+    "maxAmount": 2
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.FallSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.WinterSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.AncientSeeds",
+    "minAmount": 1,
+    "maxAmount": 1
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.StrawberrySeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.MixedSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.CactusSeeds",
+    "minAmount": 5,
+    "maxAmount": 5
+  }
+]

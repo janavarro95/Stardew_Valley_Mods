@@ -1,0 +1,23 @@
+[
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.SolarEssence",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 0,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.VoidEssence",
+    "minAmount": 5,
+    "maxAmount": 5
+  },
+  {
+    "minRequiredHearts": 4,
+    "maxRequiredHearts": 20,
+    "objectID": "StardewValley.Object.VoidEgg",
+    "minAmount": 1,
+    "maxAmount": 1
+  }
+]

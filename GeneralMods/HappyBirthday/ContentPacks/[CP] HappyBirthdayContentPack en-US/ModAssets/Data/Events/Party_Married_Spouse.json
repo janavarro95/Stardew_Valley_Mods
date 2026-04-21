@@ -1,0 +1,7 @@
+{
+  "stardewEventID": "Omegasis.HappyBirthday.Events.Party_Married_Spouse",
+  "eventStringId": "HappyBirthday_Events_Party_Married_Spouse",
+  "version": 3,
+  "EventData": "playful/6 5/farmer 9 5 0 $Spouse 6 5 0/faceDirection farmer 3 True/Omegasis.HappyBirthday.Events.SetUpSpouseAndFarmerToCorrectFarmhouseStandingLocation/Omegasis.HappyBirthday.Events.SetSpouseFacingDirection 0/Omegasis.HappyBirthday.Events.MakeObjectsTemporarilyInvisible 6 5 7 5 8 5 9 5/globalFadeToClear 0.007/move farmer -2 0 3 False/Omegasis.HappyBirthday.Events.SetSpouseFacingDirection 1/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseBirthdayEvent_$Spouse_0/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseBirthdayEvent_$Spouse_1/Omegasis.HappyBirthday.Events.GivePlayerFavoriteGift/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseBirthdayEvent_$Spouse_2/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage $Spouse SpouseBirthdayEvent_$Spouse_3/emote farmer 20/emote $Spouse 20/globalFade 0.01/viewport -400 -400 true/Omegasis.HappyBirthday.Events.ShowTranslatedMessage SpousePartyOver/end",
+  "EventPreconditionData": "Omegasis.HappyBirthday.Framework.EventPreconditions.FarmerBirthdayPrecondition/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/Omegasis.HappyBirthday.Framework.EventPreconditions.GameLocationIsHome/Omegasis.HappyBirthday.Framework.EventPreconditions.IsMarried/"
+}

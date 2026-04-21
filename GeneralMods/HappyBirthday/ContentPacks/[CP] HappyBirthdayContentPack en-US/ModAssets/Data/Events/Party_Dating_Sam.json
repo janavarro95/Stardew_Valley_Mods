@@ -1,0 +1,7 @@
+{
+  "stardewEventID": "Omegasis.HappyBirthday.Events.BirthdayParty_Dating_Sam",
+  "eventStringId": "HappyBirthday_Events_BirthdayParty_Dating_Sam",
+  "version": 3,
+  "EventData": "playful/3 6/farmer 7 9 0 Sam 3 5 2/skippable/globalFadeToClear 0.007/move farmer 0 -4 0 False/move farmer -3 0 3 False/faceDirection Sam 1 True/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Sam DatingSamBirthday_Sam:0/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Sam DatingSamBirthday_Sam:1/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Sam DatingSamBirthday_Sam:2/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Sam DatingSamBirthday_Sam:3/emote farmer 20/emote Sam 20/globalFade 0.01/viewport -100 -100 true/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingSamBirthday_Finish:0/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingSamBirthday_Finish:1/Omegasis.EventFramework.AddObjectToPlayersInventory 206 1 False/Omegasis.EventFramework.AddObjectToPlayersInventory 167 1 False/Omegasis.HappyBirthday.Events.ShowTranslatedMessage PartyOver/end",
+  "EventPreconditionData": "Omegasis.HappyBirthday.Framework.EventPreconditions.FarmerBirthdayPrecondition/StardustCore.Events.Preconditions.GameLocationPrecondition SamHouse/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/StardustCore.Events.Preconditions.NPCSpecific.DatingNPC Sam/"
+}
