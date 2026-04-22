@@ -653,6 +653,19 @@
     {
       "Action": "Include",
       "FromFile": "ModAssets/Data/Gifts/MailOnly.json"
+    },
+
+    //Load in NPCs gifts
+    //Initialize the gift asset for Abigail
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    //Append values to Abigail's possible gifts
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Abigail.json"
     }
 
 

@@ -89,28 +89,16 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         DialogueBox comparisonDB = new(new Dialogue(Game1.currentSpeaker, "", birthdayMessage));
                         if (db.getCurrentString().Equals(comparisonDB.getCurrentString()))
                         {
-                            HappyBirthdayModCore.Instance.Monitor.Log("Correct birthday message loaded, do nothing!");
+                            //HappyBirthdayModCore.Instance.Monitor.Log("Correct birthday message loaded, do nothing!");
                             return;
                         }
-                        /*
-                        if (db.getCurrentString().Equals(birthdayMessage.Replace("@", Game1.player.Name)))
-                        {
-                            HappyBirthdayModCore.Instance.Monitor.Log("Correct birthday message loaded, do nothing!");
-                            return;
-                        }
-                        if (db.getCurrentString().Equals(BirthdayMessages.DefaultBirthdayWishMessage.Replace("@",Game1.player.Name)))
-                        {
-                            HappyBirthdayModCore.Instance.Monitor.Log("Default Correct birthday message loaded, do nothing!");
-                            return;
-                        }
-                        */
 
 
                         Game1.currentSpeaker.resetCurrentDialogue();
                         Game1.currentSpeaker.resetSeasonalDialogue();
                         HappyBirthdayModCore.Instance.Helper.Reflection.GetMethod(Game1.currentSpeaker, "loadCurrentDialogue", true).Invoke();
                         Game1.npcDialogues[Game1.currentSpeaker.Name] = Game1.currentSpeaker.CurrentDialogue;
-                        if (HappyBirthdayModCore.Instance.birthdayManager.isBirthday() && HappyBirthdayModCore.Instance.birthdayManager.hasGivenBirthdayGift(Game1.currentSpeaker.Name) == false)
+                        if (HappyBirthdayModCore.Instance.birthdayManager.hasGivenBirthdayGift(Game1.currentSpeaker.Name) == false && Game1.player.getFriendshipHeartLevelForNPC(Game1.currentSpeaker.Name) >= HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish)
                         {
                             try
                             {

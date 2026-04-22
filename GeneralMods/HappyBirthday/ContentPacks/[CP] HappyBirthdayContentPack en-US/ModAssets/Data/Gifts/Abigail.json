@@ -1,0 +1,42 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "entries": {
+        "StardewValley.Object.Quartz": "1 1"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "entries": {
+        "StardewValley.Object.FireOpal": "1 1"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "entries": {
+        "StardewValley.Object.Malachite": "1 1"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "entries": {
+        "StardewValley.Object.IceCream": "1 1"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Abigail",
+      "entries": {
+        "StardewValley.Object.PurpleMushroom": "1 1"
+      }
+    }
+
+
+
+  ]
+}

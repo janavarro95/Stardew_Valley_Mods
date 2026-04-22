@@ -15,7 +15,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
         public static void EditMailAsset(StardewModdingAPI.IAssetData asset)
         {
-            HappyBirthdayModCore.Instance.Monitor.Log("Try to edit mail asset");
+           
 
             //if (HappyBirthdayModCore.Instance.contentPacksInitalized == false) return;
 
@@ -23,10 +23,6 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             data[MailKeys.MomBirthdayMessageKey] = GetMomsMailMessage();
             data[MailKeys.DadBirthdayMessageKey] = GetDadsMailMessage();
             data[MailKeys.DadMarriedBirthdayMessageKey] = GetDadsMailMessage();
-
-
-            HappyBirthdayModCore.Instance.Monitor.Log("Dad's birthday message is: " + GetDadsMailMessage());
-            HappyBirthdayModCore.Instance.Monitor.Log("Mom's birthday message is: " + GetMomsMailMessage());
 
             foreach (string MailKey in MailKeys.GetAllNonBelatedMailKeysExcludingParents())
             {

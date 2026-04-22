@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using ContentPatcher;
+using Microsoft.Xna.Framework.Input;
 using Omegasis.HappyBirthday.Framework;
 using Omegasis.HappyBirthday.Framework.Configs;
 using Omegasis.HappyBirthday.Framework.ContentPack;
@@ -260,6 +261,13 @@ namespace Omegasis.HappyBirthday
         {
             if (Game1.player.friendshipData.ContainsKey(name))
             {
+                Item possibleContentPatcherItem = this.getGiftFromContentPatcherForNPC(name);
+                if (possibleContentPatcherItem != null)
+                {
+                    return possibleContentPatcherItem;
+                }
+
+
                 if (Game1.player.getSpouse() != null)
                 {
                     if (Game1.player.getSpouse().Name.Equals(name))
@@ -302,6 +310,46 @@ namespace Omegasis.HappyBirthday
                     Item gift = this.getDefaultBirthdayGift(name);
                     return gift;
                 }
+            }
+        }
+
+        public Item getGiftFromContentPatcherForNPC(string name)
+        {
+            try
+            {
+                Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>(string.Format("Mods/Omegasis.HappyBirthday/Gifts/{0}",name));
+
+                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: "+possibleCPGifts.Count.ToString());
+
+                int index = StardewValley.Game1.random.Next(0,possibleCPGifts.Count+1);
+                string key = possibleCPGifts.Keys.ElementAt(index);
+                string itemStackSizeString = possibleCPGifts[key];
+                string[] itemStackSizeSplit = itemStackSizeString.Split(" ");
+                int itemStackSize = 1;
+                if (itemStackSizeSplit.Length == 0)
+                {
+                    itemStackSize = 1;
+                }
+                else if (itemStackSizeSplit.Length == 1)
+                {
+                    itemStackSize = Convert.ToInt32(itemStackSizeSplit[0]);
+                }
+                else if (itemStackSizeSplit.Length == 2)
+                {
+                    int minAmount = Convert.ToInt32(itemStackSizeSplit[0]);
+                    int maxAmount = Convert.ToInt32(itemStackSizeSplit[1]);
+                    itemStackSize = StardewValley.Game1.random.Next(minAmount,maxAmount+1);
+                }
+
+
+                Item item = this.getItemFromId(key, itemStackSize);
+                return item;
+            }
+            catch(Exception e)
+            {
+                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.Message, LogLevel.Error);
+
+                return null;
             }
         }
 
