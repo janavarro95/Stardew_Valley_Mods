@@ -28,7 +28,7 @@ namespace Omegasis.HappyBirthday
     public class HappyBirthdayModCore : Mod
     {
         //TODO: Migrate all Mail
-            //TODO: Add in dynamic tokens for npc gifts?
+            //TODO: Add in extra files for NPC gifts. (See loading MailOnlyStrings as an example)
 
         //TODO: Migrate all events.
         //TODO: Migrate all translated strings (Can I just have a "fake") file and have Content Patcher take care of this?
@@ -203,7 +203,16 @@ namespace Omegasis.HappyBirthday
 
             api.RegisterToken(this.ModManifest, "MomsBirthdayGift", () =>
             {
-                return [this.giftManager.getRandomPossibleGiftMailStringFromMom()];
+                // save is loaded
+                if (Context.IsWorldReady)
+                    return [this.giftManager.getRandomPossibleGiftMailStringFromMom()];
+
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null)
+                    return [this.giftManager.getRandomPossibleGiftMailStringFromMom()];
+
+                // no save loaded (e.g. on the title screen)
+                return null;
             });
 
             api.RegisterToken(this.ModManifest, "DadsBirthdayGift", () =>

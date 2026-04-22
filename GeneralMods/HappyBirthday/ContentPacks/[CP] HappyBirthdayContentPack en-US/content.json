@@ -643,13 +643,18 @@
       }
     },
 
-
-    //Mail Only Gifts
+    //Initialize the Asset Mods/Omegasis.HappyBirthday/MailOnlyGifts
     {
       "Action": "Load",
       "Target": "Mods/Omegasis.HappyBirthday/MailOnlyGifts",
-      "FromFile": "ModAssets/Data/Gifts/MailOnly.json"
+      "FromFile": "ModAssets/Data/Blank.json"
     },
+    //Append values to the Mods/Omegasis.HappyBirthday/MailOnlyGifts asset.
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/MailOnly.json"
+    }
+
 
   ]
 }

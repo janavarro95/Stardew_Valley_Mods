@@ -493,6 +493,14 @@ namespace Omegasis.HappyBirthday
                 message = "";
             }
 
+            var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, message, new SemanticVersion("2.9.0"));
+            tokenString.UpdateContext();
+            if (tokenString.Value != null)
+            {
+                message = tokenString.Value;
+            }
+
             if (!string.IsNullOrEmpty(message) && !message.Equals(key))
             {
                 List<string> giftInformation = message.Split("%item").ToList();
@@ -503,8 +511,6 @@ namespace Omegasis.HappyBirthday
 
                     int index = Game1.random.Next(0, giftInformation.Count);
                     string chosenString = giftInformation[index];
-
-                    HappyBirthdayModCore.Instance.Monitor.Log("MOM's CHOSEN birthday gift string is: " + chosenString);
 
                     if (chosenString.StartsWith(" "))
                     {
@@ -556,19 +562,17 @@ namespace Omegasis.HappyBirthday
             }
             catch(Exception e)
             {
-                HappyBirthdayModCore.Instance.Monitor.Log("Exception failure is" + e.Message);
 
                 message = "";
             }
 
-            HappyBirthdayModCore.Instance.Monitor.Log("Dad's birthday gift string is: " + message);
-
-
-
             var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
             IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, message, new SemanticVersion("2.9.0"));
             tokenString.UpdateContext();
-            message = tokenString.Value;
+            if (tokenString.Value != null)
+            {
+                message = tokenString.Value;
+            }
 
             if (!string.IsNullOrEmpty(message) && !message.Equals(key))
             {
@@ -585,8 +589,6 @@ namespace Omegasis.HappyBirthday
                     {
                         chosenString = chosenString.Trim();
                     }
-
-                    HappyBirthdayModCore.Instance.Monitor.Log("Dad's CHOSEN birthday gift string is: " + chosenString);
                     if (!string.IsNullOrEmpty(chosenString))
                     {
                         if (chosenString.StartsWith("money") || chosenString.StartsWith("id"))

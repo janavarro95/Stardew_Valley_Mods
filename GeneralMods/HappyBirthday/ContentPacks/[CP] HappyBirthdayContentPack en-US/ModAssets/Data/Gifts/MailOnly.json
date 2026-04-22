@@ -1,4 +1,13 @@
 {
-  "HappyBirthday_Dad": "%item money {{Omegasis.HappyBirthday/DadsMoneyAmount}}",
-  "HappyBirthday_Mom": "%item id (O)221 1"
+  "Changes": [
+    //Add in the mail only gifts.
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/MailOnlyGifts",
+      "entries": {
+        "HappyBirthday_Dad": "%item money {{Omegasis.HappyBirthday/DadsMoneyAmount}}",
+        "HappyBirthday_Mom": "%item id (O)221 1"
+      }
+    },
+  ]
 }
