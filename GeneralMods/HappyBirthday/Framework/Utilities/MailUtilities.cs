@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Omegasis.HappyBirthday.Framework.Constants;
+using Omegasis.HappyBirthday.Framework.ContentPack;
 using StardewValley;
 
 namespace Omegasis.HappyBirthday.Framework.Utilities
@@ -14,13 +15,18 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
         public static void EditMailAsset(StardewModdingAPI.IAssetData asset)
         {
-            if (HappyBirthdayModCore.Instance.contentPacksInitalized == false) return;
+            HappyBirthdayModCore.Instance.Monitor.Log("Try to edit mail asset");
+
+            //if (HappyBirthdayModCore.Instance.contentPacksInitalized == false) return;
 
             IDictionary<string, string> data = asset.AsDictionary<string, string>().Data;
             data[MailKeys.MomBirthdayMessageKey] = GetMomsMailMessage();
             data[MailKeys.DadBirthdayMessageKey] = GetDadsMailMessage();
             data[MailKeys.DadMarriedBirthdayMessageKey] = GetDadsMailMessage();
 
+
+            HappyBirthdayModCore.Instance.Monitor.Log("Dad's birthday message is: " + GetDadsMailMessage());
+            HappyBirthdayModCore.Instance.Monitor.Log("Mom's birthday message is: " + GetMomsMailMessage());
 
             foreach (string MailKey in MailKeys.GetAllNonBelatedMailKeysExcludingParents())
             {
@@ -66,19 +72,26 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// <returns></returns>
         public static string GetDadsMailMessage()
         {
+            string dadCPGiftString = HappyBirthdayModCore.Instance.giftManager.getRandomPossibleGiftMailStringFromDad();
+            if (!string.IsNullOrEmpty(dadCPGiftString))
+            {
+                return dadCPGiftString;
+            }
+
+
             int moneyToGet = Game1.year==1?  HappyBirthdayModCore.Configs.mailConfig.dadBirthdayYear1MoneyGivenAmount: HappyBirthdayModCore.Configs.mailConfig.dadBirthdayMoneyGivenAmount;
 
             string formattedString = string.Format("%item money {0} %%",moneyToGet);
 
             if (Game1.player.isMarriedOrRoommates() && Game1.player.isRoommate("Krobus")==false)
             {
-                string birthdayMessage = HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadMarriedBirthdayMessageKey);
+                string birthdayMessage = GetMailMessage(MailKeys.DadMarriedBirthdayMessageKey);
                 if (string.IsNullOrEmpty(birthdayMessage)==false) {
-                    return string.Format(HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadMarriedBirthdayMessageKey), formattedString);
+                    return string.Format(GetMailMessage(MailKeys.DadMarriedBirthdayMessageKey), formattedString);
                 }
             }
 
-            return string.Format(HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.DadBirthdayMessageKey), formattedString);
+            return string.Format(GetMailMessage(MailKeys.DadBirthdayMessageKey), formattedString);
         }
 
         /// <summary>
@@ -103,6 +116,22 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             return string.Format("%item object {0} {1} %%", ParentSheetIndex, StackSize);
         }
 
+        public static string GetItemMailStringFormat(string ItemId, int StackSize, string NPCName)
+        {
+            if (!string.IsNullOrEmpty(NPCName))
+            {
+                NPC npc = Game1.getCharacterFromName(NPCName);
+                if (npc == null) return "";
+
+                if (Game1.player.getFriendshipHeartLevelForNPC(NPCName) < HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish)
+                {
+                    return "";
+                }
+            }
+
+            return string.Format("%item id {0} {1} %%", ItemId, StackSize);
+        }
+
         /// <summary>
         /// Creates the mail message from mom.
         /// </summary>
@@ -113,7 +142,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             int stackSizeToGet = HappyBirthdayModCore.Configs.mailConfig.momBirthdayItemGiveStackSize;
             string formattedString = GetItemMailStringFormat(itemToGet, stackSizeToGet,"");
 
-            return string.Format(HappyBirthdayModCore.Instance.translationInfo.getMailString(MailKeys.MomBirthdayMessageKey), formattedString);
+            return string.Format(GetMailMessage(MailKeys.MomBirthdayMessageKey), formattedString);
         }
 
         /// <summary>
@@ -123,6 +152,25 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// <returns></returns>
         public static string GetMailMessage(string Key)
         {
+            //Code for Content Patcher Content Packs
+            string message = "";
+            string key = string.Format("Data/Mail:{0}", Key);
+
+            try
+            {
+                message = Game1.content.LoadString(key);
+            }
+            catch
+            {
+                message = "";
+            }
+
+            if (!string.IsNullOrEmpty(message) && !message.Equals(key))
+            {
+                return message;
+            }
+
+            //Code for legacy Happy Birthday Content Packs
             return HappyBirthdayModCore.Instance.translationInfo.getMailString(Key);
         }
 

@@ -1,7 +1,7 @@
 {
   "Name": "Happy Birthday",
   "Author": "Alpha_Omegasis",
-  "Version": "3.20.0",
+  "Version": "3.21.0",
   "Description": "Adds the farmer's birthday to the game.",
   "UniqueID": "Omegasis.HappyBirthday",
   "EntryDll": "HappyBirthday.dll",
@@ -18,7 +18,8 @@
     },
     {
       "UniqueID": "Pathoschild.ContentPatcher",
-      "IsRequired": false
+      "IsRequired": true,
+      "MinimumVersion": "2.9.0"
     }
   ]
 }

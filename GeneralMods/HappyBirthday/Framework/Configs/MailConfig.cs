@@ -15,6 +15,11 @@ namespace Omegasis.HappyBirthday.Framework.Configs
         public int momBirthdayItemGive;
         public int momBirthdayItemGiveStackSize;
 
+        public List<string> momBirthdayGiftsToGive = new List<string>()
+        {
+            "(O)221 1"
+        };
+
 
         public MailConfig()
         {

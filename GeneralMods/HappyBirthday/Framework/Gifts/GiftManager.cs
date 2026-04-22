@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
+using ContentPatcher;
 using Omegasis.HappyBirthday.Framework;
 using Omegasis.HappyBirthday.Framework.Configs;
 using Omegasis.HappyBirthday.Framework.ContentPack;
@@ -476,6 +477,134 @@ namespace Omegasis.HappyBirthday
                 return this.legacyGiftIdResolverMap[id];
             }
             return id;
+        }
+
+        public string getRandomPossibleGiftMailStringFromMom()
+        {
+
+            string message = "";
+            string key = "Mods/Omegasis.HappyBirthday/MailOnlyGifts:HappyBirthday_Mom";
+            try
+            {
+                message = Game1.content.LoadString(key);
+            }
+            catch
+            {
+                message = "";
+            }
+
+            if (!string.IsNullOrEmpty(message) && !message.Equals(key))
+            {
+                List<string> giftInformation = message.Split("%item").ToList();
+                giftInformation.RemoveAll(string.IsNullOrEmpty);
+
+                if (giftInformation.Count > 0)
+                {
+
+                    int index = Game1.random.Next(0, giftInformation.Count);
+                    string chosenString = giftInformation[index];
+
+                    HappyBirthdayModCore.Instance.Monitor.Log("MOM's CHOSEN birthday gift string is: " + chosenString);
+
+                    if (chosenString.StartsWith(" "))
+                    {
+                        chosenString = chosenString.Trim();
+                    }
+                    if (!string.IsNullOrEmpty(chosenString))
+                    {
+                        if (chosenString.StartsWith("money") || chosenString.StartsWith("id"))
+                        {
+                            return "%item " + chosenString + " %%";
+                        }
+                    }
+
+                }
+            }
+
+
+
+            if (HappyBirthdayModCore.Configs.mailConfig.momBirthdayGiftsToGive.Count == 0)
+            {
+                return MailUtilities.GetItemMailStringFormat(HappyBirthdayModCore.Configs.mailConfig.momBirthdayItemGive, 1, "");
+            }
+
+            string chosen = HappyBirthdayModCore.Configs.mailConfig.momBirthdayGiftsToGive[Game1.random.Next(0, HappyBirthdayModCore.Configs.mailConfig.momBirthdayGiftsToGive.Count)];
+            string[] splits = chosen.Split(' ');
+
+            if (splits.Length == 0)
+            {
+                return MailUtilities.GetItemMailStringFormat(HappyBirthdayModCore.Configs.mailConfig.momBirthdayItemGive, 1, "");
+            }
+
+            if (splits.Length == 1)
+            {
+                return MailUtilities.GetItemMailStringFormat(splits[0], 1, "");
+            }
+
+            return MailUtilities.GetItemMailStringFormat(splits[0], Convert.ToInt32(splits[1]),"");
+
+        }
+
+        public string getRandomPossibleGiftMailStringFromDad()
+        {
+
+            string message = "";
+            string key = "Mods/Omegasis.HappyBirthday/MailOnlyGifts:HappyBirthday_Dad";
+            try
+            {
+                message = Game1.content.LoadString(key);
+            }
+            catch(Exception e)
+            {
+                HappyBirthdayModCore.Instance.Monitor.Log("Exception failure is" + e.Message);
+
+                message = "";
+            }
+
+            HappyBirthdayModCore.Instance.Monitor.Log("Dad's birthday gift string is: " + message);
+
+
+
+            var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, message, new SemanticVersion("2.9.0"));
+            tokenString.UpdateContext();
+            message = tokenString.Value;
+
+            if (!string.IsNullOrEmpty(message) && !message.Equals(key))
+            {
+                List<string> giftInformation = message.Split("%item").ToList();
+                giftInformation.RemoveAll(string.IsNullOrEmpty);
+
+
+                if (giftInformation.Count > 0)
+                {
+
+                    int index = Game1.random.Next(0, giftInformation.Count);
+                    string chosenString = giftInformation[index];
+                    if (chosenString.StartsWith(" "))
+                    {
+                        chosenString = chosenString.Trim();
+                    }
+
+                    HappyBirthdayModCore.Instance.Monitor.Log("Dad's CHOSEN birthday gift string is: " + chosenString);
+                    if (!string.IsNullOrEmpty(chosenString))
+                    {
+                        if (chosenString.StartsWith("money") || chosenString.StartsWith("id"))
+                        {
+                            return "%item " + chosenString + " %%";
+                        }
+                    }
+
+                }
+            }
+
+            if (message.Equals(key))
+            {
+                return "";
+            }
+
+            return message;
+
         }
     }
 

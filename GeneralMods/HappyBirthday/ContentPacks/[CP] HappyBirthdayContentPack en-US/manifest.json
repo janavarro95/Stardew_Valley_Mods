@@ -7,5 +7,11 @@
   "UpdateKeys": [ "Nexus:11148" ],
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher"
-  }
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Omegasis.HappyBirthday",
+      "MinimumVersion": "3.21.0"
+    },
+  ]
 }

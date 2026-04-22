@@ -1,0 +1,4 @@
+{
+  "HappyBirthday_Dad": "%item money {{Omegasis.HappyBirthday/DadsMoneyAmount}}",
+  "HappyBirthday_Mom": "%item id (O)221 1"
+}

@@ -27,9 +27,9 @@ namespace Omegasis.HappyBirthday
     /// <summary>The mod entry point.</summary>
     public class HappyBirthdayModCore : Mod
     {
-        //TODO: Migrate all original content pack dialogue to ContentPatcher dialogue.
-        //TODO: Migrate all Spouse Dialogue. (Just have a when condition for when you are married)
         //TODO: Migrate all Mail
+            //TODO: Add in dynamic tokens for npc gifts?
+
         //TODO: Migrate all events.
         //TODO: Migrate all translated strings (Can I just have a "fake") file and have Content Patcher take care of this?
 
@@ -125,7 +125,6 @@ namespace Omegasis.HappyBirthday
             LocalizedContentManager.OnLanguageChange += this.LocalizedContentManager_OnLanguageChange;
 
             this.Helper.ConsoleCommands.Add("Omegasis.Happy_Birthday.reset_birthday", "Resets the player's birthday and allows for them to choose it again.", this.birthdayManager.resetPlayersBirthday);
-
         }
 
         private void Content_AssetRequested(object sender, AssetRequestedEventArgs e)
@@ -195,6 +194,41 @@ namespace Omegasis.HappyBirthday
             api.RegisterToken(this.ModManifest, "AffectionateSpouseWord", () =>
             {
                 return [this.birthdayMessages.getAffectionateSpouseWord()];
+            });
+
+            api.RegisterToken(this.ModManifest, "TimeOfDay", () =>
+            {
+                return [this.birthdayMessages.getTimeOfDayString()];
+            });
+
+            api.RegisterToken(this.ModManifest, "MomsBirthdayGift", () =>
+            {
+                return [this.giftManager.getRandomPossibleGiftMailStringFromMom()];
+            });
+
+            api.RegisterToken(this.ModManifest, "DadsBirthdayGift", () =>
+            {
+                // save is loaded
+                if (Context.IsWorldReady)
+                    return [this.giftManager.getRandomPossibleGiftMailStringFromDad()];
+
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null)
+                    return [this.giftManager.getRandomPossibleGiftMailStringFromDad()];
+
+                // no save loaded (e.g. on the title screen)
+                return null;
+            });
+
+            api.RegisterToken(this.ModManifest, "DadsMoneyAmount", () =>
+            {
+                if (Game1.year == 1) {
+                    return [Convert.ToString(Configs.mailConfig.dadBirthdayYear1MoneyGivenAmount)];
+                }
+                else
+                {
+                    return [Convert.ToString(Configs.mailConfig.dadBirthdayMoneyGivenAmount)];
+                }
             });
 
         }
