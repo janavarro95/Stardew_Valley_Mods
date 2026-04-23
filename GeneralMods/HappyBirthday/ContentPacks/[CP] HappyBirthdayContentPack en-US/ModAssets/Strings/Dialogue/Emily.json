@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Emily
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! I can see your future shining bright like a star! $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, whenever I tried to read my fortune, I never thought that I'd be as happy as I am with you! Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}! $l"
+      },
+      "When": {
+        "Spouse": "Emily"
+      }
+    }
+
+
+  ]
+}

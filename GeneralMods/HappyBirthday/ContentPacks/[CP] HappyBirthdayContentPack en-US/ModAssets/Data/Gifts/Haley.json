@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Haley",
+      "entries": {
+        "{{Omegasis.HappyBirthday/RandomFlower}}": "1 3"
+      }
+    }
+  ]
+}

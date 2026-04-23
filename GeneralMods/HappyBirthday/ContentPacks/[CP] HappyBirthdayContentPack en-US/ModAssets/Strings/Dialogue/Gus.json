@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+
+    //Gus
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! Hopefully you enjoy the rest of the day, and make sure you aren't a stranger at the saloon!"
+      }
+    }
+
+  ]
+}

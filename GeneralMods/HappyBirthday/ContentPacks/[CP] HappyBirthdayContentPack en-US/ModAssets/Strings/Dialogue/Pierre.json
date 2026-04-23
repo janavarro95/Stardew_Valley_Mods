@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Pierre
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pierre",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! Hopefully this next year will be a great one for you!"
+      }
+    }
+  ]
+}

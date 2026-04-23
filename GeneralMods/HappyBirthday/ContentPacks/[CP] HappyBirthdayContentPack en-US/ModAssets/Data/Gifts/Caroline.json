@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Caroline",
+      "entries": {
+        "StardewValley.Object.GreenTea": "1 1",
+        "StardewValley.Object.TeaLeaves": "3 3",
+        "StardewValley.Object.SummerSpangle": "1 1"
+
+      }
+    }
+  ]
+}

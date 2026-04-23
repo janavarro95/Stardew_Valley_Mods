@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Kent",
+      "entries": {
+        "StardewValley.Object.RoastedHazelnuts": "1 1",
+        "StardewValley.Object.FiddleheadRisotto": "1 1",
+        "StardewValley.Object.PineTar": "3 3",
+        "StardewValley.Object.BrownEgg": "6 6"
+      }
+    }
+  ]
+}

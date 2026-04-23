@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Willy",
+      "entries": {
+        "StardewValley.Object.Bait": "50 50",
+        "StardewValley.Object.CuriosityLure": "1 1",
+        "StardewValley.Object.BarbedHook": "1 1",
+        "StardewValley.Object.QualityBobber": "1 1",
+        "StardewValley.Object.TreasureHunter": "1 1"
+
+      }
+    }
+  ]
+}

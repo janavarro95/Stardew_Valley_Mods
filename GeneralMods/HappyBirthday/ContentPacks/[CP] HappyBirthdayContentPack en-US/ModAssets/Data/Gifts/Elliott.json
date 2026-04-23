@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Elliott",
+      "entries": {
+        "StardewValley.Object.CrabCakes": "1 3",
+        "StardewValley.Object.DuckFeather": "1 3",
+        "StardewValley.Object.RainbowShell": "1 3"
+      }
+    }
+  ]
+}

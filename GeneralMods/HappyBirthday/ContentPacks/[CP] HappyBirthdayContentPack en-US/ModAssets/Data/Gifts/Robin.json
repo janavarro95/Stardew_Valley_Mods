@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Robin",
+      "entries": {
+        "StardewValley.Object.Wood": "50 50",
+        "StardewValley.Object.Stone": "50 50",
+        "StardewValley.Object.Hardwood": "20 20",
+      }
+    }
+  ]
+}

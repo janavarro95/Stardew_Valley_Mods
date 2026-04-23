@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Shane",
+      "entries": {
+        "StardewValley.Object.Pizza": "1 1",
+        "StardewValley.Object.Egg": "6 6",
+        "StardewValley.Object.JojaCola": "12 12",
+        "StardewValley.Object.Beer": "1 1"
+      }
+    }
+  ]
+}

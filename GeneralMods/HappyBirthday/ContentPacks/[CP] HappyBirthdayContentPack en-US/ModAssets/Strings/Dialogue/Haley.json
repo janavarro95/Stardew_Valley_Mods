@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Haley
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Hopefully this year you'll get some good presents! $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}, we've come a long way since we first met, but I'm glad we took this journey together. Every day feels picture perfect with you. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Haley"
+      }
+    }
+
+
+  ]
+}

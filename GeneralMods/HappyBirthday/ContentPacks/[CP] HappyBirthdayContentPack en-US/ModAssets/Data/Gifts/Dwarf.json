@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Dwarf",
+      "entries": {
+        "StardewValley.Object.CherryBomb": "10 10",
+        "StardewValley.Object.Bomb": "5 5",
+        "StardewValley.Object.MegaBomb": "3 3"
+      }
+    }
+  ]
+}

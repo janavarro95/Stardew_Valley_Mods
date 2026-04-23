@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Krobus",
+      "entries": {
+        "StardewValley.Object.SolarEssence": "5 10",
+        "StardewValley.Object.VoidEssence": "5 10",
+        "StardewValley.Object.VoidEgg": "1 1"
+      }
+    }
+  ]
+}

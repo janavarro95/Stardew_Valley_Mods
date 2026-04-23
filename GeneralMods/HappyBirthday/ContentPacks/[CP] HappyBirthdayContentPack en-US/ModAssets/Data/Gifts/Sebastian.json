@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sebastian",
+      "entries": {
+        "StardewValley.Object.Quartz": "3 3",
+        "StardewValley.Object.BlueberryTart": "1 1",
+        "StardewValley.Object.CherryBomb": "4 4",
+        "StardewValley.Object.GhostCrystal": "1 1"
+
+      }
+    }
+  ]
+}

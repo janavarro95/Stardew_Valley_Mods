@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Shane
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Keep working hard, and I'm sure this next year will be a great one for you."
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "I never though I'd enjoy anything but drinking on birthdays, but you've shown me how to live a great life. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
+      },
+      "When": {
+        "Spouse": "Shane"
+      }
+    }
+
+
+  ]
+}

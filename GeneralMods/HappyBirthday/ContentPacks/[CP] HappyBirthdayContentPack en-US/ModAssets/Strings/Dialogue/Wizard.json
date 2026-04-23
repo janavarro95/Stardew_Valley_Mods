@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Wizard
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Never forget that you alone make your future.#$e#How did I know? Ah, I overheard a few of the locals conferring on what gifts to give you. I think you'll appreciate them."
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Penny
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. May you enjoy all of life's blessings this year. $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I always read about happy endings in books but being with you makes me realize that it continues well into the future. Here is to many more years to come. $l"
+      },
+      "When": {
+        "Spouse": "Penny"
+      }
+    }
+
+  ]
+}

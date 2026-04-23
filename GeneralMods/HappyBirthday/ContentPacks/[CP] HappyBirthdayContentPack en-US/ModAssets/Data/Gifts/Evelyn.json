@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Evelyn",
+      "entries": {
+        "StardewValley.Object.Cookies": "1 3"
+      }
+    }
+  ]
+}

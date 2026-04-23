@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Pam
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, kid. We should have a drink to celebrate another year of life for you! $h"
+      }
+    }
+  ]
+}

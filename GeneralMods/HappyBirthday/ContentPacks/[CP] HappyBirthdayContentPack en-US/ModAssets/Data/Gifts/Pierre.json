@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Pierre",
+      "entries": {
+        "{{Omegasis.HappyBirthday/RandomFertilizer}}": "10 10",
+        "{{Omegasis.HappyBirthday/RandomNonRareSeeds}}": "10 10"
+      }
+    }
+  ]
+}

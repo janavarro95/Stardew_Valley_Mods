@@ -15,7 +15,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
         public static void EditMailAsset(StardewModdingAPI.IAssetData asset)
         {
-           
+
 
             //if (HappyBirthdayModCore.Instance.contentPacksInitalized == false) return;
 
@@ -29,19 +29,23 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                 UpdateMailMessage(ref data, MailKey);
             }
 
-            foreach(KeyValuePair<string,string> npcNameToMailKey in MailKeys.GetAllBelatedBirthdayMailKeys())
+            foreach (KeyValuePair<string, string> npcNameToMailKey in MailKeys.GetAllBelatedBirthdayMailKeys())
             {
                 string npcName = npcNameToMailKey.Key;
                 string mailKey = npcNameToMailKey.Value;
 
-                Item gift= HappyBirthdayModCore.Instance.giftManager.getNextBirthdayGift(npcName);
-                int itemParentSheetIndex = gift.ParentSheetIndex;
-                int stackSize = gift.Stack;
-                string formattedMailItemString = GetItemMailStringFormat(itemParentSheetIndex, stackSize, npcName);
+                Item gift = HappyBirthdayModCore.Instance.giftManager.getNextBirthdayGift(npcName);
+                string formattedMailItemString = GetItemMailStringFormat(gift.QualifiedItemId, gift.Stack, npcName);
 
 
                 //Add some special handling here to allow for belated birthday wishes from modded npcs that don't have specific dialogue.
                 string mailMessage = GetMailMessage(mailKey);
+                mailMessage = string.Format(mailMessage, formattedMailItemString);
+
+                HappyBirthdayModCore.Instance.Monitor.Log("NPC mail key is " + mailKey);
+                HappyBirthdayModCore.Instance.Monitor.Log("NPC mail message is " + mailMessage);
+                HappyBirthdayModCore.Instance.Monitor.Log("NPC formattedMailItemString message is " + formattedMailItemString);
+
                 if (string.IsNullOrEmpty(mailMessage))
                 {
                     mailMessage = GetMailMessage("Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message");
@@ -52,13 +56,13 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         npcName = npc.displayName;
                     }
 
-                    data[mailKey] = string.Format(mailMessage, formattedMailItemString,npcName);
+                    data[mailKey] = string.Format(mailMessage, formattedMailItemString, npcName);
                     continue;
                 }
-
-                
-
-                UpdateMailMessage(ref data, mailKey, formattedMailItemString,npcName);
+                else
+                {
+                    data[mailKey] = mailMessage;
+                }
             }
         }
 
@@ -75,14 +79,15 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             }
 
 
-            int moneyToGet = Game1.year==1?  HappyBirthdayModCore.Configs.mailConfig.dadBirthdayYear1MoneyGivenAmount: HappyBirthdayModCore.Configs.mailConfig.dadBirthdayMoneyGivenAmount;
+            int moneyToGet = Game1.year == 1 ? HappyBirthdayModCore.Configs.mailConfig.dadBirthdayYear1MoneyGivenAmount : HappyBirthdayModCore.Configs.mailConfig.dadBirthdayMoneyGivenAmount;
 
-            string formattedString = string.Format("%item money {0} %%",moneyToGet);
+            string formattedString = string.Format("%item money {0} %%", moneyToGet);
 
-            if (Game1.player.isMarriedOrRoommates() && Game1.player.isRoommate("Krobus")==false)
+            if (Game1.player.isMarriedOrRoommates() && Game1.player.isRoommate("Krobus") == false)
             {
                 string birthdayMessage = GetMailMessage(MailKeys.DadMarriedBirthdayMessageKey);
-                if (string.IsNullOrEmpty(birthdayMessage)==false) {
+                if (string.IsNullOrEmpty(birthdayMessage) == false)
+                {
                     return string.Format(GetMailMessage(MailKeys.DadMarriedBirthdayMessageKey), formattedString);
                 }
             }
@@ -136,7 +141,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         {
             int itemToGet = HappyBirthdayModCore.Configs.mailConfig.momBirthdayItemGive;
             int stackSizeToGet = HappyBirthdayModCore.Configs.mailConfig.momBirthdayItemGiveStackSize;
-            string formattedString = GetItemMailStringFormat(itemToGet, stackSizeToGet,"");
+            string formattedString = GetItemMailStringFormat(itemToGet, stackSizeToGet, "");
 
             return string.Format(GetMailMessage(MailKeys.MomBirthdayMessageKey), formattedString);
         }
@@ -154,10 +159,15 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
             try
             {
-                message = Game1.content.LoadString(key);
+                Dictionary<string, string> data = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>("Data/Mail");
+                message = data[Key];
+
+                HappyBirthdayModCore.Instance.Monitor.Log("THE MESSAGE IS: " + message);
+
             }
-            catch
+            catch (Exception e)
             {
+                HappyBirthdayModCore.Instance.Monitor.Log(e.ToString());
                 message = "";
             }
 
@@ -175,7 +185,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// </summary>
         public static void RemoveAllBirthdayMail()
         {
-            foreach(string MailKey in MailKeys.GetAllMailKeys())
+            foreach (string MailKey in MailKeys.GetAllMailKeys())
             {
                 RemoveBirthdayMailIfReceived(MailKey);
             }
@@ -199,9 +209,9 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// <param name="MailData"></param>
         /// <param name="MailKey"></param>
         /// <param name="FormattingArgs">The string args to be used in replacing the mail keys.</param>
-        public static void UpdateMailMessage(ref IDictionary<string,string> MailData, string MailKey, params string[] FormattingArgs)
+        public static void UpdateMailMessage(ref IDictionary<string, string> MailData, string MailKey, params string[] FormattingArgs)
         {
-            MailData[MailKey] = string.Format(GetMailMessage(MailKey),FormattingArgs);
+            MailData[MailKey] = string.Format(GetMailMessage(MailKey), FormattingArgs);
         }
 
         /// <summary>
@@ -213,7 +223,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             Game1.player.mailbox.Add(MailKeys.MomBirthdayMessageKey);
             Game1.player.mailbox.Add(MailKeys.DadBirthdayMessageKey);
 
-            foreach(NPC npc in NPCUtilities.GetAllHumanNpcs())
+            foreach (NPC npc in NPCUtilities.GetAllNonSpecialHumanNpcs())
             {
                 string npcName = npc.Name;
                 if (Game1.player.friendshipData.ContainsKey(npcName))
@@ -225,7 +235,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         {
                             if (Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth).ToLowerInvariant().Equals("wed") || Game1.shortDayNameFromDayOfSeason(Game1.dayOfMonth).ToLowerInvariant().Equals("wed."))
                             {
-                                mailKey = MailKeys.CreateDatingPartyInvitationKey(npcName,"_Wednesday");
+                                mailKey = MailKeys.CreateDatingPartyInvitationKey(npcName, "_Wednesday");
                             }
                             else
                             {
@@ -251,6 +261,9 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// <param name="NpcsToReceieveMailFrom"></param>
         public static void AddBelatedBirthdayMailToMailbox(List<string> NpcsToReceieveMailFrom)
         {
+            HappyBirthdayModCore.Instance.Helper.GameContent.InvalidateCache("Data/Mail");
+
+
             foreach (string npcName in NpcsToReceieveMailFrom)
             {
                 if (NPCUtilities.ShouldWishPlayerHappyBirthday(npcName))

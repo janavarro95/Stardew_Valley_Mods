@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/DefaultGifts",
+      "entries": {
+        "{{Omegasis.HappyBirthday/RandomCookedDish}}": "1 1",
+        "{{Omegasis.HappyBirthday/RandomNonRareSeeds}}": "1 1"
+      }
+    }
+  ]
+}

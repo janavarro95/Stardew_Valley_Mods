@@ -10,7 +10,10 @@ using Omegasis.StardustCore.Events;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
+using StardewValley.GameData.Characters;
 using StardewValley.Menus;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Omegasis.HappyBirthday.Framework.Utilities
 {
@@ -18,6 +21,8 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
     {
         /// <summary>Checks if the current billboard is the daily quest screen or not.</summary>
         public static bool IsDailyQuestBoard;
+
+        public static string JustCheckedMailKey;
 
         /// <summary>Raised after a game menu is opened, closed, or replaced.</summary>
         /// <param name="sender">The event sender.</param>
@@ -43,6 +48,51 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                     }
                 case LetterViewerMenu menu:
                     {
+                        string title = menu.mailTitle;
+
+                        if (JustCheckedMailKey.Equals(title))
+                        {
+                            return;
+                        }
+
+                        Dictionary<string,string> allMail = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string,string>>("Data/Mail");
+                        foreach (string key in allMail.Keys)
+                        {
+
+                            string checkedTitle = key;
+
+                            if (checkedTitle.Equals(title))
+                            {
+
+                                JustCheckedMailKey = key;
+                                string message = allMail[key];
+
+                                foreach (NPC npc in NPCUtilities.GetAllHumanNpcs()) {
+                                    string npcGiftKey = "{NPCGift:{0}}".Replace("{0}", npc.Name); 
+                                    if (message.Contains(npcGiftKey))
+                                    {
+                                        Item gift = HappyBirthdayModCore.Instance.giftManager.getNextBirthdayGift(npc.Name);
+                                        string formattedMailItemString =MailUtilities.GetItemMailStringFormat(gift.QualifiedItemId, gift.Stack, npc.Name);
+                                        message = message.Replace(npcGiftKey,formattedMailItemString);
+                                        break;
+                                    }
+
+                                    string genericKey = "{NPCGift:Generic}";
+                                    if (message.Contains(genericKey))
+                                    {
+                                        Item gift = HappyBirthdayModCore.Instance.giftManager.getDefaultBirthdayGift(npc.Name);
+                                        string formattedMailItemString = MailUtilities.GetItemMailStringFormat(gift.QualifiedItemId, gift.Stack, npc.Name);
+                                        message = message.Replace(genericKey, formattedMailItemString).Replace("{1}",npc.Name);
+                                        break;
+                                    }
+
+                                }
+
+
+                                Game1.activeClickableMenu = new LetterViewerMenu(message, key);
+                                break;
+                            }                            
+                        }
 
                         break;
                     }
@@ -70,6 +120,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                     NPCUtilities.LastSpeaker = null;
                 }
             }
+            JustCheckedMailKey = "";
         }
 
         public static void OnMenuChangedToDialogueBox()

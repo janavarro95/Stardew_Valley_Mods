@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Harvey
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Come in for a checkup sometime, alright? I want to make sure you'll see plenty more."
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I was just thinking on how invigorated I've felt since marrying you. When I look at you, I feel as I'm positively glowing with joy. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Harvey"
+      }
+    }
+
+  ]
+}

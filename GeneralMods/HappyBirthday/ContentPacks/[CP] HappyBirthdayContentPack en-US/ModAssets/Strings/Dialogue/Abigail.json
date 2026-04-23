@@ -1,0 +1,23 @@
+{
+  "Changes": [
+
+    //Abigail
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Hopefully this year we can go on even more adventures together! $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. You know every day feels like a great adventure with you! Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Abigail"
+      }
+    }
+  ]
+}

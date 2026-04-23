@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+
+    //Jodi
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hello there, @. Rumor has it that today is your birthday. In that case, happy birthday! $h"
+      }
+    }
+
+  ]
+}

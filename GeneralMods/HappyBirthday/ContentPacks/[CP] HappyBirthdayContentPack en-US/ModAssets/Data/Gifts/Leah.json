@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Leah",
+      "entries": {
+        "StardewValley.Object.Salad": "1 1",
+        "StardewValley.Object.Wood": "50 50",
+      }
+    }
+  ]
+}

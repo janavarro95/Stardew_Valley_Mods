@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Sam
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! We'll have to have a birthday jam session for you sometime! $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. You know, I never saw myself settling down before I met you, but now that I have, I feel like I never want to look back. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Sam"
+      }
+    }
+
+
+  ]
+}

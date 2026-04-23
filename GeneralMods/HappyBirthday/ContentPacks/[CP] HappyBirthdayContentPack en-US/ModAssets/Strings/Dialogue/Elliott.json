@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Elliott
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "What a wonderful day, isn't it, @? Though I'm sure it's even lovelier to you, it being your birthday!$h#$b#I was actually in the middle of writing a poem for the occasion, but a 'happy birthday' will have to suffice for now."
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I was just thinking on how you have been a muse for my work. You inspire me every day I spend with you. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Elliott"
+      }
+    }
+
+  ]
+}

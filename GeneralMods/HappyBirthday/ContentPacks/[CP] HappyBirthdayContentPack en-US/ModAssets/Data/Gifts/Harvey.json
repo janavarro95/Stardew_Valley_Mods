@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Harvey",
+      "entries": {
+        "StardewValley.Object.MuscleRemedy": "1 3",
+        "StardewValley.Object.LifeElixer": "1 3",
+        "StardewValley.Object.EnergyTonic": "1 3",
+        "StardewValley.Object.SuperMeal": "1 1"
+      }
+    }
+  ]
+}

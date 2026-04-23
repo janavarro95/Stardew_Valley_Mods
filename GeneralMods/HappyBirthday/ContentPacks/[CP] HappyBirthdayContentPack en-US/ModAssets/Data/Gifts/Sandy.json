@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sandy",
+      "entries": {
+        "StardewValley.Object.Starfruit": "3 3",
+        "StardewValley.Object.Coconut": "6 6",
+        "StardewValley.Object.CactusFruit": "6 6"
+      }
+    }
+  ]
+}

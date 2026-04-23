@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Vincent
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, have you come to pl... oh, it's your birthday? Happy birthday!"
+      }
+    }
+  ]
+}

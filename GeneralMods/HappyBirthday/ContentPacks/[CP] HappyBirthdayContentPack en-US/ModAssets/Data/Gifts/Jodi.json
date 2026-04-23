@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Jodi",
+      "entries": {
+        "StardewValley.Object.BlueberryTart": "1 1",
+        "StardewValley.Object.BlackberryCobbler": "1 1",
+        "StardewValley.Object.PumpkinPie": "1 1",
+        "StardewValley.Object.RhubarbPie": "1 1"
+      }
+    }
+  ]
+}

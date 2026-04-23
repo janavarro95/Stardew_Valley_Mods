@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Maru",
+      "entries": {
+        "StardewValley.Object.CopperBar": "8 8",
+        "StardewValley.Object.IronBar": "5 5",
+        "StardewValley.Object.GoldBar": "3 3",
+        "StardewValley.Object.BatteryPack": "1 1",
+        "StardewValley.Object.IridiumSprinkler": "1 1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Wizard",
+      "entries": {
+        "StardewValley.Object.SolarEssence": "10 10",
+        "StardewValley.Object.VoidEssence": "10 10",
+        "StardewValley.Object.FireQuartz": "3 5",
+        "StardewValley.Object.Obsidian": "3 5",
+        "StardewValley.Object.LifeElixer": "1 1"
+      }
+    }
+  ]
+}

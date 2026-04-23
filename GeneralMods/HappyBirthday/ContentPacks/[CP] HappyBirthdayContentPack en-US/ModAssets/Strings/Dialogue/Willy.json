@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Willy
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Willy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Ahoy, @, happy birthday. Looking at you reminds me of the days when I was just a guppy myself. Enjoy yours while you can, young'un. $h"
+      }
+    }
+  ]
+}

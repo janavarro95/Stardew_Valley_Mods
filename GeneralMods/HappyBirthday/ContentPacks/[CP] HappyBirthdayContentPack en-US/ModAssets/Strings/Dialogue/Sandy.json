@@ -1,0 +1,26 @@
+{
+  "Changes": [
+
+    //Sandy
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sandy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Aww, sweetie, you came all the way out here to see me on your birthday?$h#$b#Well, then, the least I can do is wish you a happy one!~ $h"
+      }
+    },
+    //Sandy has been announced as a bacheolor for 1.7 so include that dialogue preemptively.
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sandy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "I'm so glad that our paths crossed and so appreciative of all the times you came to visit me in the desert. Now I'm overjoyed that I get to spend every day and the rest of my life with you! Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
+      },
+      "When": {
+        "Spouse": "Sandy"
+      }
+    }
+
+
+  ]
+}

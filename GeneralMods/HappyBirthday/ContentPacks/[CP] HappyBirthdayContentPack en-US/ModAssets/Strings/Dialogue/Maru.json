@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Maru
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I tried to make an everlasting candle for you, but sadly that didn't work out. Maybe next year, right? $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I always thought I had to look into space to find a shooting star but when I look at you I realize I already have one. $l"
+      },
+      "When": {
+        "Spouse": "Maru"
+      }
+    }
+
+  ]
+}

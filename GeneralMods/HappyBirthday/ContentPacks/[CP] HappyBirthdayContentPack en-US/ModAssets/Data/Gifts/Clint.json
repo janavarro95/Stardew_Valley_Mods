@@ -1,0 +1,20 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Clint",
+      "entries": {
+        "StardewValley.Object.CopperBar": "5 5",
+        "StardewValley.Object.IronBar": "3 3",
+        "StardewValley.Object.GoldBar": "3 3",
+        "StardewValley.Object.IridiumBar": "1 1",
+        "StardewValley.Object.Geode": "5 5",
+        "StardewValley.Object.FrozenGeode": "3 3",
+        "StardewValley.Object.MagmaGeode": "2 2",
+        "StardewValley.Object.OmniGeode": "1 1"
+
+
+      }
+    }
+  ]
+}

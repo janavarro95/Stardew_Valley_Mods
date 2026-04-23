@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Emily",
+      "entries": {
+        "StardewValley.Object.Amethyst": "1 3",
+        "StardewValley.Object.Ruby": "1 3",
+        "StardewValley.Object.Emerald": "1 3",
+        "StardewValley.Object.Topaz": "1 3",
+        "StardewValley.Object.Aquamarine": "1 3",
+        "StardewValley.Object.Cloth": "1 3"
+      }
+    }
+  ]
+}

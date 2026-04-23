@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Linus",
+      "entries": {
+        "{{Omegasis.HappyBirthday/RandomForage}}": "1 3"
+      }
+    }
+  ]
+}

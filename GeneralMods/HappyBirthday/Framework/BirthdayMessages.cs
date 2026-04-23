@@ -118,8 +118,6 @@ namespace Omegasis.HappyBirthday
             catch(Exception e)
             {
                 message = "";
-
-                HappyBirthdayModCore.Instance.Monitor.Log("Exception while loading asset: " + e.ToString());
             }
 
             if (!string.IsNullOrEmpty(message) && !message.Equals(key))

@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Krobus
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I still don't quite understand humans, but I'm glad to have met you all the same."
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}. I'm glad that we have the opportunity to live together as it has taught me much about both you and your human culture, including how birthdays are celebrated. Here's hoping we can spend many more years together. Happy birthday @! $h"
+      },
+      "When": {
+        "Roommate": "Krobus"
+      }
+    }
+
+  ]
+}

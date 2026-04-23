@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sam",
+      "entries": {
+        "StardewValley.Object.Pizza": "1 1",
+        "StardewValley.Object.JojaCola": "12 12",
+        "StardewValley.Object.CherryBomb": "6 6"
+      }
+    }
+  ]
+}

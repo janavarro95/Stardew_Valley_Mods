@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Linus
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thanks for visiting me even on your birthday. It makes me really happy. $h"
+      }
+    }
+  ]
+}

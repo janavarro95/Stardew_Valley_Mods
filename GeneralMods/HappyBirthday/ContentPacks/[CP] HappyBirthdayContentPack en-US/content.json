@@ -2,585 +2,145 @@
   "Format": "2.9.0",
   "Changes": [
 
-    //Abigail
+    //Include dialogue from npcs.
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Abigail",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Hopefully this year we can go on even more adventures together! $h"
-      },
-      "When": {
-        "query: {{Hearts:Abigail}} >= 2": true
-      },
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Abigail.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Abigail",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. You know every day feels like a great adventure with you! Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Abigail": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Abigail"
-      }
-    },
-
-    //Alex
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Alex",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Yo, @, happy birthday! Here's to making this the best year yet! $h"
-      },
-      "When": {
-        "Hearts:Alex": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Alex.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Alex",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I'm so glad that I married you. You make every day feel like winning a sports match. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Alex": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Alex"
-      }
-    },
-
-
-    //Elliott
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Elliott",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "What a wonderful day, isn't it, @? Though I'm sure it's even lovelier to you, it being your birthday!$h#$b#I was actually in the middle of writing a poem for the occasion, but a 'happy birthday' will have to suffice for now."
-      },
-      "When": {
-        "Hearts:Elliott": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Elliott.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Elliott",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I was just thinking on how you have been a muse for my work. You inspire me every day I spend with you. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Elliott": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Elliott"
-      }
-    },
-
-    //Emily
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Emily",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! I can see your future shining bright like a star! $h"
-      },
-      "When": {
-        "Hearts:Emily": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Emily.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Emily",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, whenever I tried to read my fortune, I never thought that I'd be as happy as I am with you! Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}! $l"
-      },
-      "When": {
-        "Hearts:Emily": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Emily"
-      }
-    },
-
-
-    //Haley
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Haley",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Hopefully this year you'll get some good presents! $h"
-      },
-      "When": {
-        "Hearts:Haley": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Haley.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Haley",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}, we've come a long way since we first met, but I'm glad we took this journey together. Every day feels picture perfect with you. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Haley": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Haley"
-      }
-    },
-
-    //Harvey
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Harvey",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Come in for a checkup sometime, alright? I want to make sure you'll see plenty more."
-      },
-      "When": {
-        "Hearts:Harvey": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Harvey.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Harvey",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I was just thinking on how invigorated I've felt since marrying you. When I look at you, I feel as I'm positively glowing with joy. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Harvey": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Harvey"
-      }
-    },
-
-    //Krobus
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Krobus",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I still don't quite understand humans, but I'm glad to have met you all the same."
-      },
-      "When": {
-        "Hearts:Krobus": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Krobus.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Krobus",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}. I'm glad that we have the opportunity to live together as it has taught me much about both you and your human culture, including how birthdays are celebrated. Here's hoping we can spend many more years together. Happy birthday @! $h"
-      },
-      "When": {
-        "Hearts:Krobus": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Roommate": "Krobus"
-      }
-    },
-
-    //Leah
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Leah",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! I'm glad to see you're doing well on the farm. $h"
-      },
-      "When": {
-        "Hearts:Leah": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Leah.json"
     },
     {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Leah",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. Being with you has been a great inspiration to me. I might sculpt wood, but being with you has helped sculpt my life. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Leah": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Leah"
-      }
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Maru.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Penny.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Sam.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Sebastian.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Shane.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Clint.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Sandy.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Caroline.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Demetrius.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Dwarf.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Evelyn.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/George.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Gus.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Jas.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Jodi.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Kent.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Leo.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Lewis.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Linus.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Marnie.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Pam.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Pierre.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Robin.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Vincent.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Willy.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Dialogue/Wizard.json"
     },
 
 
-    //Maru
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Maru",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I tried to make an everlasting candle for you, but sadly that didn't work out. Maybe next year, right? $h"
-      },
-      "When": {
-        "Hearts:Maru": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Maru",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I always thought I had to look into space to find a shooting star but when I look at you I realize I already have one. $l"
-      },
-      "When": {
-        "Hearts:Maru": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Maru"
-      }
-    },
-
-    //Penny
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Penny",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. May you enjoy all of life's blessings this year. $h"
-      },
-      "When": {
-        "Hearts:Penny": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Penny",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I always read about happy endings in books but being with you makes me realize that it continues well into the future. Here is to many more years to come. $l"
-      },
-      "When": {
-        "Hearts:Penny": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Penny"
-      }
-    },
-
-    //Sam
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sam",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! We'll have to have a birthday jam session for you sometime! $h"
-      },
-      "When": {
-        "Hearts:Sam": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sam",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Good {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. You know, I never saw myself settling down before I met you, but now that I have, I feel like I never want to look back. Happy birthday! $l"
-      },
-      "When": {
-        "Hearts:Sam": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Sam"
-      }
-    },
-
-    //Sebastian
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sebastian",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Hope things are going well down at the farm."
-      },
-      "When": {
-        "Hearts:Sebastian": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sebastian",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "I was never a big celebrator of birthdays, but with you, today is special. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
-      },
-      "When": {
-        "Hearts:Sebastian": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Sebastian"
-      }
-    },
-
-    //Shane
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Shane",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Keep working hard, and I'm sure this next year will be a great one for you."
-      },
-      "When": {
-        "Hearts:Shane": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Shane",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "I never though I'd enjoy anything but drinking on birthdays, but you've shown me how to live a great life. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
-      },
-      "When": {
-        "Hearts:Shane": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Shane"
-      }
-    },
-
-    //Clint
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Clint",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thank you for all that you've done for our community. I'm sure your parents must be proud of you. $h"
-      },
-      "When": {
-        "Hearts:Clint": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    //Clint has been announced as a bacheolor for 1.7 so include that dialogue preemptively.
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Clint",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, you sure are a diamond in the rough for me. I thought I would have nothing but hot sweaty years with just me and the forge, but I'm glad you saw my heart just like a gem in a geode. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
-      },
-      "When": {
-        "Hearts:Clint": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Clint"
-      }
-    },
-
-    //Sandy
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sandy",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Aww, sweetie, you came all the way out here to see me on your birthday?$h#$b#Well, then, the least I can do is wish you a happy one!~ $h"
-      },
-      "When": {
-        "Hearts:Sandy": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
-    },
-    //Sandy has been announced as a bacheolor for 1.7 so include that dialogue preemptively.
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Sandy",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "I'm so glad that our paths crossed and so appreciative of all the times you came to visit me in the desert. Now I'm overjoyed that I get to spend every day and the rest of my life with you! Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
-      },
-      "When": {
-        "Hearts:Sandy": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}",
-        "Spouse": "Sandy"
-      }
-    },
-
-
-    //Caroline
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Caroline",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thank you for all that you've done for our community. I'm sure your parents must be proud of you. $h"
-      },
-      "When": {
-        "Hearts:Caroline": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Demetrius
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Demetrius",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Make sure you take some time off today to enjoy yourself. $h"
-      },
-      "When": {
-        "Hearts:Demetrius": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Dwarf
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Dwarf",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Wait, humans celebrate those, right?"
-      },
-      "When": {
-        "Hearts:Dwarf": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-
-    //Evelyn
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Evelyn",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. You have grown into such a fine individual, and I'm sure your grandfather would be proud to see who you've become."
-      },
-      "When": {
-        "Hearts:Evelyn": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //George
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/George",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "When you get to my age, birthdays start to come and go. Still, happy birthday, @."
-      },
-      "When": {
-        "Hearts:George": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Gus
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Gus",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! Hopefully you enjoy the rest of the day, and make sure you aren't a stranger at the saloon!"
-      },
-      "When": {
-        "Hearts:Gus": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Jas
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Jas",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I'm glad I decided to get to know you."
-      },
-      "When": {
-        "Hearts:Jas": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Jodi
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Jodi",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hello there, @. Rumor has it that today is your birthday. In that case, happy birthday! $h"
-      },
-      "When": {
-        "Hearts:Jodi": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Kent
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Kent",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Jodi told me that it was your birthday today, @. Happy birthday, and make sure to cherish every single day."
-      },
-      "When": {
-        "Hearts:Kent": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Leo
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Leo",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "My bird family told me that it's your birthday today, @. Happy birthday!"
-      },
-      "When": {
-        "Hearts:Leo": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Lewis
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Lewis",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! I really appreciate everything you've done for the town. Keep up the good work."
-      },
-      "When": {
-        "Hearts:Lewis": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Linus
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Linus",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thanks for visiting me even on your birthday. It makes me really happy. $h"
-      },
-      "When": {
-        "Hearts:Linus": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Marnie
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Marnie",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hi, @! Everyone is talking about your birthday today, and I wanted to make sure that I wished you a happy birthday as well. So, happy birthday! $h"
-      },
-      "When": {
-        "Hearts:Marnie": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Pam
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Pam",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, kid. We should have a drink to celebrate another year of life for you! $h"
-      },
-      "When": {
-        "Hearts:Pam": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Pierre
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Pierre",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! Hopefully this next year will be a great one for you!"
-      },
-      "When": {
-        "Hearts:Pierre": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Robin
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Robin",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! I'm really glad you decided to move to the valley."
-      },
-      "When": {
-        "Hearts:Robin": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Vincent
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Vincent",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, have you come to pl... oh, it's your birthday? Happy birthday!"
-      },
-      "When": {
-        "Hearts:Vincent": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Willy
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Willy",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Ahoy, @, happy birthday. Looking at you reminds me of the days when I was just a guppy myself. Enjoy yours while you can, young'un. $h"
-      },
-      "When": {
-        "Hearts:Willy": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
-
-    //Wizard
-    {
-      "Action": "EditData",
-      "Target": "Characters/Dialogue/Wizard",
-      "entries": {
-        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Never forget that you alone make your future.#$e#How did I know? Ah, I overheard a few of the locals conferring on what gifts to give you. I think you'll appreciate them."
-      },
-      "When": {
-        "Hearts:Wizard": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 10}}"
-      }
-    },
 
 
     //Mail
@@ -588,40 +148,40 @@
       "Action": "EditData",
       "Target": "Data/Mail",
       "entries": {
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Abigail": "Happy belated birthday, @! ^ Hopefully this year we can go on even more adventures together. ^^ - Abigail {0}[#]Happy Birthday from Abigail",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Alex": "Yo @, happy belated birthday! ^ Here's to making this the best year yet. ^^ - Alex {0}[#]Happy Birthday from Alex",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Caroline": "Happy belated birthday, @. ^ Thank you for all that you've done for our community. I'm sure your parents must be proud of you. ^^ - Caroline {0}[#]Happy Birthday from Caroline",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Clint": "Hey, happy belated birthday, @. ^ I'm sure this year is going to be great for you. ^^ - Clint {0}[#]Happy Birthday from Clint",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Demetrius": "Happy belated birthday, @! ^ Make sure you take some time off today to enjoy yourself. ^^ - Demetrius {0}[#]Happy Birthday from Demetrius",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Dwarf": "Happy belated birthday, @. ^ Wait, humans celebrate those, right? ^^ - Dwarf {0}",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Elliott": "I hope you had a lovely day on your birthday, @. ^ I was trying to write you a poem for the occasion, but a 'happy belated birthday' will have to suffice for now. ^^ - Elliott {0}[#]Happy Birthday from Elliott",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Emily": "Happy belated birthday, @! ^ I can see your future shining bright. ^^ - Emily {0}",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Evelyn": "Happy belated birthday, @. ^ You have grown into such a fine individual, and I'm sure your grandfather would be proud to see who you've become. ^^ - Evelyn {0}[#]Happy Birthday from Evelyn",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_George": "When you get to my age, birthdays start to come and go. Still, happy belated birthday, @. ^^ - George {0}[#]Happy Birthday from George",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Gus": "Hey, @, happy belated birthday! ^ Hopefully you enjoy the rest of the day, and make sure you aren't a stranger at the saloon! ^^ - Gus {0}[#]Happy Birthday from Gus",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Haley": "Happy belated birthday, @. ^ Hopefully this year you'll get some good presents! ^^ - Haley {0}[#]Happy Birthday from Haley",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Harvey": "Happy belated birthday, @. ^ Come in for a checkup sometime, alright? I want to make sure you'll see plenty more. ^^ - Harvey {0}[#]Happy Birthday from Harvey",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jas": "Happy belated birthday, @. ^ I'm glad I decided to get to know you. ^^ - Jas {0}[#]Happy Birthday from Jas",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jodi": "Hello there, @. ^ Rumor has it that yesterday was your birthday. In that case, happy belated birthday! ^^ - Jodi {0}[#]Happy Birthday from Jodi",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Kent": "Jodi told me that it was your birthday yesterday, @. ^ Happy belated birthday, and make sure to cherish every single day. ^^ - Kent {0}[#]Happy Birthday from Kent",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Krobus": "Happy belated birthday, @. ^ I still don't quite understand humans, but I'm glad to have met you all the same. ^^ - Krobus {0}[#]Happy Birthday from Krobus",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leah": "Hey @, happy belated birthday! ^ I'm glad to see you're doing well on the farm and I hope this next year gives you new inspiration! ^^ - Leah {0}[#]Happy Birthday from Leah",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leo": "Hi @, ^ my bird family told me that your birthday was yesterday so I wanted to wish you a happy belated birthday. I hope you have another great year! ^^ -Leo {0}[#]Happy Birthday from Leo",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Lewis": "Happy belated birthday, @! ^ I really appreciate everything you've done for the town. Keep up the good work. ^^ - Lewis {0}[#]Happy Birthday from Lewis",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Linus": "Happy belated birthday, @. ^ Thanks for visiting me from time to time, It makes me really happy to have such wonderful company. ^^ - Linus {0}[#]Happy Birthday from Linus",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Marnie": "Hi, @! ^ Everyone was talking about your birthday yesterday, and I wanted to make sure that I wished you a happy birthday as well. So, happy belated birthday! ^^ - Marnie {0}[#]Happy Birthday from Marnie",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Maru": "Happy belated birthday, @. ^ I tried to make an everlasting candle for you, but sadly that didn't work out. Maybe next year, right? ^^ - Maru {0}[#]Happy Birthday from Maru",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pam": "Happy belated birthday, kid. ^ We should have a drink sometime to celebrate another year of life for you! ^^ - Pam {0}[#]Happy Birthday from Pam",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Penny": "Happy belated birthday, @. ^ May you enjoy all of life's blessings this year. ^^ - Penny {0}[#]Happy Birthday from Penny",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pierre": "Hey @, happy belated birthday! ^ Hopefully this next year will be a great one for you! ^^ - Pierre {0}[#]Happy Birthday from Pierre",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Robin": "Hey, @, happy belated birthday! ^ I'm really glad you decided to move to the valley. ^^ - Robin {0}[#]Happy Birthday from Robin",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sam": "Hey @, happy belated birthday! ^ We'll have to have a birthday jam session for you sometime! ^^ - Sam {0}[#]Happy Birthday from Sam",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sandy": "Hey, sweetie, ^ I wish I could have made it to town to wish you a happy birthday, but I still wanted to wish you a happy belated birthday all the same~. Here's to many more. ^^ - Sandy {0}[#]Happy Birthday from Sandy",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sebastian": "Happy belated birthday, @. ^ Hope things are going well down at the farm. ^^ - Sebastian {0}[#]Happy Birthday from Sebastian",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Shane": "Happy belated birthday, @. ^ Keep working hard, and I'm sure this next year will be a great one for you. ^^ - Shane {0}[#]Happy Birthday from Shane",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Vincent": "Hey @, ^ mom told me yesterday was your birthday so I wanted to wish you a happy belated birthday! Come by so we can play sometime! ^^ - Vincent {0}[#]Happy Birthday from Vincent",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Willy": "Ahoy, @, ^ happy belated birthday. Looking at you reminds me of the days when I was just a guppy myself. Enjoy yours while you can, young'un. ^^ - Willy {0}[#]Happy Birthday from Willy",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Wizard": "Happy belated birthday ^ @. Never forget that you alone make your future. How did I know? Ah, I overheard a few of the locals conferring on what gifts to give you. I think you'll appreciate them. ^^ - M. Rasmodius {0}[#]Happy Birthday from the Wizard",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Abigail": "Happy belated birthday, @! ^ Hopefully this year we can go on even more adventures together. ^^ - Abigail {NPCGift:Abigail}[#]Happy Birthday from Abigail",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Alex": "Yo @, happy belated birthday! ^ Here's to making this the best year yet. ^^ - Alex {NPCGift:Alex}[#]Happy Birthday from Alex",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Caroline": "Happy belated birthday, @. ^ Thank you for all that you've done for our community. I'm sure your parents must be proud of you. ^^ - Caroline {NPCGift:Caroline}[#]Happy Birthday from Caroline",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Clint": "Hey, happy belated birthday, @. ^ I'm sure this year is going to be great for you. ^^ - Clint {NPCGift:Clint}[#]Happy Birthday from Clint",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Demetrius": "Happy belated birthday, @! ^ Make sure you take some time off today to enjoy yourself. ^^ - Demetrius {NPCGift:Demetrius}[#]Happy Birthday from Demetrius",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Dwarf": "Happy belated birthday, @. ^ Wait, humans celebrate those, right? ^^ - Dwarf {NPCGift:Dwarf}[#]Happy Birthday from Dwarf",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Elliott": "I hope you had a lovely day on your birthday, @. ^ I was trying to write you a poem for the occasion, but a 'happy belated birthday' will have to suffice for now. ^^ - Elliott {NPCGift:Elliott}[#]Happy Birthday from Elliott",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Emily": "Happy belated birthday, @! ^ I can see your future shining bright. ^^ - Emily {NPCGift:Emily}[#]Happy Birthday from Emily",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Evelyn": "Happy belated birthday, @. ^ You have grown into such a fine individual, and I'm sure your grandfather would be proud to see who you've become. ^^ - Evelyn {NPCGift:Evelyn}[#]Happy Birthday from Evelyn",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_George": "When you get to my age, birthdays start to come and go. Still, happy belated birthday, @. ^^ - George {NPCGift:George}[#]Happy Birthday from George",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Gus": "Hey, @, happy belated birthday! ^ Hopefully you enjoy the rest of the day, and make sure you aren't a stranger at the saloon! ^^ - Gus {NPCGift:Gus}[#]Happy Birthday from Gus",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Haley": "Happy belated birthday, @. ^ Hopefully this year you'll get some good presents! ^^ - Haley {NPCGift:Haley}[#]Happy Birthday from Haley",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Harvey": "Happy belated birthday, @. ^ Come in for a checkup sometime, alright? I want to make sure you'll see plenty more. ^^ - Harvey {NPCGift:Harvey}[#]Happy Birthday from Harvey",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jas": "Happy belated birthday, @. ^ I'm glad I decided to get to know you. ^^ - Jas {NPCGift:Jas}[#]Happy Birthday from Jas",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jodi": "Hello there, @. ^ Rumor has it that yesterday was your birthday. In that case, happy belated birthday! ^^ - Jodi {NPCGift:Jodi}[#]Happy Birthday from Jodi",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Kent": "Jodi told me that it was your birthday yesterday, @. ^ Happy belated birthday, and make sure to cherish every single day. ^^ - Kent {NPCGift:Kent}[#]Happy Birthday from Kent",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Krobus": "Happy belated birthday, @. ^ I still don't quite understand humans, but I'm glad to have met you all the same. ^^ - Krobus {NPCGift:Krobus}[#]Happy Birthday from Krobus",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leah": "Hey @, happy belated birthday! ^ I'm glad to see you're doing well on the farm and I hope this next year gives you new inspiration! ^^ - Leah {NPCGift:Leah}[#]Happy Birthday from Leah",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leo": "Hi @, ^ my bird family told me that your birthday was yesterday so I wanted to wish you a happy belated birthday. I hope you have another great year! ^^ -Leo {NPCGift:Leo}[#]Happy Birthday from Leo",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Lewis": "Happy belated birthday, @! ^ I really appreciate everything you've done for the town. Keep up the good work. ^^ - Lewis {NPCGift:Lewis}[#]Happy Birthday from Lewis",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Linus": "Happy belated birthday, @. ^ Thanks for visiting me from time to time, It makes me really happy to have such wonderful company. ^^ - Linus {NPCGift:Linus}[#]Happy Birthday from Linus",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Marnie": "Hi, @! ^ Everyone was talking about your birthday yesterday, and I wanted to make sure that I wished you a happy birthday as well. So, happy belated birthday! ^^ - Marnie {NPCGift:Marnie}[#]Happy Birthday from Marnie",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Maru": "Happy belated birthday, @. ^ I tried to make an everlasting candle for you, but sadly that didn't work out. Maybe next year, right? ^^ - Maru {NPCGift:Maru}[#]Happy Birthday from Maru",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pam": "Happy belated birthday, kid. ^ We should have a drink sometime to celebrate another year of life for you! ^^ - Pam {NPCGift:Pam}[#]Happy Birthday from Pam",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Penny": "Happy belated birthday, @. ^ May you enjoy all of life's blessings this year. ^^ - Penny {NPCGift:Penny}[#]Happy Birthday from Penny",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pierre": "Hey @, happy belated birthday! ^ Hopefully this next year will be a great one for you! ^^ - Pierre {NPCGift:Pierre}[#]Happy Birthday from Pierre",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Robin": "Hey, @, happy belated birthday! ^ I'm really glad you decided to move to the valley. ^^ - Robin {NPCGift:Robin}[#]Happy Birthday from Robin",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sam": "Hey @, happy belated birthday! ^ We'll have to have a birthday jam session for you sometime! ^^ - Sam {NPCGift:Sam}[#]Happy Birthday from Sam",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sandy": "Hey, sweetie, ^ I wish I could have made it to town to wish you a happy birthday, but I still wanted to wish you a happy belated birthday all the same~. Here's to many more. ^^ - Sandy {NPCGift:Sandy}[#]Happy Birthday from Sandy",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sebastian": "Happy belated birthday, @. ^ Hope things are going well down at the farm. ^^ - Sebastian {NPCGift:Sebastian}[#]Happy Birthday from Sebastian",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Shane": "Happy belated birthday, @. ^ Keep working hard, and I'm sure this next year will be a great one for you. ^^ - Shane {NPCGift:Shane}[#]Happy Birthday from Shane",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Vincent": "Hey @, ^ mom told me yesterday was your birthday so I wanted to wish you a happy belated birthday! Come by so we can play sometime! ^^ - Vincent {NPCGift:Vincent}[#]Happy Birthday from Vincent",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Willy": "Ahoy, @, ^ happy belated birthday. Looking at you reminds me of the days when I was just a guppy myself. Enjoy yours while you can, young'un. ^^ - Willy {NPCGift:Willy}[#]Happy Birthday from Willy",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Wizard": "Happy belated birthday ^ @. Never forget that you alone make your future. How did I know? Ah, I overheard a few of the locals conferring on what gifts to give you. I think you'll appreciate them. ^^ - M. Rasmodius {NPCGift:Wizard}[#]Happy Birthday from the Wizard",
         "Omegasis.HappyBirthday_Dad": "Dear @,^  Happy birthday kiddo. It's been a little quiet around here on your birthday since you aren't around, but your mother and I know that you are making both your grandpa and us proud.  We both know that living on your own can be tough but we believe in you one hundred percent, just keep following your dreams.^  Love, Dad ^ P.S. Here's some spending money to help you out on the farm. Good luck! {{Omegasis.HappyBirthday/DadsBirthdayGift}}[#]Happy Birthday from Dad",
         "Omegasis.HappyBirthday_Dad_Married": "Dear @,^  Happy birthday kiddo. It seems like just the other day we were staying up late watching movies, going on bike rides together after school, making all kinds of food together on the weekend, and visiting your grandpa out on the farm. Now here you are all grown up, making those happy memories together with the love of your life. I know your mom and I couldn't be prouder of you, and I'm sure grandpa would say the same knowing you have inherited his legacy. Keep working hard on living the best life and I'll keep wishing you the best for all these special years to come.^Love, Dad ^ P.S. Here's some spending money to help you out on the farm. Good luck! {{Omegasis.HappyBirthday/DadsBirthdayGift}}[#]Happy Birthday from Dad",
         "Omegasis.HappyBirthday_DatingAbigail_BirthdayPartyInvitation": "Hey @. ^ My family and I decided to have a birthday party for you at our place. Could you come by our house sometime today?^Sincerly,^      -Abigail[#]Birthday Party Invite from Abigail",
@@ -639,7 +199,7 @@
         "Omegasis.HappyBirthday_DatingShane_BirthdayPartyInvitation": "Hey @. ^Could you come by my house sometime today? I thought I'd have a little get together for you.^^      -Shane",
         "Omegasis.HappyBirthday_Junimos": "Please come to the community center. ^ Sincerly,^      -The Junimos[#]Birthday Party Invite from the Junimos",
         "Omegasis.HappyBirthday_Mom": "Dear @,^  Happy birthday sweetheart. It's been amazing watching you grow into the kind, hard working person that I've always dreamed that you would become. I hope you continue to make many more fond memories with the ones you love. ^  Love, Mom ^ P.S. Here's a little something that I made for you. {{Omegasis.HappyBirthday/MomsBirthdayGift}}[#]Happy Birthday from Mom",
-        "Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message": "Happy belated birthday, @! ^I hope you had a wonderful day yesterday.^^ - {1} {0}[#]Happy Birthday"
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message": "Happy belated birthday, @! ^I hope you had a wonderful day yesterday.^^ - {1} {NPCGift:Generic}[#]Happy Birthday"
       }
     },
 
@@ -666,6 +226,377 @@
     {
       "Action": "Include",
       "FromFile": "ModAssets/Data/Gifts/Abigail.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Alex",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Alex.json"
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Caroline",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Caroline.json"
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Clint",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Clint.json"
+    },
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/DefaultGifts",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/DefaultGifts.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Demetrius",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Demetrius.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Dwarf",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Dwarf.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Elliott",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Elliott.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Emily",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Emily.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Evelyn",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Evelyn.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/George",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/George.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Gus",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Gus.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Haley",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Haley.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Harvey",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Harvey.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Jas",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Jas.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Jodi",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Jodi.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Kent",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Kent.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Krobus",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Krobus.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Leah",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Leah.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Leo",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Leo.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Lewis",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Lewis.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Linus",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Linus.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Marnie",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Marnie.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Maru",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Maru.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Pam",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Pam.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Penny",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Penny.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Pierre",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Pierre.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Robin",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Robin.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sam",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Sam.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sandy",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Sandy.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Sebastian",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Sebastian.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Shane",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Shane.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Vincent",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Vincent.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Willy",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Willy.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Wizard",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Data/Gifts/Wizard.json"
     }
 
 

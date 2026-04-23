@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+    //Demetrius
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Demetrius",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Make sure you take some time off today to enjoy yourself. $h"
+      }
+    }
+
+
+  ]
+}

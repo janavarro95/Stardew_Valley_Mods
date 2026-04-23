@@ -1,0 +1,17 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Leo",
+      "entries": {
+        "StardewValley.Object.Ginger": "3 5",
+        "StardewValley.Object.TaroRoot": "3 5",
+        "StardewValley.Object.Pineapple": "1 3",
+        "StardewValley.Object.Mango": "1 3",
+        "StardewValley.Object.BananaPudding": "1 1",
+        "StardewValley.Object.MangoStickyRice": "1 1",
+        "StardewValley.Object.Poi": "1 1"
+      }
+    }
+  ]
+}

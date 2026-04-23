@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Kent
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kent",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Jodi told me that it was your birthday today, @. Happy birthday, and make sure to cherish every single day."
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Pam",
+      "entries": {
+        "StardewValley.Object.Mead": "1 1",
+        "StardewValley.Object.PaleAle": "1 1",
+        "StardewValley.Object.Beer": "1 1"
+      }
+    }
+  ]
+}

@@ -269,4 +269,6 @@
   </ItemGroup>
 
   <Import Project="..\common.targets" />
+
+  <ProjectExtensions><VisualStudio><UserProperties contentpacks_4_x005B_cp_x005D__x0020_happybirthdaycontentpack_x0020_en-us_4modassets_4data_4gifts_4sam_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

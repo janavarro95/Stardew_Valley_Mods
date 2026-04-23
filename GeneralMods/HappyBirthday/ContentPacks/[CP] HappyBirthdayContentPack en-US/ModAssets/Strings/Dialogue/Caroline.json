@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+
+    //Caroline
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thank you for all that you've done for our community. I'm sure your parents must be proud of you. $h"
+      }
+    }
+
+  ]
+}

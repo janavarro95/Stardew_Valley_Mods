@@ -1,0 +1,16 @@
+{
+  "Changes": [
+
+
+
+    //Dwarf
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Dwarf",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Wait, humans celebrate those, right?"
+      }
+    }
+
+  ]
+}

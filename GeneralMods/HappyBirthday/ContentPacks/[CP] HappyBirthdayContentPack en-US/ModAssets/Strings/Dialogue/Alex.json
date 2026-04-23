@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Alex
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Yo, @, happy birthday! Here's to making this the best year yet! $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. I'm so glad that I married you. You make every day feel like winning a sports match. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Alex"
+      }
+    }
+
+
+  ]
+}

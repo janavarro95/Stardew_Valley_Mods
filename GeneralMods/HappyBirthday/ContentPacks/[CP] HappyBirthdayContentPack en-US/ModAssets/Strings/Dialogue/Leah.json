@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+    //Leah
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! I'm glad to see you're doing well on the farm. $h"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, {{Omegasis.HappyBirthday/TimeOfDay}}, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. Being with you has been a great inspiration to me. I might sculpt wood, but being with you has helped sculpt my life. Happy birthday! $l"
+      },
+      "When": {
+        "Spouse": "Leah"
+      }
+    }
+
+
+  ]
+}

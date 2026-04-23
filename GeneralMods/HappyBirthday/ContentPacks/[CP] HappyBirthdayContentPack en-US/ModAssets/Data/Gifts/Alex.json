@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Alex",
+      "entries": {
+        "StardewValley.Object.Egg": "4 4",
+        "StardewValley.Object.SalmonDinner": "1 1",
+        "StardewValley.Object.CompleteBreakfast": "1 1",
+        "StardewValley.Object.EnergyTonic": "1 1"
+
+      }
+    }
+  ]
+}

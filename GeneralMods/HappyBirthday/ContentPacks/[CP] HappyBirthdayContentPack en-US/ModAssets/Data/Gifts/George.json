@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/George",
+      "entries": {
+        "StardewValley.Object.FriedMushroom": "1 1",
+        "StardewValley.Object.BatteryPack": "1 3",
+        "StardewValley.Object.Coffee": "3 5"
+      }
+    }
+  ]
+}

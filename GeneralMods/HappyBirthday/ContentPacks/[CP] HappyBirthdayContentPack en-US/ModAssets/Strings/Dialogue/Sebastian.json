@@ -1,0 +1,25 @@
+{
+  "Changes": [
+
+
+    //Sebastian
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Hope things are going well down at the farm."
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "I was never a big celebrator of birthdays, but with you, today is special. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
+      },
+      "When": {
+        "Spouse": "Sebastian"
+      }
+    }
+
+  ]
+}

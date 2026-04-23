@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Marnie",
+      "entries": {
+        "StardewValley.Object.Milk": "3 3",
+        "StardewValley.Object.Egg": "6 6",
+        "StardewValley.Object.GoatMilk": "3 3",
+        "StardewValley.Object.Wool": "3 3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+
+    //George
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "When you get to my age, birthdays start to come and go. Still, happy birthday, @."
+      }
+    }
+
+  ]
+}

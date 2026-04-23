@@ -1,0 +1,16 @@
+{
+  "Changes": [
+
+
+
+    //Jas
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. I'm glad I decided to get to know you."
+      }
+    }
+
+  ]
+}

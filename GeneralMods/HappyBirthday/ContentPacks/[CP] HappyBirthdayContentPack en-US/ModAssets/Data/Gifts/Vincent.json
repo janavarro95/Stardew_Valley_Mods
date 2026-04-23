@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Vincent",
+      "entries": {
+        "StardewValley.Object.Snail": "1 1",
+        "StardewValley.Object.IceCream": "1 1"
+      }
+    }
+  ]
+}

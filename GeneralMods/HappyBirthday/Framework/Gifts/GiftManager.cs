@@ -317,11 +317,11 @@ namespace Omegasis.HappyBirthday
         {
             try
             {
-                Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>(string.Format("Mods/Omegasis.HappyBirthday/Gifts/{0}",name));
+                Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>(string.Format("Mods/Omegasis.HappyBirthday/Gifts/{0}", name));
 
-                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: "+possibleCPGifts.Count.ToString());
+                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: " + possibleCPGifts.Count.ToString());
 
-                int index = StardewValley.Game1.random.Next(0,possibleCPGifts.Count+1);
+                int index = StardewValley.Game1.random.Next(0, possibleCPGifts.Count);
                 string key = possibleCPGifts.Keys.ElementAt(index);
                 string itemStackSizeString = possibleCPGifts[key];
                 string[] itemStackSizeSplit = itemStackSizeString.Split(" ");
@@ -338,7 +338,18 @@ namespace Omegasis.HappyBirthday
                 {
                     int minAmount = Convert.ToInt32(itemStackSizeSplit[0]);
                     int maxAmount = Convert.ToInt32(itemStackSizeSplit[1]);
-                    itemStackSize = StardewValley.Game1.random.Next(minAmount,maxAmount+1);
+                    itemStackSize = StardewValley.Game1.random.Next(minAmount, maxAmount + 1);
+                }
+
+                if (key.Contains("{"))
+                {
+                    var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+                    IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, key, new SemanticVersion("2.9.0"));
+                    tokenString.UpdateContext();
+                    if (tokenString.Value != null)
+                    {
+                        key = tokenString.Value;
+                    }
                 }
 
 
@@ -346,6 +357,57 @@ namespace Omegasis.HappyBirthday
                 return item;
             }
             catch(Exception e)
+            {
+                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.ToString(), LogLevel.Error);
+
+                return null;
+            }
+        }
+
+        public Item getDefaultGiftFromContentPatcher()
+        {
+            try
+            {
+                Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>("Mods/Omegasis.HappyBirthday/Gifts/DefaultGifts");
+
+                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: " + possibleCPGifts.Count.ToString());
+
+                int index = StardewValley.Game1.random.Next(0, possibleCPGifts.Count);
+                string key = possibleCPGifts.Keys.ElementAt(index);
+                string itemStackSizeString = possibleCPGifts[key];
+                string[] itemStackSizeSplit = itemStackSizeString.Split(" ");
+                int itemStackSize = 1;
+                if (itemStackSizeSplit.Length == 0)
+                {
+                    itemStackSize = 1;
+                }
+                else if (itemStackSizeSplit.Length == 1)
+                {
+                    itemStackSize = Convert.ToInt32(itemStackSizeSplit[0]);
+                }
+                else if (itemStackSizeSplit.Length == 2)
+                {
+                    int minAmount = Convert.ToInt32(itemStackSizeSplit[0]);
+                    int maxAmount = Convert.ToInt32(itemStackSizeSplit[1]);
+                    itemStackSize = StardewValley.Game1.random.Next(minAmount, maxAmount + 1);
+                }
+
+                if (key.Contains("{"))
+                {
+                    var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+                    IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, key, new SemanticVersion("2.9.0"));
+                    tokenString.UpdateContext();
+                    if (tokenString.Value != null)
+                    {
+                        key = tokenString.Value;
+                    }
+                }
+
+
+                Item item = this.getItemFromId(key, itemStackSize);
+                return item;
+            }
+            catch (Exception e)
             {
                 HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.ToString(), LogLevel.Error);
 
@@ -442,6 +504,13 @@ namespace Omegasis.HappyBirthday
         /// <param name="name"></param>
         public Item getDefaultBirthdayGift(string name)
         {
+            Item cpItem = this.getDefaultGiftFromContentPatcher();
+            if (cpItem!=null)
+            {
+                return cpItem;
+            }
+
+
             int heartLevel = Game1.player.getFriendshipHeartLevelForNPC(name);
 
             List<GiftInformation> possibleItems = new List<GiftInformation>();

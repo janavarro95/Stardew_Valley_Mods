@@ -21,20 +21,15 @@ using Omegasis.StardustCore.Events;
 using Omegasis.HappyBirthday.Framework.Compatibility;
 using StardewValley.Locations;
 using ContentPatcher;
+using StardewValley.GameData.Objects;
 
 namespace Omegasis.HappyBirthday
 {
     /// <summary>The mod entry point.</summary>
     public class HappyBirthdayModCore : Mod
     {
-        //TODO: Migrate all Mail
-            //TODO: Add in extra files for NPC gifts. (See loading MailOnlyStrings as an example)
-
         //TODO: Migrate all events.
         //TODO: Migrate all translated strings (Can I just have a "fake") file and have Content Patcher take care of this?
-
-
-
 
 
         //TODO: Include changelog documentation for new command, ability to select multiple birthday gifts, and support for modded items.
@@ -240,6 +235,107 @@ namespace Omegasis.HappyBirthday
                 }
             });
 
+            api.RegisterToken(this.ModManifest, "RandomCookedDish", () =>
+            {
+                List<string> list = new List<string>();
+
+                foreach (string id in Game1.objectData.Keys)
+                {
+                    ObjectData d = Game1.objectData[id];
+                    if (d.Category == StardewValley.Object.CookingCategory)
+                    {
+                        list.Add(id);
+                    }
+                }
+                int index = Game1.random.Next(list.Count);
+                string chosenId = list[index];
+                return [chosenId];
+            });
+
+            api.RegisterToken(this.ModManifest, "RandomFlower", () =>
+            {
+                List<string> list = new List<string>();
+
+                foreach (string id in Game1.objectData.Keys)
+                {
+                    ObjectData d = Game1.objectData[id];
+                    if (d.Category == StardewValley.Object.flowersCategory)
+                    {
+                        list.Add(id);
+                    }
+                }
+                int index = Game1.random.Next(list.Count);
+                string chosenId = list[index];
+                return [chosenId];
+            });
+
+            api.RegisterToken(this.ModManifest, "RandomForage", () =>
+            {
+                List<string> list = new List<string>();
+
+                foreach (string id in Game1.objectData.Keys)
+                {
+                    ObjectData d = Game1.objectData[id];
+                    if (d.Category == -81)
+                    {
+                        list.Add(id);
+                    }
+                }
+                int index = Game1.random.Next(list.Count);
+                string chosenId = list[index];
+                return [chosenId];
+            });
+
+            api.RegisterToken(this.ModManifest, "RandomFertilizer", () =>
+            {
+                List<string> list = new List<string>();
+
+                foreach (string id in Game1.objectData.Keys)
+                {
+                    ObjectData d = Game1.objectData[id];
+                    if (d.Category == StardewValley.Object.fertilizerCategory)
+                    {
+                        list.Add(id);
+                    }
+                }
+                int index = Game1.random.Next(list.Count);
+                string chosenId = list[index];
+                return [chosenId];
+            });
+
+            api.RegisterToken(this.ModManifest, "RandomNonRareSeeds", () =>
+            {
+                List<string> list = new List<string>();
+
+                foreach (string id in Game1.objectData.Keys)
+                {
+                    ObjectData d = Game1.objectData[id];
+                    if (d.Category == StardewValley.Object.SeedsCategory)
+                    {
+                        if (id == "347")
+                        {
+                            //Sweet Gem Berry
+                            continue;
+                        }
+                        if (id == "499")
+                        {
+                            //Ancient Seeds
+                            continue;
+                        }
+                        if (d.Name.Contains("Sapling"))
+                        {
+                            //Don't include saplings.
+                            continue;
+                        }
+
+                        list.Add(id);
+                    }
+                }
+                int index = Game1.random.Next(list.Count);
+                string chosenId = list[index];
+                return [chosenId];
+            });
+
         }
 
         private void LocalizedContentManager_OnLanguageChange(LocalizedContentManager.LanguageCode code)
@@ -287,47 +383,17 @@ namespace Omegasis.HappyBirthday
         protected virtual void initalizeHappyBirthdayContent()
         {
             if (this.contentPacksInitalized) return;
-
-            /*
-            if (this.Helper.ContentPacks.GetOwned().Count() == 0)
-            {
-                this.drawDialogueBoxWithError("There are ZERO Happy birthday content packs found for the mod. Without at least one installed there is no guaranteed that this mod will work due to missing dialogue errors. Please install at least one HappyBirthdayContent pack before continuing. One can be found at https://www.nexusmods.com/stardewvalley/mods/11148 for English dialogue. Thank you!");
-                return;
-            }
-            */
             
             foreach (IContentPack contentPack in this.Helper.ContentPacks.GetOwned())
             {
                 this.happyBirthdayContentPackManager.registerNewContentPack(contentPack);
             }
-            /*
-            if (this.happyBirthdayContentPackManager.getHappyBirthdayContentPacksForCurrentLanguageCode().Count == 0)
-            {
-                if (HappyBirthdayModCore.Configs.modConfig.fallbackToEnglishTranslationWhenPossible)
-                {
-                    if (this.happyBirthdayContentPackManager.getHappyBirthdayContentPacksForEnglishLanguageCode().Count == 0)
-                    {
-                        this.drawDialogueBoxWithError("There were zero content packs for Happy Birthday for the English language code en-US. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one? One can be found at https://www.nexusmods.com/stardewvalley/mods/11148 for English dialogue. If one is installed, is the language code in TranslationInfo.json correct?");
-                        return;
-                    }
-                }
-
-                this.drawDialogueBoxWithError(string.Format("There were zero content packs for Happy Birthday for the given language code {0}. This is a fatal error as the modded cutscenes WILL NOT work without at least one proper content pack installed. Did you mean to install one?", LocalizedContentManager.CurrentLanguageString));
-                return;
-            }
-            */
 
             this.giftManager.addInPotentialGiftsFromNPCsFromContentPacks();
             MailUtilities.RemoveAllBirthdayMail();
 
             BirthdayEventUtilities.InitializeBirthdayEvents();
             this.contentPacksInitalized = true;
-        }
-
-        private void drawDialogueBoxWithError(string error)
-        {
-            Game1.activeClickableMenu = new DialogueBox(error);
-            this.Monitor.Log(error, LogLevel.Error);
         }
 
         /// <summary>Raised before the game begins writes data to the save file (except the initial save creation).</summary>

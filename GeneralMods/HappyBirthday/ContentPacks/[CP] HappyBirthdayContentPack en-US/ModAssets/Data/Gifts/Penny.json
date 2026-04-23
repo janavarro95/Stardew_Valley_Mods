@@ -1,0 +1,15 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Penny",
+      "entries": {
+        "StardewValley.Object.Hashbrowns": "1 1",
+        "StardewValley.Object.CrispyBass": "1 1",
+        "StardewValley.Object.VegetableMedley": "1 1",
+        "StardewValley.Object.MixedSeeds": "10 10",
+        "StardewValley.Object.Sunflower": "3 3"
+      }
+    }
+  ]
+}

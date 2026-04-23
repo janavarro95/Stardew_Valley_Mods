@@ -1,0 +1,23 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Demetrius",
+      "entries": {
+        "StardewValley.Object.PurpleMushroom": "2 2",
+        "StardewValley.Object.RedMushroom": "5 5",
+        "StardewValley.Object.Chanterelle": "5 5",
+        "StardewValley.Object.CommonMushroom": "10 10",
+        "StardewValley.Object.Morel": "5 5",
+        "StardewValley.Object.Apricot": "5 5",
+        "StardewValley.Object.Cherry": "5 5",
+        "StardewValley.Object.Orange": "5 5",
+        "StardewValley.Object.Peach": "5 5",
+        "StardewValley.Object.Apple": "5 5",
+        "StardewValley.Object.Pomegranate": "5 5"
+
+
+      }
+    }
+  ]
+}

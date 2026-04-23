@@ -1,0 +1,26 @@
+{
+  "Changes": [
+
+
+    //Clint
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. Thank you for all that you've done for our community. I'm sure your parents must be proud of you. $h"
+      }
+    },
+    //Clint has been announced as a bacheolor for 1.7 so include that dialogue preemptively.
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "You know, you sure are a diamond in the rough for me. I thought I would have nothing but hot sweaty years with just me and the forge, but I'm glad you saw my heart just like a gem in a geode. Happy birthday, {{Omegasis.HappyBirthday/AffectionateSpouseWord}}. $l"
+      },
+      "When": {
+        "Spouse": "Clint"
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Leo
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leo",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "My bird family told me that it's your birthday today, @. Happy birthday!"
+      }
+    }
+  ]
+}

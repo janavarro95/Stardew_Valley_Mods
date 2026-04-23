@@ -1,0 +1,12 @@
+{
+  "Changes": [
+    //Robin
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Hey, @, happy birthday! I'm really glad you decided to move to the valley."
+      }
+    }
+  ]
+}

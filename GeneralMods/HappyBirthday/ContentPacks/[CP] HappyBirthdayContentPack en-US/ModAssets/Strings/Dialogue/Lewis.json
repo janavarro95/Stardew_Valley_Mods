@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    //Lewis
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! I really appreciate everything you've done for the town. Keep up the good work."
+      }
+    }
+
+  ]
+}

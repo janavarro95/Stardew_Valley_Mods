@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Gifts/Lewis",
+      "entries": {
+        "StardewValley.Object.GreenTea": "1 1",
+        "StardewValley.Object.PepperPoppers": "1 1",
+        "StardewValley.Object.VegetableMedley": "1 1"
+      }
+    }
+  ]
+}

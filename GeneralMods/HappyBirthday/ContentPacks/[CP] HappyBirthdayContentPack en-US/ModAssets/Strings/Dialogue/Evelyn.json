@@ -1,0 +1,15 @@
+{
+  "Changes": [
+
+    //Evelyn
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @. You have grown into such a fine individual, and I'm sure your grandfather would be proud to see who you've become."
+      }
+    }
+
+
+  ]
+}
