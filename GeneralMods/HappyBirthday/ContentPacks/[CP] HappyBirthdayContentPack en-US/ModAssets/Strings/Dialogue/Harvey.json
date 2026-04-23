@@ -18,7 +18,8 @@
       },
       "When": {
         "Spouse": "Harvey"
-      }
+      },
+      "Update": "OnTimeChange"
     }
 
   ]

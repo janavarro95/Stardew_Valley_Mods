@@ -319,8 +319,6 @@ namespace Omegasis.HappyBirthday
             {
                 Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>(string.Format("Mods/Omegasis.HappyBirthday/Gifts/{0}", name));
 
-                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: " + possibleCPGifts.Count.ToString());
-
                 int index = StardewValley.Game1.random.Next(0, possibleCPGifts.Count);
                 string key = possibleCPGifts.Keys.ElementAt(index);
                 string itemStackSizeString = possibleCPGifts[key];
@@ -358,7 +356,6 @@ namespace Omegasis.HappyBirthday
             }
             catch(Exception e)
             {
-                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.ToString(), LogLevel.Error);
 
                 return null;
             }
@@ -409,7 +406,6 @@ namespace Omegasis.HappyBirthday
             }
             catch (Exception e)
             {
-                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.ToString(), LogLevel.Error);
 
                 return null;
             }

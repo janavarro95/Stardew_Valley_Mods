@@ -137,7 +137,7 @@ namespace Omegasis.HappyBirthday.Framework.Menus
             this._leftButton = new ClickableTextureComponent("LeftButton", new Rectangle(this.xPositionOnScreen + this.width - borderWidth - spaceToClearSideBorder - Game1.tileSize, this.yPositionOnScreen + this.height - borderWidth - spaceToClearTopBorder + Game1.tileSize / 4 + 96, Game1.tileSize, Game1.tileSize), "", null, HappyBirthdayModCore.Instance.Helper.ModContent.Load<Texture2D>(Path.Combine("ModAssets", "Graphics", "lastPageButton.png")), new Rectangle(0, 0, 32, 32), 2f);
             this._rightButton = new ClickableTextureComponent("RightButton", new Rectangle(this.xPositionOnScreen + this.width - borderWidth - spaceToClearSideBorder - Game1.tileSize + 96, this.yPositionOnScreen + this.height - borderWidth - spaceToClearTopBorder + Game1.tileSize / 4 + 96, Game1.tileSize, Game1.tileSize), "", null, HappyBirthdayModCore.Instance.Helper.ModContent.Load<Texture2D>(Path.Combine("ModAssets", "Graphics", "nextPageButton.png")), new Rectangle(0, 0, 32, 32), 2f);
 
-            string title = HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("FavoriteGift");
+            string title = Messages.GetMessage("FavoriteGift");
             this.Labels.Add(new ClickableComponent(new Rectangle(this.xPositionOnScreen + 128, this.yPositionOnScreen + 128, 1, 1), title));
 
 
@@ -215,7 +215,7 @@ namespace Omegasis.HappyBirthday.Framework.Menus
             HappyBirthdayModCore.Instance.Monitor.Log(string.Format("Added {0} as a potential favorited gift.", i.QualifiedItemId));
             Rectangle textureBounds = GameLocation.getSourceRectForObject(i.ParentSheetIndex);
             float itemScale = 4f;
-            Rectangle placementBounds = new Rectangle((int)(this.xPositionOnScreen + 64 + 16 * itemScale + Game1.tinyFont.MeasureString(HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("FavoriteGift")).X) + (this.potentialFavoriteGifts.Count * 64), (int)(this.yPositionOnScreen + 64 + 16 * itemScale), 64, 64);
+            Rectangle placementBounds = new Rectangle((int)(this.xPositionOnScreen + 64 + 16 * itemScale + Game1.tinyFont.MeasureString(Messages.GetMessage("FavoriteGift")).X) + (this.potentialFavoriteGifts.Count * 64), (int)(this.yPositionOnScreen + 64 + 16 * itemScale), 64, 64);
             ClickableTextureComponent favoriteGiftButton = new ClickableTextureComponent(i.DisplayName, placementBounds, "", i.getHoverBoxText(i), Game1.objectSpriteSheet, textureBounds, 4f, true);
             favoriteGiftButton.item = i;
             this.potentialFavoriteGifts.Add(favoriteGiftButton);
@@ -240,7 +240,7 @@ namespace Omegasis.HappyBirthday.Framework.Menus
 
                 ClickableTextureComponent favoriteGiftButton = this.potentialFavoriteGifts[i];
                 float itemScale = 4f;
-                Rectangle placementBounds = new Rectangle((int)(this.xPositionOnScreen + 64 + 16 * itemScale + Game1.tinyFont.MeasureString(HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("FavoriteGift")).X) + (i * 64), (int)(this.yPositionOnScreen + 64 + 16 * itemScale), 64, 64);
+                Rectangle placementBounds = new Rectangle((int)(this.xPositionOnScreen + 64 + 16 * itemScale + Game1.tinyFont.MeasureString(Messages.GetMessage("FavoriteGift")).X) + (i * 64), (int)(this.yPositionOnScreen + 64 + 16 * itemScale), 64, 64);
                 favoriteGiftButton.setPosition(placementBounds.X, placementBounds.Y);
 
             }

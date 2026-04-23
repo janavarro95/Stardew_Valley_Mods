@@ -198,7 +198,7 @@ namespace Omegasis.HappyBirthday.Framework
         {
             if (this.isBirthday())
             {
-                string starMessage = HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Happy Birthday: Star Message");
+                string starMessage = Messages.GetMessage("Happy Birthday: Star Message");
                 Messages.ShowStarMessage(starMessage);
                 MultiplayerUtilities.SendBirthdayMessageToOtherPlayers();
 

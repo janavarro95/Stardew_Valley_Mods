@@ -29,7 +29,6 @@ namespace Omegasis.HappyBirthday
     public class HappyBirthdayModCore : Mod
     {
         //TODO: Migrate all events.
-        //TODO: Migrate all translated strings (Can I just have a "fake") file and have Content Patcher take care of this?
 
 
         //TODO: Include changelog documentation for new command, ability to select multiple birthday gifts, and support for modded items.
@@ -193,7 +192,16 @@ namespace Omegasis.HappyBirthday
 
             api.RegisterToken(this.ModManifest, "TimeOfDay", () =>
             {
-                return [this.birthdayMessages.getTimeOfDayString()];
+                // save is loaded
+                if (Context.IsWorldReady)
+                    return [this.birthdayMessages.getTimeOfDayString()];
+
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null)
+                    return [this.birthdayMessages.getTimeOfDayString()];
+
+
+                return null;
             });
 
             api.RegisterToken(this.ModManifest, "MomsBirthdayGift", () =>

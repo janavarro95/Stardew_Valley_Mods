@@ -597,6 +597,17 @@
     {
       "Action": "Include",
       "FromFile": "ModAssets/Data/Gifts/Wizard.json"
+    },
+
+
+    {
+      "Action": "Load",
+      "Target": "Mods/Omegasis.HappyBirthday/Strings/Misc",
+      "FromFile": "ModAssets/Data/Blank.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "ModAssets/Strings/Misc.json"
     }
 
 

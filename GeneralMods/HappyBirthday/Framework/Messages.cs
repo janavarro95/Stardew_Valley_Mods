@@ -29,5 +29,21 @@ namespace Omegasis.HappyBirthday.Framework
             }
         }
 
+        public static string GetMessage(string id, string defaultMessage = "")
+        {
+            string message = Game1.content.LoadString(string.Format("Mods/Omegasis.HappyBirthday/Strings/Misc:{0}",id));
+            if (!string.IsNullOrEmpty(message))
+            {
+                return message;
+            }
+
+            message = HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString(id);
+            if (!string.IsNullOrEmpty(message))
+            {
+                return message;
+            }
+            return defaultMessage;
+        }
+
     }
 }

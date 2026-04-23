@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Newtonsoft.Json;
+using Omegasis.HappyBirthday.Framework;
 using Omegasis.HappyBirthday.Framework.ContentPack;
 using Omegasis.HappyBirthday.Framework.Utilities;
 using StardewModdingAPI;
@@ -77,13 +78,13 @@ namespace Omegasis.HappyBirthday
         { 
             if (Game1.timeOfDay >= 600 && Game1.timeOfDay < 1200)
             {
-                return HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("TimeOfDay_Morning").ToLowerInvariant();
+                return Messages.GetMessage("TimeOfDay_Morning").ToLowerInvariant();
             }
             else if (Game1.timeOfDay >= 1200 && Game1.timeOfDay < 600)
             {
-                return HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("TimeOfDay_Afternoon").ToLowerInvariant();
+                return Messages.GetMessage("TimeOfDay_Afternoon").ToLowerInvariant();
             }
-            else return HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("TimeOfDay_Night").ToLowerInvariant();
+            else return Messages.GetMessage("TimeOfDay_Night").ToLowerInvariant();
         }
 
         /// <summary>
@@ -300,7 +301,7 @@ namespace Omegasis.HappyBirthday
                     return this.getDefaultBirthdayWish("", false);
                 }
 
-                return DefaultBirthdayWishMessage;
+                return Messages.GetMessage(Key);
             }
             else
             {

@@ -18,7 +18,8 @@
       },
       "When": {
         "Roommate": "Krobus"
-      }
+      },
+      "Update": "OnTimeChange"
     }
 
   ]

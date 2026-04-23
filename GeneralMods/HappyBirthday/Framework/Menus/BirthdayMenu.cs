@@ -95,7 +95,7 @@ namespace Omegasis.HappyBirthday.Framework.Menus
             if (Day != 0)
                 toSpeak = $"{toSpeak} {Day}";
             if (toSpeak != "")
-                HappyBirthdayModCore.Instance.SayWithMenuChecker($"{toSpeak} {HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Selected")}", true);
+                HappyBirthdayModCore.Instance.SayWithMenuChecker($"{toSpeak} {Messages.GetMessage("Selected")}", true);
         }
 
         /// <summary>The method called when the game window changes size.</summary>
@@ -129,8 +129,8 @@ namespace Omegasis.HappyBirthday.Framework.Menus
                 upNeighborID = -7777
             };
 
-            string bdaySeason = HappyBirthdayModCore.Instance.translationInfo.getTranslatedBaseGameString("Birthday") + " " + HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Season");
-            string bdayDay = HappyBirthdayModCore.Instance.translationInfo.getTranslatedBaseGameString("Birthday") + " " + HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Date");
+            string bdaySeason = HappyBirthdayModCore.Instance.translationInfo.getTranslatedBaseGameString("Birthday") + " " + Messages.GetMessage("Season");
+            string bdayDay = HappyBirthdayModCore.Instance.translationInfo.getTranslatedBaseGameString("Birthday") + " " + Messages.GetMessage("Date");
             this.Labels.Add(new ClickableComponent(new Rectangle(this.xPositionOnScreen + Game1.tileSize / 4 + spaceToClearSideBorder + borderWidth + Game1.tileSize * 3 + 8, this.yPositionOnScreen + borderWidth + spaceToClearTopBorder - Game1.tileSize / 8, 1, 1), bdaySeason + ": " + this.BirthdaySeason));
             this.Labels.Add(new ClickableComponent(new Rectangle(this.xPositionOnScreen + Game1.tileSize / 4 + spaceToClearSideBorder + borderWidth + Game1.tileSize * 3 + 8, this.yPositionOnScreen + borderWidth + spaceToClearTopBorder + Game1.tileSize, Game1.tileSize * 2, Game1.tileSize), bdayDay + ": " + this.birthdayDay));
             this.seasonButtons.Add(new ClickableTextureComponent("Spring", new Rectangle(this.xPositionOnScreen + spaceToClearSideBorder + borderWidth + Game1.tileSize * 1 - Game1.tileSize / 4, this.yPositionOnScreen + borderWidth + spaceToClearTopBorder + (int)(Game1.tileSize * 3.10) - Game1.tileSize / 4, Game1.tileSize * 2, Game1.tileSize), "", "", Game1.mouseCursors, this.getSpringButton(), Game1.pixelZoom) {
@@ -681,10 +681,12 @@ namespace Omegasis.HappyBirthday.Framework.Menus
             {
                 if (this.isFestivalDay())
                 {
-                    if (string.IsNullOrEmpty(HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("BirthdayError_FestivalDay")) == false)
-                        Game1.addHUDMessage(new BirthdayHudMessage(HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("BirthdayError_FestivalDay")));
-                    else
-                        Game1.addHUDMessage(new BirthdayHudMessage("You can't have a birthday on this day. Sorry!"));
+                    string message = Messages.GetMessage("BirthdayError_FestivalDay", "You can't have your birthday on this day. Sorry!");
+                    if (!string.IsNullOrEmpty(message))
+                    {
+                        Game1.addHUDMessage(new BirthdayHudMessage(message));
+                        return;
+                    }
                     return;
                 }
                 if (this.seasonName == "" || this.birthdayDay == 0) return;
@@ -914,7 +916,7 @@ namespace Omegasis.HappyBirthday.Framework.Menus
                 }
                 if ((this.currentlySnappedComponent.name == this.seasonName) || (this.currentlySnappedComponent.myID == this.birthdayDay))
                 {
-                    string selected = HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Selected");
+                    string selected = Messages.GetMessage("Selected");
                     toSpeak = $"{selected} {toSpeak}";
                 } else if (toSpeak == "OK") {
                     toSpeak = $"{toSpeak} button";

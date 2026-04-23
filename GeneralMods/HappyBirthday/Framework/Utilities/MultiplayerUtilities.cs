@@ -15,7 +15,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
         public static void SendBirthdayMessageToOtherPlayers()
         {
-            string str = HappyBirthdayModCore.Instance.translationInfo.getTranslatedContentPackString("Happy Birthday: Farmhand Birthday Message");
+            string str = Messages.GetMessage("Happy Birthday: Farmhand Birthday Message");
             str=str.Replace("@", Game1.player.Name);
             HUDMessage message = new HUDMessage(str, 1);
 
