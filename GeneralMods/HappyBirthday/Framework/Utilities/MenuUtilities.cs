@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Omegasis.HappyBirthday.Framework.ContentPack;
 using Omegasis.StardustCore.Events;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -83,7 +84,11 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                     //if (NPCUtilities.ShouldWishPlayerHappyBirthday(Game1.currentSpeaker.Name) == false) return;
                     if (Game1.activeClickableMenu is DialogueBox)
                     {
+
+                        HappyBirthdayModCore.Instance.Helper.GameContent.InvalidateCache(string.Format("Characters/Dialogue/{0}", Game1.currentSpeaker.Name));
+
                         string birthdayMessage = HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(Game1.currentSpeaker.Name);
+                        birthdayMessage = HappyBirthdayModCore.Instance.birthdayMessages.getBirthdayMessage(Game1.currentSpeaker.Name);
                         HappyBirthdayModCore.Instance.Monitor.Log("Birthday message is: " + birthdayMessage);
                         DialogueBox db = (Game1.activeClickableMenu as DialogueBox);
                         DialogueBox comparisonDB = new(new Dialogue(Game1.currentSpeaker, "", birthdayMessage));

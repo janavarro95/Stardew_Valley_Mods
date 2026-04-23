@@ -347,7 +347,7 @@ namespace Omegasis.HappyBirthday
             }
             catch(Exception e)
             {
-                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.Message, LogLevel.Error);
+                HappyBirthdayModCore.Instance.Monitor.Log("ERROR: EXCEPTION IS: " + e.ToString(), LogLevel.Error);
 
                 return null;
             }

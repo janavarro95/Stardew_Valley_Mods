@@ -7,6 +7,7 @@ using Omegasis.HappyBirthday.Framework.ContentPack;
 using Omegasis.HappyBirthday.Framework.Utilities;
 using StardewModdingAPI;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 using static StardewValley.LocalizedContentManager;
 
 namespace Omegasis.HappyBirthday
@@ -97,11 +98,28 @@ namespace Omegasis.HappyBirthday
             string key = string.Format("Characters/Dialogue/{0}:Omegasis.HappyBirthday.BirthdayGreeting", NPC);
             try
             {
-                message = Game1.content.LoadString(string.Format("Characters/Dialogue/{0}:Omegasis.HappyBirthday.BirthdayGreeting", NPC));
+                //message = Game1.content.LoadString(string.Format("Characters/Dialogue/{0}:Omegasis.HappyBirthday.BirthdayGreeting", NPC));
+                Dictionary<string,string> messages = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>(string.Format("Characters/Dialogue/{0}", NPC));
+                if (messages.ContainsKey("Omegasis.HappyBirthday.BirthdayGreeting"))
+                {
+                    return messages["Omegasis.HappyBirthday.BirthdayGreeting"];
+                }
+                else
+                {
+                    foreach (string _key in messages.Keys)
+                    {
+                        HappyBirthdayModCore.Instance.Monitor.Log("Dict key is:" + _key);
+                    }
+
+                }
+
+
             }
-            catch
+            catch(Exception e)
             {
                 message = "";
+
+                HappyBirthdayModCore.Instance.Monitor.Log("Exception while loading asset: " + e.ToString());
             }
 
             if (!string.IsNullOrEmpty(message) && !message.Equals(key))

@@ -10,8 +10,8 @@
         "Omegasis.HappyBirthday.BirthdayGreeting": "Happy birthday, @! Hopefully this year we can go on even more adventures together! $h"
       },
       "When": {
-        "Hearts:Abigail": "{{Range: {{Omegasis.HappyBirthday/MinimumHeartsForBirthdayWishes}}, 14}}"
-      }
+        "query: {{Hearts:Abigail}} >= 2": true
+      },
     },
     {
       "Action": "EditData",
