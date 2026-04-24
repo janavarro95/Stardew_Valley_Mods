@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "entries": {
+        "Omegasis.HappyBirthday.Events.AskPlayerForBirthday/Time 600 2600/Omegasis.HappyBirthday.Framework.EventPreconditions.HasChosenBirthdayPrecondition False/": "continue/64 14/farmer 64 14 2 Lewis 64 16 0/globalFadeToClear 0.007/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Lewis Lewis_AskPlayerForBirthday_Intro/Omegasis.HappyBirthday.Events.ShowBirthdaySelectionMenu/Omegasis.HappyBirthday.Events.SpeakIfTodayIsPlayersBirthday/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Lewis Lewis_AskPlayerForBirthday_TodayIsBirthday/Omegasis.HappyBirthday.Events.SkipNextCommand/Omegasis.HappyBirthday.Events.SpeakWithBirthdayMessageIncluded Lewis Lewis_AskPlayerForBirthday_Confirmation/end"
+      }
+    }
+  ]
+}
+
+
+

@@ -434,6 +434,7 @@ namespace Omegasis.HappyBirthday
 
             if (!this.birthdayManager.hasCheckedForBirthday() && Game1.activeClickableMenu == null)
             {
+                /*
                 if (this.birthdayManager.playerBirthdayData == null)
                 {
 
@@ -443,6 +444,7 @@ namespace Omegasis.HappyBirthday
                     this.birthdayManager.playerBirthdayData.PlayersName = Game1.player.Name;
                     this.birthdayManager.playerBirthdayData.PlayerUniqueMultiplayerId = Game1.player.UniqueMultiplayerID;
                 }
+                */
 
                 this.birthdayManager.setCheckedForBirthday(true);
 

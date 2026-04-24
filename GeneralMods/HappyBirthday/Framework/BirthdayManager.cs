@@ -211,11 +211,12 @@ namespace Omegasis.HappyBirthday.Framework
                     npc.CurrentDialogue.Push(d);
                     if (npc.CurrentDialogue.ElementAt(0) != d) npc.setNewDialogue(message);
 
-
+                    /*
                     if (Game1.player.getFriendshipHeartLevelForNPC(npc.Name) >= HappyBirthdayModCore.Configs.modConfig.minimumFriendshipLevelForBirthdayWish)
                     {
                         //TODO: DON'T DELETE, MIGRATE TO CONTENT PATCHER PACK INSTEAD!!!
                     }
+                    */
                 }
             }
         }

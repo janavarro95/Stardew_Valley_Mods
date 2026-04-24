@@ -136,6 +136,12 @@ namespace Omegasis.HappyBirthday.Framework.Events
         /// <returns></returns>
         public static string GetEventString(string Key)
         {
+            string message = Game1.content.LoadString(string.Format("Mods/Omegasis.HappyBirthday/Strings/Events:{0}", Key));
+            if (!string.IsNullOrEmpty(message))
+            {
+                return message;
+            }
+
             string eventString = HappyBirthdayModCore.Instance.translationInfo.getEventString(Key);
             return ReplaceSpecialDialogueTokens(eventString);
         }
