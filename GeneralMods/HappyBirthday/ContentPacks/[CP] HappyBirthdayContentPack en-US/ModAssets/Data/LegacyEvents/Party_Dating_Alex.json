@@ -1,7 +1,0 @@
-{
-  "stardewEventID": "Omegasis.HappyBirthday.Events.BirthdayParty_Dating_Alex",
-  "eventStringId": "HappyBirthday_Events_BirthdayParty_Dating_Alex",
-  "version": 3,
-  "EventData": "playful/3 20/farmer 7 19 3 Alex 3 19 2/skippable/globalFadeToClear 0.007/move farmer -3 0 3 False/faceDirection Alex 1 True/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Alex DatingAlexBirthday_Alex:0/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Alex DatingAlexBirthday_Alex:1/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Alex DatingAlexBirthday_Alex:2/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Alex DatingAlexBirthday_Alex:3/emote farmer 20/emote Alex 20/globalFade 0.01/viewport -100 -100 true/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingAlexBirthday_Finish:0/Omegasis.HappyBirthday.Events.ShowTranslatedMessage DatingAlexBirthday_Finish:1/Omegasis.EventFramework.AddObjectToPlayersInventory 206 1 False/Omegasis.EventFramework.AddObjectToPlayersInventory 167 1 False/Omegasis.HappyBirthday.Events.ShowTranslatedMessage PartyOver/end",
-  "EventPreconditionData": "Omegasis.HappyBirthday.Framework.EventPreconditions.FarmerBirthdayPrecondition/StardustCore.Events.Preconditions.GameLocationPrecondition JoshHouse/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/StardustCore.Events.Preconditions.NPCSpecific.DatingNPC Alex/"
-}

@@ -1,7 +1,0 @@
-{
-  "stardewEventID": "Omegasis.HappyBirthday.Events.JojaMartBirthday",
-  "eventStringId": "HappyBirthday_Events_JojaMartBirthday",
-  "version": 3,
-  "EventData": "continue/21 24/farmer 14 28 0 Morris -100 -100 0/globalFadeToClear 0.007/move farmer 0 -2 0 False/move farmer 7 0 0 False/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Morris JojaParty_0/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Morris JojaParty_1/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Morris JojaParty_2/globalFade 0.01/viewport -400 -400 true/Omegasis.EventFramework.AddObjectToPlayersInventory 223 1 False/end",
-  "EventPreconditionData": "StardustCore.Events.Preconditions.GameLocationPrecondition JojaMart/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/StardustCore.Events.Preconditions.PlayerSpecific.JojaMemeber True/Omegasis.HappyBirthday.Framework.EventPreconditions.FarmerBirthdayPrecondition/"
-}

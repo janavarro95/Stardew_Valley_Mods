@@ -127,5 +127,26 @@ namespace Omegasis.HappyBirthday.Framework.Events.EventPreconditions
         {
             return ParseIsStardewValleyExpandedInstalledPrecondition_Legacy(precondition).meetsCondition();
         }
+
+
+        public static bool ParseIsJojaMember(GameLocation location, string eventId, string[] precondition)
+        {
+            return StardustCore.Events.Preconditions.PreconditionParsingMethods.ParseIsJojaMemeberPrecondition(precondition).meetsCondition();
+        }
+
+        public static bool ParseCanReadJunimo(GameLocation location, string eventId, string[] precondition)
+        {
+            return StardustCore.Events.Preconditions.PreconditionParsingMethods.ParseCanReadJunimoEventPrecondition(precondition).meetsCondition();
+        }
+
+        public static bool ParseDayOfTheWeek(GameLocation location, string eventId, string[] precondition)
+        {
+            return StardustCore.Events.Preconditions.PreconditionParsingMethods.ParseDayOfWeekPrecondition(precondition).meetsCondition();
+        }
+
+        public static bool ParseDatingNPC(GameLocation location, string eventId, string[] precondition)
+        {
+            return StardustCore.Events.Preconditions.PreconditionParsingMethods.ParseDatingNpcEventPrecondition(precondition).meetsCondition();
+        }
     }
 }

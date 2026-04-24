@@ -68,8 +68,6 @@ namespace Omegasis.HappyBirthday
 
         public IStardewAccessApi screenreader;
 
-        private int delay = 5;
-
         /*********
         ** Public methods
         *********/
@@ -119,6 +117,7 @@ namespace Omegasis.HappyBirthday
             LocalizedContentManager.OnLanguageChange += this.LocalizedContentManager_OnLanguageChange;
 
             this.Helper.ConsoleCommands.Add("Omegasis.Happy_Birthday.reset_birthday", "Resets the player's birthday and allows for them to choose it again.", this.birthdayManager.resetPlayersBirthday);
+            this.Helper.ConsoleCommands.Add("Omegasis.Happy_Birthday.list_all_locations", "Prints the names of all GameLocations to the console. Useful for making events.", this.PrintAllGameLocations);
         }
 
         private void Content_AssetRequested(object sender, AssetRequestedEventArgs e)
@@ -234,7 +233,8 @@ namespace Omegasis.HappyBirthday
 
             api.RegisterToken(this.ModManifest, "DadsMoneyAmount", () =>
             {
-                if (Game1.year == 1) {
+                if (Game1.year == 1)
+                {
                     return [Convert.ToString(Configs.mailConfig.dadBirthdayYear1MoneyGivenAmount)];
                 }
                 else
@@ -391,7 +391,7 @@ namespace Omegasis.HappyBirthday
         protected virtual void initalizeHappyBirthdayContent()
         {
             if (this.contentPacksInitalized) return;
-            
+
             foreach (IContentPack contentPack in this.Helper.ContentPacks.GetOwned())
             {
                 this.happyBirthdayContentPackManager.registerNewContentPack(contentPack);
@@ -434,17 +434,6 @@ namespace Omegasis.HappyBirthday
 
             if (!this.birthdayManager.hasCheckedForBirthday() && Game1.activeClickableMenu == null)
             {
-                /*
-                if (this.birthdayManager.playerBirthdayData == null)
-                {
-
-                    this.birthdayManager.playerBirthdayData = new PlayerData();
-                    this.birthdayManager.playerBirthdayData.BirthdayDay = 1;
-                    this.birthdayManager.playerBirthdayData.BirthdaySeason = "spring";
-                    this.birthdayManager.playerBirthdayData.PlayersName = Game1.player.Name;
-                    this.birthdayManager.playerBirthdayData.PlayerUniqueMultiplayerId = Game1.player.UniqueMultiplayerID;
-                }
-                */
 
                 this.birthdayManager.setCheckedForBirthday(true);
 
@@ -457,6 +446,15 @@ namespace Omegasis.HappyBirthday
         {
             if (this.screenreader != null)
                 this.screenreader.SayWithMenuChecker(text, interrupt);
+        }
+
+
+        private void PrintAllGameLocations(string name, string[] args)
+        {
+            foreach (GameLocation gl in Game1.locations)
+            {
+                this.Monitor.Log(gl.Name);
+            }
         }
 
 

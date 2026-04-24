@@ -40,12 +40,10 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
 
                 //Add some special handling here to allow for belated birthday wishes from modded npcs that don't have specific dialogue.
                 string mailMessage = GetMailMessage(mailKey);
-                mailMessage = string.Format(mailMessage, formattedMailItemString);
 
-                HappyBirthdayModCore.Instance.Monitor.Log("NPC mail key is " + mailKey);
-                HappyBirthdayModCore.Instance.Monitor.Log("NPC mail message is " + mailMessage);
-                HappyBirthdayModCore.Instance.Monitor.Log("NPC formattedMailItemString message is " + formattedMailItemString);
-
+                if (mailMessage.Contains("{NPCGift:")==false){
+                    mailMessage = string.Format(mailMessage, formattedMailItemString);
+                }
                 if (string.IsNullOrEmpty(mailMessage))
                 {
                     mailMessage = GetMailMessage("Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message");
@@ -161,8 +159,6 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             {
                 Dictionary<string, string> data = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>("Data/Mail");
                 message = data[Key];
-
-                HappyBirthdayModCore.Instance.Monitor.Log("THE MESSAGE IS: " + message);
 
             }
             catch (Exception e)

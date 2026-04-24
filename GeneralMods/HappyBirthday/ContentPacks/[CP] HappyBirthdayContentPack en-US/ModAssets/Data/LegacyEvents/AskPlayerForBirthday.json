@@ -1,7 +1,0 @@
-{
-  "stardewEventID": "Omegasis.HappyBirthday.Events.AskPlayerForBirthday",
-  "eventStringId": "HappyBirthday_Events_AskPlayerForBirthday",
-  "version": 3,
-  "EventData": "continue/64 14/farmer 64 14 2 Lewis 64 16 0/globalFadeToClear 0.007/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Lewis Lewis_AskPlayerForBirthday_Intro/Omegasis.HappyBirthday.Events.ShowBirthdaySelectionMenu/Omegasis.HappyBirthday.Events.SpeakIfTodayIsPlayersBirthday/Omegasis.HappyBirthday.Events.SpeakWithTranslatedMessage Lewis Lewis_AskPlayerForBirthday_TodayIsBirthday/Omegasis.HappyBirthday.Events.SkipNextCommand/Omegasis.HappyBirthday.Events.SpeakWithBirthdayMessageIncluded Lewis Lewis_AskPlayerForBirthday_Confirmation/end",
-  "EventPreconditionData": "StardustCore.Events.Preconditions.GameLocationPrecondition Farm/StardustCore.Events.Preconditions.TimeSpecific.TimeOfDayPrecondition 600 2600/Omegasis.HappyBirthday.Framework.EventPreconditions.HasChosenBirthdayPrecondition False/"
-}

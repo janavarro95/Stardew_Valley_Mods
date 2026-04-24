@@ -110,6 +110,12 @@ namespace Omegasis.HappyBirthday.Framework.Events
             //Compatibility event preconditions
             Event.RegisterPrecondition(IsStardewValleyExpandedInstalledPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseIsStardewValleyExpandedInstalledPrecondition);
 
+
+
+            Event.RegisterPrecondition(StardustCore.Events.Preconditions.PlayerSpecific.IsJojaMemberEventPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseIsJojaMember);
+            Event.RegisterPrecondition(StardustCore.Events.Preconditions.PlayerSpecific.CanReadJunimoEventPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseCanReadJunimo);
+            Event.RegisterPrecondition(StardustCore.Events.Preconditions.TimeSpecific.DayOfWeekPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseDayOfTheWeek);
+            Event.RegisterPrecondition(StardustCore.Events.Preconditions.NPCSpecific.DatingNPCEventPrecondition.EventPreconditionId, HappyBirthdayPreconditionParsingMethods.ParseDatingNPC);
         }
 
         public static void InitializeBirthdayEvents()
