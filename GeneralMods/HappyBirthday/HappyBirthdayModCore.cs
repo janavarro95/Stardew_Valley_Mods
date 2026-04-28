@@ -28,15 +28,6 @@ namespace Omegasis.HappyBirthday
     /// <summary>The mod entry point.</summary>
     public class HappyBirthdayModCore : Mod
     {
-        //TODO: Migrate all events.
-
-
-        //TODO: Include changelog documentation for new command, ability to select multiple birthday gifts, and support for modded items.
-
-        //TODO: Make an official StardewValleyExpanded ContentPack.
-        //TODO: Add support for content packs to override event ids that are registered. Aka allow StardewValleyExpanded Content Pack events to override their vanilla counterparts.
-
-
         /*********
         ** Fields
         *********/

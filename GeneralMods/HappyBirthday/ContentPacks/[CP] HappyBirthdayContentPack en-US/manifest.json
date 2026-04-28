@@ -1,7 +1,7 @@
 {
   "Name": "Happy Birthday en-US Translation Content Pack",
   "Author": "Omegasis",
-  "Version": "2.0.0",
+  "Version": "2.0.1",
   "Description": "A Content Patcher content pack that contains English translations for the mod, Happy Birthday.",
   "UniqueID": "Omegasis.HappyBirthday.ContentPatcher.ContentPack.en-US",
   "UpdateKeys": [ "Nexus:11148" ],

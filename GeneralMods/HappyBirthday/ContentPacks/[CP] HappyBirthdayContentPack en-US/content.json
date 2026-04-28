@@ -146,7 +146,7 @@
     //Mail
     {
       "Action": "EditData",
-      "Target": "Data/Mail",
+      "Target": "Data/mail",
       "entries": {
         "Omegasis.HappyBirthday_BelatedBirthdayWish_Abigail": "Happy belated birthday, @! ^ Hopefully this year we can go on even more adventures together. ^^ - Abigail {NPCGift:Abigail}[#]Happy Birthday from Abigail",
         "Omegasis.HappyBirthday_BelatedBirthdayWish_Alex": "Yo @, happy belated birthday! ^ Here's to making this the best year yet. ^^ - Alex {NPCGift:Alex}[#]Happy Birthday from Alex",

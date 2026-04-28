@@ -54,7 +54,19 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         npcName = npc.displayName;
                     }
 
-                    data[mailKey] = string.Format(mailMessage, formattedMailItemString, npcName);
+
+
+                    if (mailMessage.Contains("{NPCGift:Generic}") == false)
+                    {
+                        data[mailKey] = string.Format(mailMessage, formattedMailItemString, npcName);
+                    }
+                    else
+                    {
+                        //Support for Content Patcher birthday gifts for NPC who have not been added to a different content patcher content pack.
+                        Item genericGift = HappyBirthdayModCore.Instance.giftManager.getNextBirthdayGift(npc.Name);
+                        string genericFormattedMailItemString = MailUtilities.GetItemMailStringFormat(gift.QualifiedItemId, gift.Stack, npc.Name);
+                        data[mailKey] = mailMessage.Replace("{NPCGift:Generic}", formattedMailItemString);
+                    }
                     continue;
                 }
                 else
@@ -153,11 +165,11 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         {
             //Code for Content Patcher Content Packs
             string message = "";
-            string key = string.Format("Data/Mail:{0}", Key);
+            string key = string.Format("Data/mail:{0}", Key);
 
             try
             {
-                Dictionary<string, string> data = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>("Data/Mail");
+                Dictionary<string, string> data = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>("Data/mail");
                 message = data[Key];
 
             }
@@ -257,9 +269,6 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
         /// <param name="NpcsToReceieveMailFrom"></param>
         public static void AddBelatedBirthdayMailToMailbox(List<string> NpcsToReceieveMailFrom)
         {
-            HappyBirthdayModCore.Instance.Helper.GameContent.InvalidateCache("Data/Mail");
-
-
             foreach (string npcName in NpcsToReceieveMailFrom)
             {
                 if (NPCUtilities.ShouldWishPlayerHappyBirthday(npcName))

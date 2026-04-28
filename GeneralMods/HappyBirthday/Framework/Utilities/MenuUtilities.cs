@@ -55,7 +55,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                             return;
                         }
 
-                        Dictionary<string,string> allMail = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string,string>>("Data/Mail");
+                        Dictionary<string,string> allMail = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string,string>>("Data/mail");
                         foreach (string key in allMail.Keys)
                         {
 
