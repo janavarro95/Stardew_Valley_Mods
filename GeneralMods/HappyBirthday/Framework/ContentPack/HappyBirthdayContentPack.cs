@@ -334,10 +334,10 @@ namespace Omegasis.HappyBirthday.Framework.ContentPack
         public void loadDefaultBirthdayGifts()
         {
 
-            if (File.Exists(Path.Combine(this.baseContentPack.DirectoryPath,"ModAssets", "Data", "Gifts", "DefaultGifts" + ".json")))
+            if (File.Exists(Path.Combine(this.baseContentPack.DirectoryPath,"ModAssets", "Data", "Gifts", "DefaultGifts.json")))
             {
                 HappyBirthdayModCore.Instance.Monitor.Log("Loading in default birthday gifts for content pack: " + this.UniqueId);
-                this.defaultBirthdayGifts = this.baseContentPack.ReadJsonFile<List<GiftInformation>>(Path.Combine("ModAssets", "Data", "Gifts", "DefaultGifts" + ".json"));
+                this.defaultBirthdayGifts = this.baseContentPack.ReadJsonFile<List<GiftInformation>>(Path.Combine("ModAssets", "Data", "Gifts", "DefaultGifts.json"));
 
                 if (this.defaultBirthdayGifts == null)
                 {

@@ -262,12 +262,12 @@
     {
       "Action": "Load",
       "Target": "Mods/Omegasis.HappyBirthday/Gifts/DefaultGifts",
-      "FromFile": "ModAssets/Data/Blank.json"
-    },
-    {
-      "Action": "Include",
       "FromFile": "ModAssets/Data/Gifts/DefaultGifts.json"
     },
+    //{
+    //  "Action": "Include",
+    //  "FromFile": "ModAssets/Data/Gifts/DefaultGifts.json"
+    //},
 
 
     {

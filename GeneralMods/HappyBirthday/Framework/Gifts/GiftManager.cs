@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using ContentPatcher;
 using Microsoft.Xna.Framework.Input;
 using Omegasis.HappyBirthday.Framework;
+using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher;
 using Omegasis.HappyBirthday.Framework.Configs;
 using Omegasis.HappyBirthday.Framework.ContentPack;
 using Omegasis.HappyBirthday.Framework.Gifts;
@@ -90,7 +90,7 @@ namespace Omegasis.HappyBirthday
 
 
 
-            //Loads in all gifts across all content packs across all translations.
+            //Loads in all gifts across all Legacy(pre 2.0.0) content packs across all translations.
             foreach (HappyBirthdayContentPack contentPack in HappyBirthdayModCore.Instance.happyBirthdayContentPackManager.contentPacks.Values.SelectMany(contentPackList => contentPackList))
             {
                 HappyBirthdayModCore.Instance.Monitor.Log("Adding default gifts for content pack: " + contentPack.baseContentPack.Manifest.UniqueID);
@@ -366,9 +366,6 @@ namespace Omegasis.HappyBirthday
             try
             {
                 Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>("Mods/Omegasis.HappyBirthday/Gifts/DefaultGifts");
-
-                HappyBirthdayModCore.Instance.Monitor.Log("Number of gifts size: " + possibleCPGifts.Count.ToString());
-
                 int index = StardewValley.Game1.random.Next(0, possibleCPGifts.Count);
                 string key = possibleCPGifts.Keys.ElementAt(index);
                 string itemStackSizeString = possibleCPGifts[key];
@@ -406,7 +403,7 @@ namespace Omegasis.HappyBirthday
             }
             catch (Exception e)
             {
-
+                HappyBirthdayModCore.Instance.Monitor.Log("Error getDefaultGiftFromContentPatcher: " + e.ToString());
                 return null;
             }
         }

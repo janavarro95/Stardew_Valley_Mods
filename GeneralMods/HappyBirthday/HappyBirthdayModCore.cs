@@ -20,8 +20,9 @@ using Omegasis.HappyBirthday.Framework.Gifts;
 using Omegasis.StardustCore.Events;
 using Omegasis.HappyBirthday.Framework.Compatibility;
 using StardewValley.Locations;
-using ContentPatcher;
 using StardewValley.GameData.Objects;
+using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher;
+using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher.Tokens;
 
 namespace Omegasis.HappyBirthday
 {
@@ -36,6 +37,7 @@ namespace Omegasis.HappyBirthday
         /// Manages all of the configs for Happy Birthday.
         /// </summary>
         public static ConfigManager Configs;
+
 
         /// <summary>Class to handle all birthday messages for this mod.</summary>
         public BirthdayMessages birthdayMessages;
@@ -234,106 +236,15 @@ namespace Omegasis.HappyBirthday
                 }
             });
 
-            api.RegisterToken(this.ModManifest, "RandomCookedDish", () =>
-            {
-                List<string> list = new List<string>();
+            api.RegisterToken(this.ModManifest, "RandomCookedDish", new GenericNPCGiftToken(StardewValley.Object.CookingCategory));
 
-                foreach (string id in Game1.objectData.Keys)
-                {
-                    ObjectData d = Game1.objectData[id];
-                    if (d.Category == StardewValley.Object.CookingCategory)
-                    {
-                        list.Add(id);
-                    }
-                }
-                int index = Game1.random.Next(list.Count);
-                string chosenId = list[index];
-                return [chosenId];
-            });
+            api.RegisterToken(this.ModManifest, "RandomFlower",  new GenericNPCGiftToken(StardewValley.Object.flowersCategory));
 
-            api.RegisterToken(this.ModManifest, "RandomFlower", () =>
-            {
-                List<string> list = new List<string>();
+            api.RegisterToken(this.ModManifest, "RandomForage", new GenericNPCGiftToken(-81));
 
-                foreach (string id in Game1.objectData.Keys)
-                {
-                    ObjectData d = Game1.objectData[id];
-                    if (d.Category == StardewValley.Object.flowersCategory)
-                    {
-                        list.Add(id);
-                    }
-                }
-                int index = Game1.random.Next(list.Count);
-                string chosenId = list[index];
-                return [chosenId];
-            });
+            api.RegisterToken(this.ModManifest, "RandomFertilizer", new GenericNPCGiftToken(StardewValley.Object.fertilizerCategory));
 
-            api.RegisterToken(this.ModManifest, "RandomForage", () =>
-            {
-                List<string> list = new List<string>();
-
-                foreach (string id in Game1.objectData.Keys)
-                {
-                    ObjectData d = Game1.objectData[id];
-                    if (d.Category == -81)
-                    {
-                        list.Add(id);
-                    }
-                }
-                int index = Game1.random.Next(list.Count);
-                string chosenId = list[index];
-                return [chosenId];
-            });
-
-            api.RegisterToken(this.ModManifest, "RandomFertilizer", () =>
-            {
-                List<string> list = new List<string>();
-
-                foreach (string id in Game1.objectData.Keys)
-                {
-                    ObjectData d = Game1.objectData[id];
-                    if (d.Category == StardewValley.Object.fertilizerCategory)
-                    {
-                        list.Add(id);
-                    }
-                }
-                int index = Game1.random.Next(list.Count);
-                string chosenId = list[index];
-                return [chosenId];
-            });
-
-            api.RegisterToken(this.ModManifest, "RandomNonRareSeeds", () =>
-            {
-                List<string> list = new List<string>();
-
-                foreach (string id in Game1.objectData.Keys)
-                {
-                    ObjectData d = Game1.objectData[id];
-                    if (d.Category == StardewValley.Object.SeedsCategory)
-                    {
-                        if (id == "347")
-                        {
-                            //Sweet Gem Berry
-                            continue;
-                        }
-                        if (id == "499")
-                        {
-                            //Ancient Seeds
-                            continue;
-                        }
-                        if (d.Name.Contains("Sapling"))
-                        {
-                            //Don't include saplings.
-                            continue;
-                        }
-
-                        list.Add(id);
-                    }
-                }
-                int index = Game1.random.Next(list.Count);
-                string chosenId = list[index];
-                return [chosenId];
-            });
+            api.RegisterToken(this.ModManifest, "RandomNonRareSeeds", new RandomNonRareSeedsToken());
 
         }
 
@@ -383,6 +294,8 @@ namespace Omegasis.HappyBirthday
         {
             if (this.contentPacksInitalized) return;
 
+
+            //Legacy code for making old content packs work.
             foreach (IContentPack contentPack in this.Helper.ContentPacks.GetOwned())
             {
                 this.happyBirthdayContentPackManager.registerNewContentPack(contentPack);

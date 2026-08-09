@@ -105,6 +105,7 @@ namespace Omegasis.HappyBirthday
                 {
                     return messages["Omegasis.HappyBirthday.BirthdayGreeting"];
                 }
+                /*
                 else
                 {
                     foreach (string _key in messages.Keys)
@@ -113,7 +114,7 @@ namespace Omegasis.HappyBirthday
                     }
 
                 }
-
+                */
 
             }
             catch(Exception e)
