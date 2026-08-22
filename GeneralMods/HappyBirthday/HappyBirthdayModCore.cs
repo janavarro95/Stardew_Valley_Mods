@@ -294,20 +294,6 @@ namespace Omegasis.HappyBirthday
         {
             this.initalizeHappyBirthdayContent();
 
-            var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
-            string result = "";
-            IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, "{{Omegasis.HappyBirthday/NPCGift:Abigail}}", new SemanticVersion("2.9.0"));
-            tokenString.UpdateContext();
-            if (tokenString.Value != null)
-            {
-                result = tokenString.Value;
-            }
-            else
-            {
-                this.Monitor.Log("Happy birthday test: Token string is invalid???: " + result, LogLevel.Error);
-            }
-            this.Monitor.Log("Happy birthday test: Abigail birthday gift is: " + result, LogLevel.Error);
-
         }
 
         protected virtual void initalizeHappyBirthdayContent()
