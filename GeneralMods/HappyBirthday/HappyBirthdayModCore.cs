@@ -4,28 +4,31 @@ using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Omegasis.HappyBirthday.Framework;
+using Omegasis.HappyBirthday.Framework.Compatibility;
+using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher;
+using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher.Tokens;
+using Omegasis.HappyBirthday.Framework.Configs;
+using Omegasis.HappyBirthday.Framework.ContentPack;
+using Omegasis.HappyBirthday.Framework.Events;
+using Omegasis.HappyBirthday.Framework.Gifts;
+using Omegasis.HappyBirthday.Framework.Menus;
+using Omegasis.HappyBirthday.Framework.Utilities;
+using Omegasis.StardustCore.Events;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Characters;
+using StardewValley.GameData.Objects;
+using StardewValley.Locations;
 using StardewValley.Menus;
 using StardewValley.Monsters;
-using Omegasis.HappyBirthday.Framework.ContentPack;
-using Omegasis.HappyBirthday.Framework.Utilities;
-using Omegasis.HappyBirthday.Framework.Configs;
-using Omegasis.HappyBirthday.Framework.Menus;
-using Omegasis.HappyBirthday.Framework.Events;
-using Omegasis.HappyBirthday.Framework.Gifts;
-using Omegasis.StardustCore.Events;
-using Omegasis.HappyBirthday.Framework.Compatibility;
-using StardewValley.Locations;
-using StardewValley.GameData.Objects;
-using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher;
-using Omegasis.HappyBirthday.Framework.Compatibility.ContentPatcher.Tokens;
 
 namespace Omegasis.HappyBirthday
 {
+    //TODO: MailMenu hack breaks compatibility with other mods. Will need to use custom ContentPatcher Token objects to parse the npc name and replace the values accordingly.
+
     /// <summary>The mod entry point.</summary>
     public class HappyBirthdayModCore : Mod
     {
@@ -117,7 +120,7 @@ namespace Omegasis.HappyBirthday
         {
             if (e.NameWithoutLocale.BaseName.Equals(@"Data/mail"))
             {
-                e.Edit(MailUtilities.EditMailAsset);
+                //e.Edit(MailUtilities.EditMailAsset);
             }
         }
 
@@ -246,6 +249,8 @@ namespace Omegasis.HappyBirthday
 
             api.RegisterToken(this.ModManifest, "RandomNonRareSeeds", new RandomNonRareSeedsToken());
 
+            api.RegisterToken(this.ModManifest, "NPCGift", new NPCGiftToken());
+
         }
 
         private void LocalizedContentManager_OnLanguageChange(LocalizedContentManager.LanguageCode code)
@@ -288,6 +293,21 @@ namespace Omegasis.HappyBirthday
         private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
             this.initalizeHappyBirthdayContent();
+
+            var api = HappyBirthdayModCore.Instance.Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
+            string result = "";
+            IManagedTokenString tokenString = api.ParseTokenString(HappyBirthdayModCore.Instance.ModManifest, "{{Omegasis.HappyBirthday/NPCGift:Abigail}}", new SemanticVersion("2.9.0"));
+            tokenString.UpdateContext();
+            if (tokenString.Value != null)
+            {
+                result = tokenString.Value;
+            }
+            else
+            {
+                this.Monitor.Log("Happy birthday test: Token string is invalid???: " + result, LogLevel.Error);
+            }
+            this.Monitor.Log("Happy birthday test: Abigail birthday gift is: " + result, LogLevel.Error);
+
         }
 
         protected virtual void initalizeHappyBirthdayContent()

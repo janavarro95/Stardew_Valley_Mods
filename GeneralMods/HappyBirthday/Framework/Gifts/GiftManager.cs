@@ -299,6 +299,12 @@ namespace Omegasis.HappyBirthday
             }
             else
             {
+                Item possibleContentPatcherItem = this.getGiftFromContentPatcherForNPC(name);
+                if (possibleContentPatcherItem != null)
+                {
+                    return possibleContentPatcherItem;
+                }
+
                 if (this.npcBirthdayGifts.ContainsKey(name))
                 {
 
@@ -315,6 +321,7 @@ namespace Omegasis.HappyBirthday
 
         public Item getGiftFromContentPatcherForNPC(string name)
         {
+            HappyBirthdayModCore.Instance.Monitor.Log("Try to get npc gift: " + name);
             try
             {
                 Dictionary<string, string> possibleCPGifts = Game1.content.Load<Dictionary<string, string>>(string.Format("Mods/Omegasis.HappyBirthday/Gifts/{0}", name));

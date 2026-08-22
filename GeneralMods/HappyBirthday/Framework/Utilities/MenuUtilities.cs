@@ -46,6 +46,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         OnMenuChangedToDialogueBox();
                         break;
                     }
+                /*
                 case LetterViewerMenu menu:
                     {
                         string title = menu.mailTitle;
@@ -95,7 +96,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                         }
 
                         break;
-                    }
+                    }*/
             }
 
         }

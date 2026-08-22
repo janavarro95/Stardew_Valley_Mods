@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Omegasis.HappyBirthday.Framework.Constants;
 using Omegasis.HappyBirthday.Framework.ContentPack;
 using StardewValley;
+using StardewValley.BellsAndWhistles;
 
 namespace Omegasis.HappyBirthday.Framework.Utilities
 {
@@ -23,12 +24,13 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             data[MailKeys.MomBirthdayMessageKey] = GetMomsMailMessage();
             data[MailKeys.DadBirthdayMessageKey] = GetDadsMailMessage();
             data[MailKeys.DadMarriedBirthdayMessageKey] = GetDadsMailMessage();
-
+            /*
             foreach (string MailKey in MailKeys.GetAllNonBelatedMailKeysExcludingParents())
             {
                 UpdateMailMessage(ref data, MailKey);
             }
-
+            */
+            /*
             foreach (KeyValuePair<string, string> npcNameToMailKey in MailKeys.GetAllBelatedBirthdayMailKeys())
             {
                 string npcName = npcNameToMailKey.Key;
@@ -74,6 +76,7 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
                     data[mailKey] = mailMessage;
                 }
             }
+            */
         }
 
         /// <summary>
@@ -170,6 +173,13 @@ namespace Omegasis.HappyBirthday.Framework.Utilities
             try
             {
                 Dictionary<string, string> data = HappyBirthdayModCore.Instance.Helper.GameContent.Load<Dictionary<string, string>>("Data/mail");
+
+                foreach(KeyValuePair<string, string> kvp in data)
+                {
+                    HappyBirthdayModCore.Instance.Monitor.Log("Mail data is: " + kvp.Key + " " + kvp.Value);
+                }
+
+                
                 message = data[Key];
 
             }
