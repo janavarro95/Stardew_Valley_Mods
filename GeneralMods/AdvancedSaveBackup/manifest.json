@@ -1,7 +1,7 @@
 {
   "Name": "Advanced Save Backup",
   "Author": "Alpha_Omegasis",
-  "Version": "1.12.1",
+  "Version": "1.13.0",
   "Description": "Backs up your save files when loading SMAPI and every in game night when saving.",
   "UniqueID": "Omegasis.AdvancedSaveBackup",
   "EntryDll": "AdvancedSaveBackup.dll",

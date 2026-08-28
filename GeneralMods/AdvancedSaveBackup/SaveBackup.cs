@@ -70,6 +70,8 @@ namespace Omegasis.SaveBackup
             }
 
             helper.Events.GameLoop.Saving += this.OnSaving;
+            helper.Events.GameLoop.Saved += this.OnSaved;
+            helper.Events.GameLoop.SaveCreated += this.OnSaveCreated;
         }
 
         /// <summary>
@@ -117,6 +119,27 @@ namespace Omegasis.SaveBackup
         /// <param name="sender">The event sender.</param>
         /// <param name="e">The event arguments.</param>
         private void OnSaving(object sender, SavingEventArgs e)
+        {
+            if (!this.Config.BackupAfterSave) this.DoBackup();
+        }
+
+        /// <summary>Raised after the game finishes writing data to the save file (except the initial save creation).</summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnSaved(object sender, SavedEventArgs e)
+        {
+            if (this.Config.BackupAfterSave) this.DoBackup();
+        }
+
+        /// <summary>Raised after the game finishes creating the save file.</summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnSaveCreated(object sender, SaveCreatedEventArgs e)
+        {
+            if (this.Config.BackupAfterSave) this.DoBackup();
+        }
+
+        private void DoBackup()
         {
             if (string.IsNullOrEmpty(this.Config.AlternateNightlySaveBackupPath) == false)
             {

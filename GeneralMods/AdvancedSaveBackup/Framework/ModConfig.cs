@@ -14,5 +14,8 @@ namespace Omegasis.SaveBackup.Framework
         public string AlternateNightlySaveBackupPath { get; set; } = "";
 
         public string AlternatePreplaySaveBackupPath { get; set; } = "";
+
+        /// <summary>Back up the save after saving instead of before saving.</summary>
+        public bool BackupAfterSave { get; set; } = false;
     }
 }
