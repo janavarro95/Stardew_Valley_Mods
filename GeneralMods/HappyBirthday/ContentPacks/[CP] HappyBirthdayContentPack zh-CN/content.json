@@ -1,0 +1,870 @@
+{
+  "Format": "2.9.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@！希望今年我们能一起经历更多冒险！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Abigail.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Abigail",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。你知道吗，和你在一起的每一天都像一场精彩的冒险！生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Abigail",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Abigail.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "哟，@，生日快乐！祝你迎来迄今为止最棒的一年！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Alex.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Alex",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。我很庆幸嫁给了你。和你在一起，每一天都像赢下一场比赛一样开心。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Alex",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Alex.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Caroline",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。感谢你为我们的社区所做的一切。我相信你的父母一定为你感到骄傲。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Caroline.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。感谢你为我们的社区所做的一切。我相信你的父母一定为你感到骄傲。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Clint.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Clint",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "你知道吗，对我来说，你就像一颗未经雕琢的钻石。我原以为这辈子只能在炉火旁独自挥汗度日，幸好你发现了我的心，就像从晶球中发现宝石一样。生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$l"
+      },
+      "When": {
+        "Spouse": "Clint",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Clint.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Demetrius",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@！今天一定要抽空好好放松一下。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Demetrius.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Dwarf",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。等等，人类会庆祝生日，对吧？"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Dwarf.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "今天真是美好的一天，不是吗，@？不过我相信对你来说，这一天更加美好，毕竟今天是你的生日！$h#$b#我刚才其实正在为这个特别的日子写诗，不过眼下只能先说一句‘生日快乐’了。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Elliott.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Elliott",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "{{Omegasis.HappyBirthday/TimeOfDay}}好，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。我刚才还在想，你一直是我创作的灵感缪斯。每一天与你共度的时光，都令我深受启发。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Elliott",
+        "Language": "zh"
+      },
+      "Update": "OnTimeChange",
+      "LogName": "Chinese Dialogue/Elliott.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@！我看到你的未来像星星一样闪耀！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Emily.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "你知道吗，每次我试着占卜自己的命运时，都没想过自己能像现在这样幸福！生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}！$l"
+      },
+      "When": {
+        "Spouse": "Emily",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Emily.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Evelyn",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。你已经成长为一个如此出色的人，我相信你的祖父看到你如今的模样，一定会感到骄傲。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Evelyn.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/George",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "到了我这个年纪，生日也就一年年地过去了。不过，生日快乐，@。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/George.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，生日快乐！希望你今天剩下的时间过得开心，记得常来酒吧坐坐！"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Gus.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。希望今年你能收到些不错的礼物！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Haley.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "你知道吗，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，从我们初次相遇到现在，我们一起走过了很长一段路。我很庆幸我们携手走过了这段旅程。和你在一起的每一天都完美得像一张照片。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Haley",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Haley.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。有空来做个体检，好吗？我希望你能活得长长久久。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Harvey.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "{{Omegasis.HappyBirthday/TimeOfDay}}好，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。我刚才还在想，自从和你结婚后，我感觉整个人都充满了活力。每当看着你，我都觉得自己幸福得容光焕发。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Harvey",
+        "Language": "zh"
+      },
+      "Update": "OnTimeChange",
+      "LogName": "Chinese Dialogue/Harvey.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jas",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。我很高兴当初决定认识你。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Jas.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jodi",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "你好呀，@。听说今天是你的生日。既然如此，那就祝你生日快乐！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Jodi.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kent",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "乔迪告诉我今天是你的生日，@。生日快乐，记得珍惜每一天。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Kent.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。我还是不太理解人类，不过无论如何，我很高兴能遇见你。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Krobus.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "{{Omegasis.HappyBirthday/TimeOfDay}}好。我很高兴我们有机会一起生活，因为这让我学到了很多关于你和人类文化的事，包括人类如何庆祝生日。希望我们还能一起度过许多年。生日快乐，@！$h"
+      },
+      "When": {
+        "Roommate": "Krobus",
+        "Language": "zh"
+      },
+      "Update": "OnTimeChange",
+      "LogName": "Chinese Dialogue/Krobus.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，生日快乐！很高兴看到你在农场过得不错。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Leah.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leah",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，{{Omegasis.HappyBirthday/TimeOfDay}}，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。和你在一起给了我很多灵感。我会雕刻木头，而你则帮我雕琢了人生。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Leah",
+        "Language": "zh"
+      },
+      "Update": "OnTimeChange",
+      "LogName": "Chinese Dialogue/Leah.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Leo",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "我的鸟儿家人告诉我今天是你的生日，@。生日快乐！"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Leo.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@！我真心感谢你为镇上所做的一切。继续加油吧。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Lewis.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Linus",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。谢谢你连生日这天都来看我。我真的很开心。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Linus.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嗨，@！今天大家都在谈论你的生日，我也想亲口向你送上祝福。所以，生日快乐！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Marnie.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。我试着给你做一支永不熄灭的蜡烛，可惜没能成功。也许明年就能做好了，对吧？$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Maru.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Maru",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。我以前总觉得得望向太空才能找到流星，可每当看着你，我才发现自己早已拥有了一颗。$l"
+      },
+      "When": {
+        "Spouse": "Maru",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Maru.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，小伙子。我们该喝一杯，庆祝你又长大了一岁！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Pam.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。愿你今年尽享人生的种种美好。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Penny.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Penny",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。我总是在书里读到幸福美满的结局，但和你在一起让我明白，幸福还会一直延续下去。愿我们未来还能共度许多年。$l"
+      },
+      "When": {
+        "Spouse": "Penny",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Penny.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Pierre",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，生日快乐！希望接下来的一年对你来说会很棒！"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Pierre.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Robin",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，生日快乐！我真高兴你决定搬来山谷。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Robin.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，生日快乐！改天我们得为你办场生日即兴演奏会！$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Sam.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "{{Omegasis.HappyBirthday/TimeOfDay}}好，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。你知道吗，遇见你之前，我从没想过自己会安定下来。但现在我安定下来了，就再也不想回头。生日快乐！$l"
+      },
+      "When": {
+        "Spouse": "Sam",
+        "Language": "zh"
+      },
+      "Update": "OnTimeChange",
+      "LogName": "Chinese Dialogue/Sam.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sandy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "哎呀，亲爱的，你生日这天还特地大老远跑来看我呀？$h#$b#那我至少也得祝你生日快乐！~ $h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Sandy.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sandy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "能与你相遇，我真的很高兴，也很感激你一次次到沙漠来看我。如今能和你度过每一天，携手走过余生，我真是幸福极了！生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$l"
+      },
+      "When": {
+        "Spouse": "Sandy",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Sandy.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。希望你在农场一切顺利。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Sebastian.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "我以前不怎么过生日，但有你陪着，今天就变得特别了。生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$l"
+      },
+      "When": {
+        "Spouse": "Sebastian",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Sebastian.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。继续努力工作，我相信接下来的一年一定会很棒。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Shane.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "我以前以为生日除了喝酒就没别的乐趣了，但你让我知道了怎样才能过上美好的生活。生日快乐，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$l"
+      },
+      "When": {
+        "Spouse": "Shane",
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Shane.json:2"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Vincent",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "嘿，@，你是来钓……哦，今天是你的生日？生日快乐！"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Vincent.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Willy",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "啊哟，@，生日快乐。看着你，我想起了自己还是条小鱼苗的时候。趁年轻，好好享受吧，小家伙。$h"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Willy.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Wizard",
+      "entries": {
+        "Omegasis.HappyBirthday.BirthdayGreeting": "生日快乐，@。永远别忘了，你的未来由你自己创造。#$e#我怎么知道的？啊，我无意间听到几位镇民在商量送你什么礼物。我想你会喜欢的。"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Dialogue/Wizard.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Strings/Events",
+      "entries": {
+        "DatingAbigailBirthday_Abigail:0": "嘿，@！你来得正是时候，派对马上就要开始了！$h",
+        "DatingAbigailBirthday_Abigail:1": "哇，这蛋糕看起来真好吃，妈妈！$h",
+        "DatingAbigailBirthday_Abigail:2": "来许个愿吧，@。",
+        "DatingAbigailBirthday_Abigail:3": "那么，@，你许了什么愿？希望是想要一些超棒的技能！",
+        "DatingAbigailBirthday_Abigail:4": "总之，生日快乐！希望今后我们还能一起经历更多冒险。$l",
+        "DatingAbigailBirthday_Caroline:0": "拜托，我相信你的顾客不会介意你离开几分钟的。总之，蛋糕做好了。",
+        "DatingAbigailBirthday_Caroline:1": "*叹气* 真是的。",
+        "DatingAbigailBirthday_Caroline:2": "那么，@，想吃多少就尽管吃吧。$h",
+        "DatingAbigailBirthday_Finish:0": "能和阿比盖尔及她的家人一起庆祝生日，真开心。",
+        "DatingAbigailBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingAbigailBirthday_Mine_Abigail:0": "嘿，@！你来得正是时候，派对马上就要开始了。嗯，或者说是冒险！$h",
+        "DatingAbigailBirthday_Mine_Abigail:1": "我觉得在你生日这天，我们一起去矿洞待一会儿会很有趣。没有什么比冒险更能让生日变得精彩了，对吧？$h",
+        "DatingAbigailBirthday_Mine_Abigail:2": "别担心，我不是说要去和怪物打架。我只是觉得换个地方可能会很有意思。而且我家今天关门，因为我爸每周三都会休息。",
+        "DatingAbigailBirthday_Mine_Abigail:3": "我很高兴能像这样和你共度时光。我还带了些蛋糕来，这样庆祝起来才像样。来许个愿吧！",
+        "DatingAbigailBirthday_Mine_Abigail:4": "总之，生日快乐，@！希望今后我们还能一起经历更多冒险。$l",
+        "DatingAbigailBirthday_Mine_Finish:0": "能和阿比盖尔单独一起庆祝生日，真开心。",
+        "DatingAbigailBirthday_Mine_Finish:1": "看来还剩了些蛋糕！",
+        "DatingAbigailBirthday_Pierre:0": "请随意些，@！我得照看店里，不能待太久，不过我觉得办个派对是个好主意！$h",
+        "DatingAbigailBirthday_Pierre:1": "那当然了。蛋糕是用店里*最高级*的食材做的！$h",
+        "DatingAlexBirthday_Alex:0": "嘿，@，你来得正是时候。$h",
+        "DatingAlexBirthday_Alex:1": "我觉得你的生日值得办个小派对，应该会很有趣。锻炼得这么辛苦之后，放松一下总是好事！$h",
+        "DatingAlexBirthday_Alex:2": "我买了披萨和一些乔家可乐。希望你喜欢！$h",
+        "DatingAlexBirthday_Alex:3": "生日快乐，@。能和你这样的人在一起，我真是太幸运了。$l",
+        "DatingAlexBirthday_Finish:0": "能和亚历克斯单独一起庆祝生日，真开心。",
+        "DatingAlexBirthday_Finish:1": "看来还剩了些吃的！",
+        "DatingElliottBirthday_Elliott:0": "啊，@，太好了！你来得正是时候！$h",
+        "DatingElliottBirthday_Elliott:1": "我觉得为了庆祝你的生日，我们一起办个小小的庆祝会会很不错！$h",
+        "DatingElliottBirthday_Elliott:2": "我知道过生日有时会有不少琐事，而且你今天肯定也很忙，但我很感谢你特地赶来，和我一起度过这个特别的日子。$l",
+        "DatingElliottBirthday_Elliott:3": "唉，我试着为你写点东西，表达我对你的爱意，可不知怎的，文字就是无法描绘出每一个细节。$l",
+        "DatingElliottBirthday_Elliott:4": "好了，现在我们来吃些蛋糕庆祝一下吧。来许个愿！",
+        "DatingElliottBirthday_Elliott:5": "生日快乐，@！愿你的生命中还会有许多故事等待书写！$l",
+        "DatingElliottBirthday_Finish:0": "能和艾利欧特单独一起庆祝生日，真开心。",
+        "DatingElliottBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingEmilyBirthday_Emily:0": "嗨，@，你来得正是时候，庆祝活动马上就要开始了。$h",
+        "DatingEmilyBirthday_Emily:1": "我觉得为你办个小派对会很不错。",
+        "DatingEmilyBirthday_Emily:2": "不知为何，我觉得生日是在提醒我们活在当下，并与自然和谐共处的重要时刻。",
+        "DatingEmilyBirthday_Emily:3": "总之，我做了些巧克力蛋糕！用的全是天然食材，还加了仙人掌糖浆调味！$h",
+        "DatingEmilyBirthday_Emily:4": "许个愿吧，@！$h",
+        "DatingEmilyBirthday_Emily:5": "生日快乐，@！我感觉今年的精灵们正为你带来一股强烈的好运。$l",
+        "DatingEmilyBirthday_Finish:0": "能和艾米丽两个人一起庆祝生日，感觉真不错。",
+        "DatingEmilyBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingHaleyBirthday_Finish:0": "能和海莉两个人一起庆祝生日，感觉真不错。",
+        "DatingHaleyBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingHaleyBirthday_Haley:0": "嗨，@，你来得正是时候，派对马上就要开始啦！$h",
+        "DatingHaleyBirthday_Haley:1": "嗯，我是说，本来会办一场派对的，不过我觉得只邀请我们两个人也挺好的。$l",
+        "DatingHaleyBirthday_Haley:2": "我觉得只要安排得当，生日可以很有趣。不过我想让今天变得特别一些，因为……你对我来说很特别，你懂吧？$l",
+        "DatingHaleyBirthday_Haley:3": "总之，我还买了蛋糕，咱们一起吃吧！记得许个愿，好吗？$h",
+        "DatingHaleyBirthday_Haley:4": "生日快乐，@。我很高兴能和你共度这段时光。我们拍张照片，留住这一刻吧。$l",
+        "DatingHarveyBirthday_Finish:0": "能和哈维两个人一起庆祝生日，感觉真不错。",
+        "DatingHarveyBirthday_Finish:1": "看来还剩了些吃的！",
+        "DatingHarveyBirthday_Harvey:0": "你好啊，@，你来得正是时候！我先稍微收拾一下。$h",
+        "DatingHarveyBirthday_Harvey:1": "我觉得为你办个小小的庆祝会会很不错，所以特地做了些特别的菜。$l",
+        "DatingHarveyBirthday_Harvey:2": "别担心葡萄酒。适量饮用就好，不过今天可是特别的日子！$h",
+        "DatingHarveyBirthday_Harvey:3": "来，干杯！生日快乐，祝你身体健康，也祝你未来还有许多美好的年岁！$l",
+        "DatingLeahBirthday_Finish:0": "能和莉亚两个人一起庆祝生日，感觉真不错。",
+        "DatingLeahBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingLeahBirthday_Leah:0": "欢迎，@！快进来，就当在自己家一样！$h",
+        "DatingLeahBirthday_Leah:1": "我知道今天是你的生日，就想着咱们可以为你小小庆祝一下。我还特地买了蛋糕呢。$h",
+        "DatingLeahBirthday_Leah:2": "你知道吗，我已经好几年没和别人一起庆祝生日了，可不知怎么的，我今天就是特别想和你一起度过。$l",
+        "DatingLeahBirthday_Leah:3": "我以前从没想过自己会改变对这种庆祝活动的看法，不过我想，和你在一起确实让我重新敞开了心扉。$l",
+        "DatingLeahBirthday_Leah:4": "总之，不说这些让人难为情的话了。生日快乐，@。现在我们来吃点蛋糕，好吗？$h",
+        "DatingMaruBirthday_Demetrius:0": "欢迎你，@，快进来，别拘束。$h",
+        "DatingMaruBirthday_Demetrius:1": "我同意。我觉得这场派对办得非常棒。而且，研究表明，偶尔玩得开心一些能提高工作效率。$h",
+        "DatingMaruBirthday_Finish:0": "能和玛鲁还有她的家人一起庆祝生日，感觉真不错。",
+        "DatingMaruBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingMaruBirthday_Maru:0": "哦，@，你来得正是时候，派对马上就要开始啦。$h",
+        "DatingMaruBirthday_Maru:1": "我本想给你做个机器人，作为礼物帮你打理农场，可惜时间不够。希望明年之前能做好。",
+        "DatingMaruBirthday_Maru:2": "好啦，@，许个愿吧！",
+        "DatingMaruBirthday_Maru:3": "生日快乐，@。希望这只是未来许多年美好时光的开始。$l",
+        "DatingMaruBirthday_Robin:0": "你知道吗，我也这么觉得。我想重要的是心意，不一定非得是礼物本身。$h",
+        "DatingMaruBirthday_Robin:1": "哦！我想蛋糕烤好了！",
+        "DatingMaruBirthday_Sebastian:0": "你知道吗，我觉得光是办这场派对就已经够好了，不用搞得太铺张。",
+        "DatingMaruBirthday_Sebastian:1": "太棒了，开吃吧。",
+        "DatingPennyBirthday_Finish:0": "能和潘姆还有潘妮一起庆祝生日，感觉真不错。",
+        "DatingPennyBirthday_Finish:1": "看来还剩了些蛋糕和啤酒！",
+        "DatingPennyBirthday_Pam:0": "进来吧，孩子。派对才刚开始呢！$h",
+        "DatingPennyBirthday_Pam:1": "来，找个位子坐下，喝杯啤酒庆祝一下！",
+        "DatingPennyBirthday_Pam:2": "好啦，干杯，孩子！祝你生日快乐，也祝新的一年一切顺利！$h",
+        "DatingPennyBirthday_Penny:0": "哦，@，你来得正是时候！$h",
+        "DatingPennyBirthday_Penny:1": "我想着给你办个小小的生日派对应该挺不错的。虽然没准备多少东西，但希望你喜欢。$l",
+        "DatingPennyBirthday_Penny:2": "妈妈！$a",
+        "DatingPennyBirthday_Penny:3": "*叹气* 好吧，别拘束，就当在自己家一样。我去把蛋糕拿出来。",
+        "DatingPennyBirthday_Penny:4": "生日快乐，@。希望以后还能和你一起过很多个生日。$l",
+        "DatingSamBirthday_Finish:0": "只和山姆一起庆祝生日，感觉真不错。",
+        "DatingSamBirthday_Finish:1": "看来还剩了些吃的！",
+        "DatingSamBirthday_Sam:0": "嘿，@，你来得正是时候。$h",
+        "DatingSamBirthday_Sam:1": "我想着既然今天是你的生日，给你办个小派对应该挺有意思的。别担心，我家人都忙着做别的事，所以咱们可以放松一下。$h",
+        "DatingSamBirthday_Sam:2": "我买了些披萨和乔家可乐。希望你喜欢！我本来想给你做个蛋糕，可我一直没弄明白该怎么做这类东西。$h",
+        "DatingSamBirthday_Sam:3": "总之，生日快乐，@。能和你这样的人在一起，我真是太幸运了。$l",
+        "DatingSebastianBirthday_Demetrius:0": "我同意。我觉得这场派对办得非常棒。而且研究表明，偶尔玩得开心一点，工作效率也会提高。$h",
+        "DatingSebastianBirthday_Demetrius:1": "好了，@，来许个愿吧！$h",
+        "DatingSebastianBirthday_Finish:0": "和塞巴斯蒂安还有他的家人一起庆祝生日，感觉真不错。",
+        "DatingSebastianBirthday_Finish:1": "看来还剩了些蛋糕！",
+        "DatingSebastianBirthday_Maru:0": "生日快乐，@。说实话，我有点惊讶我们居然办了这场派对。塞巴斯蒂安一向不怎么喜欢庆祝活动。",
+        "DatingSebastianBirthday_Maru:1": "太好了，我们终于能吃蛋糕了！我来给你切第一块，@！$h",
+        "DatingSebastianBirthday_Robin:0": "欢迎你，@，快进来，别拘束。$h",
+        "DatingSebastianBirthday_Robin:1": "哎呀，我觉得塞巴斯蒂安想为@办场派对，这很好啊。$h",
+        "DatingSebastianBirthday_Robin:2": "哦，我想蛋糕应该做好了！",
+        "DatingSebastianBirthday_Sebastian:0": "嘿，@，你来得正是时候。妈妈刚好正在做蛋糕。$h",
+        "DatingSebastianBirthday_Sebastian:1": "说真的……他们还奇怪我为什么不常做这种事呢。",
+        "DatingSebastianBirthday_Sebastian:2": "生日快乐，@。我很高兴能和你一起度过这样的时光。$h",
+        "DatingShaneBirthday_Finish:0": "只和谢恩一起庆祝生日，感觉真不错。",
+        "DatingShaneBirthday_Finish:1": "看来还剩了些吃的！",
+        "DatingShaneBirthday_Shane:0": "嘿，@，你来得正是时候。$h",
+        "DatingShaneBirthday_Shane:1": "我觉得给你办场派对挺不错的。$h",
+        "DatingShaneBirthday_Shane:2": "我买了些披萨和乔家可乐。希望你喜欢！我本来想用鸡下的蛋给你做点吃的，比如蛋糕什么的，可我不太确定该怎么做。$h",
+        "DatingShaneBirthday_Shane:3": "总之，生日快乐，@。能和你这样的人在一起，我很开心。$l",
+        "JojaParty_0": "欢迎光临乔家超市，尊贵的会员@！",
+        "JojaParty_1": "我们的记录显示今天是你的生日。乔家品牌一直把所有会员都当作家人一样对待，这一点请你放心。",
+        "JojaParty_2": "请收下这份免费的小点心，作为乔家大家庭送给你的礼物。",
+        "JojaPartyOver": "挺不错的。回去干活！",
+        "JunimoBirthdayParty_0": "看来祝尼魔们想给你办场派对！",
+        "JunimoBirthdayParty_1": "看来还剩了些蛋糕！",
+        "Lewis_AskPlayerForBirthday_Confirmation": "好的，{0}，{1}我会记住的，回头见@！$h",
+        "Lewis_AskPlayerForBirthday_Intro": "嘿，@，你搬来的时候我忘了问你生日是哪天。我想记下来，好把它写进镇上的档案里。毕竟我希望你能感受到大家的欢迎。把这张表填好就行！$h",
+        "Lewis_AskPlayerForBirthday_TodayIsBirthday": "哦，今天是你的生日？生日快乐，@！我一定会记住的！$h",
+        "PartyOver": "派对真开心。回去干活！",
+        "SpousePartyOver": "能和心爱的人共度这样的时光，感觉真好。",
+        "SpouseAskPlayerForFavoriteGift_Abigail_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Abigail_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Alex_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Alex_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Elliott_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Elliott_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Emily_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Emily_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Haley_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Haley_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Harvey_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Harvey_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Leah_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Leah_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Maru_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Maru_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Penny_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Penny_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Sam_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Sam_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Sebastian_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Sebastian_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_Shane_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_Shane_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "SpouseAskPlayerForFavoriteGift_0": "嘿，@，我想问你一件事：你特别喜欢什么？我在想，我好像不太清楚你喜欢什么，所以想问问你。以后要是遇到特别的日子，我想给你准备礼物，让你感受到自己有多特别。",
+        "SpouseAskPlayerForFavoriteGift_1": "好，太好了！等到时候我一定会尽力准备的，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}。$h",
+        "CommunityBirthdayParty_0": "嘘，我想他们到了。",
+        "CommunityBirthdayParty_1": "谁来把灯打开。",
+        "CommunityBirthdayParty_2": "生日快乐，{{PlayerName}}！",
+        "CommunityBirthdayParty_3": "@，生日快乐！你已经成了我们社区不可或缺的一员，所以我和格斯聊起给你办个小派对时，这个主意很快就得到了大家的响应。每个人都想来参加庆祝，让你感受到自己有多特别，就像你给我们每个人的生活都带来了温暖一样。$h",
+        "CommunityBirthdayParty_4": "来吧，这场派对是为你办的，尽情庆祝吧！$h",
+        "CommunityBirthdayParty_5": "派对真是太有意思了。能看到大家都来，真好。好了，该回去干活了！"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Events.json:1"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Strings/Events",
+      "entries": {
+        "SpouseBirthdayEvent_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_1": "我想送你点东西，表达我对你的感激之情。$h",
+        "SpouseBirthdayEvent_2": "谢谢你走进我的生命。能和你共度的每一天，对我来说都很特别。$l",
+        "SpouseBirthdayEvent_3": "生日快乐，@，希望我们还能携手共度许多岁月。$l",
+        "SpouseBirthdayEvent_Abigail_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Abigail_1": "你知道吗，今天可是某个人的特别日子！我知道这礼物不算什么，不过我还是给你准备了礼物！$h",
+        "SpouseBirthdayEvent_Abigail_2": "谢谢你成为我生命中特别的一部分。和你在一起，我才发现生活是一场精彩的冒险。我迫不及待地想知道未来会带我们去往何方。$l",
+        "SpouseBirthdayEvent_Abigail_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Alex_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Alex_1": "你知道吗，今天可是某个人的特别日子！我知道这礼物不算什么，不过我还是给你准备了礼物！$h",
+        "SpouseBirthdayEvent_Alex_2": "谢谢你成为这么棒的伴侣。我很庆幸能和你这样的人结婚，感觉自己真是赢麻了。这些时光对我来说无可替代。$l",
+        "SpouseBirthdayEvent_Alex_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Elliott_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Elliott_1": "你知道吗，今天可是某个人的特别日子！我知道这礼物不算什么，不过我还是给你准备了礼物！$h",
+        "SpouseBirthdayEvent_Elliott_2": "你总能时时刻刻给我带来新的灵感，我也希望自己能为你带来同样的感受。$l",
+        "SpouseBirthdayEvent_Elliott_3": "生日快乐，@，希望我们还能携手写下更多年的故事。$l",
+        "SpouseBirthdayEvent_Emily_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Emily_1": "你知道吗，今天可是某个人的特别日子！我知道这礼物不算什么，不过我还是给你准备了礼物！$h",
+        "SpouseBirthdayEvent_Emily_2": "和你在一起，真的让我觉得我们的命运紧紧交织在了一起，我也不愿它变成别的模样。你绝对是与我灵魂相契的知己。$l",
+        "SpouseBirthdayEvent_Emily_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Haley_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Haley_1": "我给你准备了件礼物！我就知道你一定会喜欢！为了找到最适合你的礼物，我可是逛了好久呢。$h",
+        "SpouseBirthdayEvent_Haley_2": "你知道吗，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，从我们初次相遇到现在，我们一起走过了好长一段路。我很高兴能和你一路同行。和你在一起的每一天都像完美的照片。$l",
+        "SpouseBirthdayEvent_Haley_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Harvey_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Harvey_1": "为了这个特别的日子，我想送你一份特别的礼物。$h",
+        "SpouseBirthdayEvent_Harvey_2": "和你在一起，让我更加珍惜生活中的许多美好。从未有过像和你在一起时这般充满活力的感觉。你让我的心洋溢着喜悦。$l",
+        "SpouseBirthdayEvent_Harvey_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Leah_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Leah_1": "我给你准备了件礼物！我就知道你一定会喜欢！为了找到最适合你的礼物，我可是逛了好久呢。$h",
+        "SpouseBirthdayEvent_Leah_2": "我很高兴能成为你生命中的一部分。一路走来，你始终陪伴着我，我也想继续让你知道你对我有多重要。$l",
+        "SpouseBirthdayEvent_Leah_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Maru_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Maru_1": "你知道吗，今天可是某个人的特别日子！我给你准备了一点小礼物！$h",
+        "SpouseBirthdayEvent_Maru_2": "我很高兴我们能一起度过这样的时光。感觉我们的生活就像是星辰安排好的一样。银河系也许很广阔，但你就是我的全世界。$l",
+        "SpouseBirthdayEvent_Maru_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Penny_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Penny_1": "你知道吗，今天可是某个人的特别日子！我知道这礼物不算什么，不过我还是给你准备了礼物！$h",
+        "SpouseBirthdayEvent_Penny_2": "看到你微笑，我就特别开心。我喜欢和你一起享受每一刻，就像梦想成真了一样。$l",
+        "SpouseBirthdayEvent_Penny_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Sam_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Sam_1": "我给你准备了件礼物，我知道你会喜欢的！",
+        "SpouseBirthdayEvent_Sam_2": "我很高兴你来到了这个镇子，也很高兴我们能在这里安定下来。我们一起拥有的生活真的很美好，这让我更加珍惜这一切。你给了我很大的鼓舞，我也希望自己能成为你的动力。$l",
+        "SpouseBirthdayEvent_Sam_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Sebastian_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Sebastian_1": "给你，我准备了件礼物，想借此告诉你，我有多庆幸生命中有你。$h",
+        "SpouseBirthdayEvent_Sebastian_2": "谢谢你陪在我身边。你让我更加珍惜我们拥有的美好生活，也更加喜欢这个地方。我不想要别的生活。",
+        "SpouseBirthdayEvent_Sebastian_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l",
+        "SpouseBirthdayEvent_Shane_0": "嘿，{{Omegasis.HappyBirthday/AffectionateSpouseWord}}，{{Omegasis.HappyBirthday/TimeOfDay}}！$h",
+        "SpouseBirthdayEvent_Shane_1": "给你，我准备了件礼物，想借此告诉你，我有多庆幸生命中有你。$h",
+        "SpouseBirthdayEvent_Shane_2": "我很感激你走进了我的生活。你一直以来都给了我巨大的支持，我也想为了你成为更好的自己。$l",
+        "SpouseBirthdayEvent_Shane_3": "生日快乐，@，希望我们还能一起度过许多个年头。$l"
+      },
+      "Update": "OnTimeChange",
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Events.json:2"
+    },
+    {
+      "LogName": "Chinese Mail.json:1",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Abigail": "迟来的生日快乐，@！^希望今年我们能一起去更多地方冒险。^^——阿比盖尔 %item id {{Omegasis.HappyBirthday/NPCGift:Abigail}} %%[#]阿比盖尔祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Alex": "哟，@，迟来的生日快乐！^祝你今年比以往任何一年都棒。^^——亚历克斯 %item id {{Omegasis.HappyBirthday/NPCGift:Alex}} %%[#]亚历克斯祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Caroline": "迟来的生日快乐，@。^感谢你为我们的社区所做的一切。我敢肯定，你的父母一定为你感到骄傲。^^——卡罗琳 %item id {{Omegasis.HappyBirthday/NPCGift:Caroline}} %%[#]卡罗琳祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Clint": "嘿，迟来的生日快乐，@。^我想今年对你来说一定会很棒。^^——克林特 %item id {{Omegasis.HappyBirthday/NPCGift:Clint}} %%[#]克林特祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Demetrius": "迟来的生日快乐，@！^今天记得抽空休息一下，好好享受生活。^^——德米特里厄斯 %item id {{Omegasis.HappyBirthday/NPCGift:Demetrius}} %%[#]德米特里厄斯祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Dwarf": "补上迟到的生日祝福，@。^等等，人类是会庆祝生日的，对吧？^^——矮人 %item id {{Omegasis.HappyBirthday/NPCGift:Dwarf}} %%[#]矮人祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Elliott": "希望你生日那天过得愉快，@。^我本想为这个特别的日子给你写首诗，不过眼下只能先说一句迟来的生日快乐了。^^——艾利欧特 %item id {{Omegasis.HappyBirthday/NPCGift:Elliott}} %%[#]艾利欧特祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Emily": "补上迟到的生日祝福，@！^我看到你的未来光芒四射。^^——艾米丽 %item id {{Omegasis.HappyBirthday/NPCGift:Emily}} %%[#]艾米丽祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Evelyn": "迟来的生日快乐，@。^你已经成长为一个这么优秀的人，我相信你的爷爷看到今天的你，一定会为你感到骄傲。^^——艾芙琳 %item id {{Omegasis.HappyBirthday/NPCGift:Evelyn}} %%[#]艾芙琳祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_George": "等你到了我这个年纪，生日也就一年年地过去了。不过，还是祝你迟来的生日快乐，@。^^——乔治 %item id {{Omegasis.HappyBirthday/NPCGift:George}} %%[#]乔治祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Gus": "嘿，@，迟来的生日快乐！^希望你今天剩下的时间也过得开心，记得常来酒吧坐坐！^^——格斯 %item id {{Omegasis.HappyBirthday/NPCGift:Gus}} %%[#]格斯祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Haley": "迟来的生日快乐，@。^希望你今年能收到一些不错的礼物！^^——海莉 %item id {{Omegasis.HappyBirthday/NPCGift:Haley}} %%[#]海莉祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Harvey": "迟来的生日快乐，@。^记得找时间来做个检查，好吗？我希望你能健健康康地再过很多年。^^——哈维 %item id {{Omegasis.HappyBirthday/NPCGift:Harvey}} %%[#]哈维祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jas": "迟来的生日快乐，@。^我很高兴当初决定认识你。^^——贾斯 %item id {{Omegasis.HappyBirthday/NPCGift:Jas}} %%[#]贾斯祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Jodi": "你好呀，@。^听说昨天是你的生日。那就祝你迟来的生日快乐！^^——乔迪 %item id {{Omegasis.HappyBirthday/NPCGift:Jodi}} %%[#]乔迪祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Kent": "乔迪告诉我，昨天是你的生日，@。^迟来的生日快乐！记得珍惜每一天。^^——肯特 %item id {{Omegasis.HappyBirthday/NPCGift:Kent}} %%[#]肯特祝你生日快乐",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Krobus": "迟来的生日快乐，@。^我还是不太理解人类，不过能认识你，我很开心。^^- 科罗布斯 %item id {{Omegasis.HappyBirthday/NPCGift:Krobus}} %%[#]科罗布斯的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leah": "嘿，@，迟来的生日快乐！^看到你在农场过得不错，我很高兴。希望新的一岁能带给你新的灵感！^^- 莉亚 %item id {{Omegasis.HappyBirthday/NPCGift:Leah}} %%[#]莉亚的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Leo": "嗨，@，^我的鸟儿家人告诉我，昨天是你的生日，所以我想补上一句生日快乐。希望你新的一年也过得很棒！^^- 雷欧 %item id {{Omegasis.HappyBirthday/NPCGift::Leo}} %%[#]雷欧的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Lewis": "迟来的生日快乐，@！^你为镇上做的一切，我都非常感激。继续加油吧。^^- 刘易斯 %item id {{Omegasis.HappyBirthday/NPCGift:Lewis}} %%[#]刘易斯的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Linus": "迟来的生日快乐，@。^谢谢你时不时来看我，有这么棒的伙伴陪着我，我真的很开心。^^- 莱纳斯 %item id {{Omegasis.HappyBirthday/NPCGift:Linus}} %%[#]莱纳斯的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Marnie": "嗨，@！^大家昨天都在聊你的生日，我也想亲口祝你生日快乐。所以，迟来的生日快乐！^^- 玛妮 %item id {{Omegasis.HappyBirthday/NPCGift:Marnie}} %%[#]玛妮的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Maru": "迟来的生日快乐，@。^我试着为你做一支永不熄灭的蜡烛，可惜没成功。也许明年就能做出来了，对吧？^^- 玛鲁 %item id {{Omegasis.HappyBirthday/NPCGift:Maru}} %%[#]玛鲁的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pam": "迟来的生日快乐，小家伙。^找个时间咱们喝一杯，庆祝你又长了一岁！^^- 潘姆 %item id {{Omegasis.HappyBirthday/NPCGift:Pam}} %%[#]潘姆的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Penny": "迟来的生日快乐，@。^愿你今年尽享人生的种种美好。^^- 潘妮 %item id {{Omegasis.HappyBirthday/NPCGift:Penny}} %%[#]潘妮的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Pierre": "嘿，@，迟来的生日快乐！^希望新的一年会是你精彩的一年！^^- 皮埃尔 %item id {{Omegasis.HappyBirthday/NPCGift:Pierre}} %%[#]皮埃尔的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Robin": "嘿，@，迟来的生日快乐！^我真的很高兴你决定搬来山谷。^^- 罗宾 %item id {{Omegasis.HappyBirthday/NPCGift:Robin}} %%[#]罗宾的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sam": "嘿，@，迟来的生日快乐！^改天我们得给你办场生日即兴演奏会！^^- 山姆 %item id {{Omegasis.HappyBirthday/NPCGift:Sam}} %%[#]山姆的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sandy": "嘿，亲爱的，^真希望我能进镇里当面祝你生日快乐，不过还是想补上一句迟来的生日快乐~。愿你往后还有许多美好的年岁。^^- 桑迪 %item id {{Omegasis.HappyBirthday/NPCGift:Sandy}} %%[#]桑迪的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Sebastian": "迟来的生日快乐，@。^希望你在农场一切顺利。^^- 塞巴斯蒂安 %item id {{Omegasis.HappyBirthday/NPCGift:Sebastian}} %%[#]塞巴斯蒂安的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Shane": "迟来的生日快乐，@。^继续努力，我相信新的一年一定会很棒。^^- 谢恩 %item id {{Omegasis.HappyBirthday/NPCGift:Shane}} %%[#]谢恩的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Vincent": "嘿，@，^妈妈昨天告诉我那天是你的生日，所以我想补上一句生日快乐！有空来找我玩吧！^^- 文森特 %item id {{Omegasis.HappyBirthday/NPCGift:Vincent}} %%[#]文森特的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Willy": "嘿呀，@，^迟来的生日快乐。看着你，我想起了自己还是条小鱼苗的时候。趁年轻，好好享受生日吧，小家伙。^^- 威利 %item id {{Omegasis.HappyBirthday/NPCGift:Willy}} %%[#]威利的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Wizard": "迟来的生日快乐，^@。永远别忘了，你的未来掌握在自己手中。你问我是怎么知道的？啊，我无意间听见镇上几个人在商量送你什么礼物。我想你会喜欢的。^^- M. 拉斯莫迪乌斯 %item id {{Omegasis.HappyBirthday/NPCGift:Wizard}} %%[#]法师的生日祝福",
+        "Omegasis.HappyBirthday_Dad": "亲爱的@，^ 生日快乐，孩子。你不在身边，家里过生日时总觉得安静了不少，不过你妈妈和我都知道，你让爷爷和我们都感到骄傲。 我们都知道独自生活不容易，但我们百分之百相信你。只要继续追逐梦想就好。^ 爱你的爸爸 ^ 附言：这里有些零用钱，帮你打理农场。祝你好运！ {{Omegasis.HappyBirthday/DadsBirthdayGift}}[#]爸爸的生日祝福",
+        "Omegasis.HappyBirthday_Dad_Married": "亲爱的@，^ 生日快乐，孩子。仿佛就在昨天，我们还一起熬夜看电影、放学后骑车兜风、周末一起做各种好吃的，还去农场看望你的爷爷。如今你已经长大成人，和生命中的挚爱一起创造着美好的回忆。我知道你妈妈和我为你感到无比骄傲，而爷爷知道你继承了他的事业，一定也会这么说。继续努力，过上最好的生活吧。我也会一直祝愿你未来的每个特别日子都幸福美满。^爱你的爸爸 ^ 附言：这里有些零用钱，帮你打理农场。祝你好运！ {{Omegasis.HappyBirthday/DadsBirthdayGift}}[#]爸爸的生日祝福",
+        "Omegasis.HappyBirthday_DatingAbigail_BirthdayPartyInvitation": "嘿，@。^我和家人决定在我们家为你办个生日派对。你今天能抽空来我们家吗？^此致，^      -阿比盖尔[#]阿比盖尔的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingAbigail_BirthdayPartyInvitation_Wednesday": "嘿，@。^我觉得今天为你办个小派对会很有趣。晚些时候你能来矿井吗？^ 此致，^      -阿比盖尔[#]阿比盖尔的冒险主题生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingAlex_BirthdayPartyInvitation": "嘿，@。^我觉得在我们家为你办个生日派对会很有趣。你今天能找时间来我家吗？^^      -亚历克斯[#]亚历克斯的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingElliott_BirthdayPartyInvitation": "你好，@。^我觉得在我家为你办个生日派对会很不错。今天晚些时候，你能来寒舍一趟吗？^此致，^      -艾利欧特[#]艾利欧特的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingEmily_BirthdayPartyInvitation": "嗨，@。^我觉得在我们家为你办个生日派对会很不错。你今天能找时间来我家吗？^此致，^      -艾米丽[#]艾米丽的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingHaley_BirthdayPartyInvitation": "嘿，@。^我觉得在我们家为你办个生日派对会很不错。你今天能找时间来我家吗？^此致，^      -海莉[#]海莉的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingHarvey_BirthdayPartyInvitation": "嘿，@。^我觉得在我家为你办个生日派对会很不错。今天你能找时间来诊所二楼我的房间吗？^此致，^      -哈维[#]哈维的生日派对邀请函",
+        "Omegasis.HappyBirthday_DatingLeah_BirthdayPartyInvitation": "嘿，@。^晚些时候能来我家一趟吗？我想给你办个小小的生日派对。^谨上，^      -莉亚[#]莉亚的生日派对邀请",
+        "Omegasis.HappyBirthday_DatingMaru_BirthdayPartyInvitation": "嘿，@。^我和家人决定在家里给你办个生日派对。今天什么时候能来我们家一趟吗？^谨上，^      -玛鲁[#]玛鲁的生日派对邀请",
+        "Omegasis.HappyBirthday_DatingPenny_BirthdayPartyInvitation": "亲爱的@：^我和妈妈决定给你办个小小的生日派对。今天什么时候能过来一趟吗？^谨上，^      -潘妮[#]潘妮的生日派对邀请",
+        "Omegasis.HappyBirthday_DatingSam_BirthdayPartyInvitation": "嘿，@。^我觉得在我们家给你办个生日派对一定很有意思。今天什么时候能来我家一趟吗？^^      -山姆[#]山姆的生日派对邀请",
+        "Omegasis.HappyBirthday_DatingSebastian_BirthdayPartyInvitation": "嘿，@。^晚些时候能来我家一趟吗？我和家人决定办个生日派对，好好庆祝一下。^^      -塞巴斯蒂安[#]塞巴斯蒂安的生日派对邀请",
+        "Omegasis.HappyBirthday_DatingShane_BirthdayPartyInvitation": "嘿，@。^今天什么时候能来我家一趟吗？我想为你办个小型聚会。^^      -谢恩",
+        "Omegasis.HappyBirthday_Junimos": "请来社区中心一趟。^谨上，^      -祝尼魔们[#]祝尼魔们的生日派对邀请",
+        "Omegasis.HappyBirthday_Mom": "亲爱的@：^生日快乐，宝贝。看着你长大，成为我一直期盼的那个善良又勤奋的人，真是件令人开心的事。希望你和所爱之人继续创造更多美好的回忆。^爱你的妈妈^附：这是我亲手为你做的一点小礼物。{{Omegasis.HappyBirthday/MomsBirthdayGift}}[#]妈妈的生日祝福",
+        "Omegasis.HappyBirthday_BelatedBirthdayWish_Generic_Fallback_Npc_Message": "迟来的生日快乐，@！^希望你昨天过得很开心。^^-{1} %item id {{Omegasis.HappyBirthday/NPCGift:Generic}}%%[#]生日快乐"
+      },
+      "When": {
+        "Language": "zh"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Omegasis.HappyBirthday/Strings/Misc",
+      "entries": {
+        "BirthdayError_FestivalDay": "生日不能选在节日当天。抱歉！",
+        "Date": "日期",
+        "Default Birthday Wish": "生日快乐，@！",
+        "FavoriteGift": "最喜欢的礼物",
+        "Happy Birthday: Farmhand Birthday Message": "今天是@的生日！祝他们生日快乐！",
+        "Happy Birthday: Star Message": "今天是你的生日！生日快乐！",
+        "Season": "季节",
+        "Selected": "已选",
+        "TimeOfDay_Morning": "早上",
+        "TimeOfDay_Afternoon": "下午",
+        "TimeOfDay_Night": "晚上"
+      },
+      "When": {
+        "Language": "zh"
+      },
+      "LogName": "Chinese Misc.json:1"
+    }
+  ]
+}

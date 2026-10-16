@@ -1,0 +1,20 @@
+{
+  "Name": "Happy Birthday zh-CN Translation Content Pack",
+  "Author": "zhanxin-xu; original content by Omegasis",
+  "Version": "1.0.0",
+  "Description": "Simplified Chinese translation overlay for the Happy Birthday Content Patcher content pack.",
+  "UniqueID": "Omegasis.HappyBirthday.ContentPatcher.ContentPack.zh-CN",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Omegasis.HappyBirthday",
+      "MinimumVersion": "3.21.0"
+    },
+    {
+      "UniqueID": "Omegasis.HappyBirthday.ContentPatcher.ContentPack.en-US",
+      "MinimumVersion": "2.0.4"
+    }
+  ]
+}
